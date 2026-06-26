@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview — Samsara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #00263E;
+    --navy-mid: #003A5C;
+    --navy-light: #004E7A;
+    --accent: #0077B6;
+    --accent-light: #E6F2FA;
+    --amber: #F5A623;
+    --amber-light: #FEF6E4;
+    --white: #FFFFFF;
+    --off-white: #F7F9FB;
+    --border: rgba(0, 38, 62, 0.12);
+    --border-strong: rgba(0, 38, 62, 0.22);
+    --text-primary: #00263E;
+    --text-secondary: #3A5A70;
+    --text-muted: #6B8A9E;
+    --radius-md: 8px;
+    --radius-lg: 14px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--amber); }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: #fff; }
+
+  /* LAYOUT */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section { padding: 4rem 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  /* EYEBROW + TITLES */
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+  .section-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 580px;
+    margin-bottom: 1.75rem;
+  }
+
+  /* AMBER BAR */
+  .amber-bar {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--amber);
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+  }
+
+  /* HERO */
+  #hero {
+    background: var(--navy);
+    padding: 5rem 0 4rem;
+    border-top: none;
+  }
+  #hero .eyebrow { color: var(--amber); }
+  #hero h1 { color: #fff; }
+  #hero .hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.25rem;
+  }
+  #hero .hero-tagline {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    max-width: 540px;
+  }
+
+  /* PILLARS */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 0;
+  }
+  .pillar-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+  }
+  .pillar-icon {
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .pillar-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+  /* STORY CARDS */
+  .story-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .story-card.open { border-color: var(--accent); }
+  .story-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .story-header:hover { background: var(--off-white); }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    display: inline-block;
+    letter-spacing: 0.04em;
+  }
+  .tag-ownership { background: var(--accent-light); color: var(--navy-light); }
+  .tag-complexity { background: #EAF3DE; color: #27500A; }
+  .tag-impact { background: var(--amber-light); color: #7A4F00; }
+  .story-title { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+  .story-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .chevron { font-size: 20px; color: var(--text-muted); flex-shrink: 0; margin-top: 2px; transition: transform 0.2s; }
+  .story-card.open .chevron { transform: rotate(180deg); }
+  .story-body { display: none; padding: 0 1.5rem 1.5rem; }
+  .story-card.open .story-body { display: block; }
+  .star-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .star-item {
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+    padding: 0.85rem;
+  }
+  .star-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+  .star-text { font-size: 13px; line-height: 1.6; color: var(--text-primary); }
+  .story-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+  .results-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .result-chip {
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+  }
+  .result-icon { font-size: 17px; color: var(--amber); flex-shrink: 0; margin-top: 1px; }
+  .result-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px; }
+  .result-text { font-size: 12px; color: var(--text-primary); line-height: 1.5; }
+
+  /* CUSTOMER ADVOCACY */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 1.25rem;
+  }
+  .metric-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    color: #fff;
+  }
+  .metric-val {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .metric-val span { font-size: 14px; font-weight: 400; color: var(--amber); }
+  .metric-label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+  .how-item {
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+  .how-icon { font-size: 20px; color: var(--accent); margin-bottom: 0.5rem; display: block; }
+  .how-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  .acv-bar {
+    background: var(--amber-light);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .acv-bar-text { font-size: 14px; font-weight: 600; color: #7A4F00; }
+  .acv-bar-sub { font-size: 12px; color: #9A6500; margin-top: 3px; line-height: 1.5; }
+
+  /* AI TOOLS */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .tool-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .tool-top { display: flex; align-items: center; gap: 10px; }
+  .tool-logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .logo-gemini { background: var(--accent-light); color: var(--navy-light); }
+  .logo-cursor { background: #EEEDFE; color: #3C3489; }
+  .logo-opencode { background: #EAF3DE; color: #27500A; }
+  .logo-windsurf { background: #E1F5EE; color: #085041; }
+  .logo-anthropic { background: var(--amber-light); color: #7A4F00; }
+  .tool-name { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .tool-maker { font-size: 11px; color: var(--text-muted); }
+  .tool-use { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  .tool-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tool-tag {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--off-white);
+    color: var(--text-muted);
+    font-weight: 500;
+    border: 1px solid var(--border);
+  }
+
+  /* PHILOSOPHY CALLOUT */
+  .philosophy-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 1.5rem;
+  }
+  .philosophy-card .phil-icon { font-size: 24px; color: var(--amber); flex-shrink: 0; margin-top: 2px; }
+  .philosophy-card .phil-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.4rem; }
+  .philosophy-card .phil-text { font-size: 15px; font-weight: 500; color: #fff; line-height: 1.6; margin-bottom: 0.5rem; }
+  .philosophy-card .phil-sub { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+  /* WHY SAMSARA */
+  #why { background: var(--navy); }
+  #why .eyebrow { color: var(--amber); }
+  #why h2 { color: #fff; }
+  #why .section-sub { color: rgba(255,255,255,0.65); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .why-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem;
+  }
+  .why-icon { font-size: 22px; color: var(--amber); margin-bottom: 0.6rem; display: block; }
+  .why-title { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 0.4rem; }
+  .why-desc { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+  .closing-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .closing-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.75; font-style: italic; }
+  .closing-attr { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
+
+  /* SHARED CARD */
+  .inner-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .inner-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 0.85rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  @media (max-width: 600px) {
+    .star-grid, .results-row, .metrics-row, .how-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    section { padding: 2.5rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Interview · <span>Samsara</span></div>
+  <ul class="nav-links">
+    <li><a href="#stories">Stories</a></li>
+    <li><a href="#advocacy">Advocacy</a></li>
+    <li><a href="#ai">AI Tools</a></li>
+    <li><a href="#why">Why Samsara</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="eyebrow">Product & Product Operations · Samsara Interview</div>
+    <span class="amber-bar"></span>
+    <h1>[Your Name]</h1>
+    <p class="hero-title">Product Operations Leader · Builder · Systems Thinker</p>
+    <p class="hero-tagline">I build lightweight frameworks that let fast-moving teams move even faster — without the overhead that slows them down. I use AI tooling to unlock what humans can't do alone, and I bring alignment to rooms full of opinionated builders.</p>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars" style="background:#fff;">
+  <div class="container">
+    <div class="eyebrow">What I bring</div>
+    <h2>Three things Samsara cares about</h2>
+    <p class="section-sub">Your recruiter was clear. Here's how I map to each one.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <i class="ti ti-flag-2 pillar-icon"></i>
+        <h3>High ownership</h3>
+        <p class="pillar-desc">I act outside my remit when it matters. I don't wait for permission when I can see what needs to be done.</p>
+      </div>
+      <div class="pillar-card">
+        <i class="ti ti-arrows-shuffle pillar-icon"></i>
+        <h3>Complex problem spaces</h3>
+        <p class="pillar-desc">I thrive where org, process, and product complexity intersect — and I build tools that outlast me.</p>
+      </div>
+      <div class="pillar-card">
+        <i class="ti ti-chart-line pillar-icon"></i>
+        <h3>Measurable impact</h3>
+        <p class="pillar-desc">Every story I tell traces back to customer impact, cost reduction, or unlocked team velocity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAR STORIES -->
+<section id="stories" style="background:var(--off-white);">
+  <div class="container">
+    <div class="eyebrow">My stories · STAR format</div>
+    <h2>Click each to expand</h2>
+    <p class="section-sub">Short and sweet — the result and the impact, always front and center.</p>
+
+    <!-- Story 1 -->
+    <div class="story-card open" onclick="this.classList.toggle('open')">
+      <div class="story-header">
+        <div>
+          <span class="tag tag-ownership">Ownership</span>
+          <p class="story-title">Scaling AI adoption across Cloudflare's product & engineering org</p>
+          <p class="story-sub">Built from zero — agentic tools, company-wide training, and measurable time back</p>
+        </div>
+        <i class="ti ti-chevron-down chevron"></i>
+      </div>
+      <div class="story-body">
+        <div class="star-grid">
+          <div class="star-item">
+            <div class="star-label">Situation</div>
+            <p class="star-text">Cloudflare's product and engineering teams were doing repetitive, low-leverage work manually — changelogs, PRD drafts, customer meeting prep, bug filing — with no consistent AI tooling in place to address it.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Task</div>
+            <p class="star-text">My role was Product Operations, but I saw the opportunity to drive company-wide leverage. I took ownership of building and rolling out our entire internal AI capability — beyond what was asked of me.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Action</div>
+            <p class="star-text">Started with Gemini Gems to automate core P&E workflows: changelog review, PRD creation, customer feedback loops, bug intake, and NPI materials. As tooling matured, I introduced Windsurf and Opencode for builders, then led company-wide training to equip every team member with the skills to automate their repeatable work.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Result</div>
+            <p class="star-text">Measurable time savings across support, communications, and product operations — with faster resolution cycles and a new capability baseline across the entire org.</p>
+          </div>
+        </div>
+        <hr class="story-divider">
+        <div class="results-row">
+          <div class="result-chip">
+            <i class="ti ti-clock result-icon"></i>
+            <div><div class="result-label">Support tickets</div><p class="result-text">40% faster time to resolution — 2 weeks down to 5 working days by automating intake and assignment of escalated tickets</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-file-text result-icon"></i>
+            <div><div class="result-label">Blog review</div><p class="result-text">Removed an entire step from the comms process by automating style and tone review before editor handoff</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-code result-icon"></i>
+            <div><div class="result-label">PRD generation</div><p class="result-text">Built an Opencode skill that auto-generates a first-pass PRD with customer notes, data, and wiki context already embedded</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-calendar result-icon"></i>
+            <div><div class="result-label">~20 hrs/month saved</div><p class="result-text">Across triage, meeting prep, and NPI materials for GTM teams via skill files that standardize format and tone automatically</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story 2 -->
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <div class="story-header">
+        <div>
+          <span class="tag tag-complexity">Complexity</span>
+          <p class="story-title">Steering a cross-org FedRAMP High certification decision</p>
+          <p class="story-sub">6+ months of effort, VP-level disagreement, and a new vertical on the line</p>
+        </div>
+        <i class="ti ti-chevron-down chevron"></i>
+      </div>
+      <div class="story-body">
+        <div class="star-grid">
+          <div class="star-item">
+            <div class="star-label">Situation</div>
+            <p class="star-text">Cloudflare was considering FedRAMP High certification — a 6+ month, all-hands effort touching every product and engineering team. The project had strong opinions on all sides: legacy vs. new codebases, competing customer segment priorities, and real debate about whether the government vertical was worth the disruption to global roadmaps.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Task</div>
+            <p class="star-text">I was brought in to facilitate the product workstream. But as the complexity became clear, I expanded my role to become the central coordinator driving the entire cross-functional decision — VPs across product, engineering, design, marketing, and legal.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Action</div>
+            <p class="star-text">I convened all stakeholders and structured the decision around data: financial analysis of the government sector vs. other verticals, effort estimates by team, and a clear cost-of-waiting model. I presented back a recommendation with confidence — framing the tradeoffs clearly enough for executives to make a call. The path chosen was a tiger team model: focused squads on certification work rather than taxing full teams, which accelerated time to market.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Result</div>
+            <p class="star-text">Certification delivered on time and on budget. Cloudflare broke into a new customer vertical, and the tiger team structure became the model for how we'd tackle future cross-functional bets.</p>
+          </div>
+        </div>
+        <hr class="story-divider">
+        <div class="results-row">
+          <div class="result-chip">
+            <i class="ti ti-users result-icon"></i>
+            <div><div class="result-label">Stakeholders aligned</div><p class="result-text">VPs across 5 functions — product, engineering, design, marketing, and legal — brought to a single decision with clear tradeoffs</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-building result-icon"></i>
+            <div><div class="result-label">New vertical unlocked</div><p class="result-text">Certification completed on time and on budget, opening the government sector as a net-new customer segment</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story 3 -->
+    <div class="story-card" onclick="this.classList.toggle('open')">
+      <div class="story-header">
+        <div>
+          <span class="tag tag-impact">Impact</span>
+          <p class="story-title">Cutting the product development lifecycle from 10 steps to 3</p>
+          <p class="story-sub">Months to weeks — by building a minimal viable process for all of EPD</p>
+        </div>
+        <i class="ti ti-chevron-down chevron"></i>
+      </div>
+      <div class="story-body">
+        <div class="star-grid">
+          <div class="star-item">
+            <div class="star-label">Situation</div>
+            <p class="star-text">When I joined, the product development lifecycle had 10 sequential steps — discovery, planning, roadmap commitment, PRD, design brief, engineering plan, beta, feedback, testing, ship. Complexity and effort were unknown until after commitment, which created bottlenecks, rework, and slow time to customer value.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Task</div>
+            <p class="star-text">My first mandate as head of Product Operations was to review the process. I approached it the same way I'd approach a product: find the MVP — in this case, the minimal viable process.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Action</div>
+            <p class="star-text">Audited every step for real value vs. paper-trailing overhead. Eliminated steps that added friction without adding signal. Rebuilt the lifecycle around three phases: iterate, implement, ship — with engineering, product, and design having shared ownership of the roadmap from the start.</p>
+          </div>
+          <div class="star-item">
+            <div class="star-label">Result</div>
+            <p class="star-text">Features that previously took months now shipped in weeks. EPD alignment improved because all three functions had a stake in decisions earlier, and customer voice was embedded directly into plans rather than arriving as late feedback.</p>
+          </div>
+        </div>
+        <hr class="story-divider">
+        <div class="results-row">
+          <div class="result-chip">
+            <i class="ti ti-scissors result-icon"></i>
+            <div><div class="result-label">10 steps → 3</div><p class="result-text">Eliminated 7 sequential handoff steps and the paper-trailing overhead that slowed every feature from commit to ship</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-rocket result-icon"></i>
+            <div><div class="result-label">Months → weeks</div><p class="result-text">Faster time to value for customers through rapid prototyping, quicker feedback loops, and stronger VoC data in plans</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-chart-bar result-icon"></i>
+            <div><div class="result-label">EPD alignment</div><p class="result-text">Engineering, product, and design gained shared roadmap ownership — reducing rework and late-stage surprises</p></div>
+          </div>
+          <div class="result-chip">
+            <i class="ti ti-user-check result-icon"></i>
+            <div><div class="result-label">Rapid prototyping as the norm</div><p class="result-text">Shifted the team's default from sequential documentation to iterative building with customer feedback baked in</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER ADVOCACY -->
+<section id="advocacy" style="background:#fff;">
+  <div class="container">
+    <div class="eyebrow">Customer advocacy</div>
+    <h2>Bridging product & engineering to close enterprise deals</h2>
+    <p class="section-sub">I built and led a Customer Advocate Program that put the right technical partner in the room at the right moment in the sales cycle — turning P&E expertise into a direct revenue lever for the GTM org.</p>
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-val">~$20M <span>ACV</span></div>
+        <div class="metric-label">Generated for the business through the program to date</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">Enterprise <span>↑</span></div>
+        <div class="metric-label">Deals closing within-quarter after the right technical advocate was engaged</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">P&E + GTM</div>
+        <div class="metric-label">Product Ops as the connective layer between two orgs that rarely spoke</div>
+      </div>
+    </div>
+
+    <div class="inner-card">
+      <div class="inner-title">How it worked</div>
+      <div class="how-grid">
+        <div class="how-item">
+          <i class="ti ti-users-group how-icon"></i>
+          <h3>Identify the right advocate</h3>
+          <p class="how-desc">Matched VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</p>
+        </div>
+        <div class="how-item">
+          <i class="ti ti-handshake how-icon"></i>
+          <h3>Engage at the right moment</h3>
+          <p class="how-desc">Product Ops coordinated with GTM to bring technical credibility into deals when trust was the blocker to close</p>
+        </div>
+        <div class="how-item">
+          <i class="ti ti-repeat how-icon"></i>
+          <h3>Systematize the motion</h3>
+          <p class="how-desc">Built the program infrastructure so it scaled beyond individual relationships — a repeatable playbook, not a one-off favor</p>
+        </div>
+      </div>
+      <div class="acv-bar">
+        <i class="ti ti-trending-up" style="font-size:22px;color:#D4860A;flex-shrink:0"></i>
+        <div>
+          <div class="acv-bar-text">~$20M in additional ACV generated</div>
+          <div class="acv-bar-sub">Enterprise deals closing within-quarter after technical advocate engagement — a direct revenue contribution from Product Operations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TOOLS -->
+<section id="ai" style="background:var(--off-white);">
+  <div class="container">
+    <div class="eyebrow">AI toolkit</div>
+    <h2>Tools I've implemented and shipped with</h2>
+    <p class="section-sub">Not evaluated — deployed. Each of these has been rolled out to teams with training, workflows, and measurable outcomes attached.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-logo logo-gemini"><i class="ti ti-sparkles"></i></div>
+          <div><div class="tool-name">Gemini</div><div class="tool-maker">Google</div></div>
+        </div>
+        <p class="tool-use">Built the first internal Gems for P&E — automating changelogs, PRD drafts, meeting prep, and customer feedback intake. The foundation of our AI workflow stack.</p>
+        <div class="tool-tags">
+          <span class="tool-tag">Workflow automation</span>
+          <span class="tool-tag">Gems / agents</span>
+          <span class="tool-tag">P&E ops</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-logo logo-cursor"><i class="ti ti-terminal-2"></i></div>
+          <div><div class="tool-name">Cursor</div><div class="tool-maker">Anysphere</div></div>
+        </div>
+        <p class="tool-use">Deployed for engineers to accelerate code writing and review — getting builders out of boilerplate and into architecture and product thinking.</p>
+        <div class="tool-tags">
+          <span class="tool-tag">Code acceleration</span>
+          <span class="tool-tag">Engineering</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-logo logo-opencode"><i class="ti ti-code"></i></div>
+          <div><div class="tool-name">Opencode</div><div class="tool-maker">Charm</div></div>
+        </div>
+        <p class="tool-use">Built skill files to auto-generate PRD first drafts with embedded customer notes, wiki context, and data. Removed the blank-page problem for PMs entirely.</p>
+        <div class="tool-tags">
+          <span class="tool-tag">PRD generation</span>
+          <span class="tool-tag">Skill files</span>
+          <span class="tool-tag">Product</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-logo logo-windsurf"><i class="ti ti-wind"></i></div>
+          <div><div class="tool-name">Windsurf</div><div class="tool-maker">Codeium</div></div>
+        </div>
+        <p class="tool-use">Rolled out for agentic coding workflows — letting engineers delegate longer-horizon tasks and iterate faster on prototypes.</p>
+        <div class="tool-tags">
+          <span class="tool-tag">Agentic coding</span>
+          <span class="tool-tag">Prototyping</span>
+          <span class="tool-tag">Engineering</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-logo logo-anthropic"><i class="ti ti-cpu"></i></div>
+          <div><div class="tool-name">Anthropic / Claude</div><div class="tool-maker">Anthropic</div></div>
+        </div>
+        <p class="tool-use">Used for reasoning-heavy work — complex document synthesis, cross-functional alignment prep, and internal tools that needed nuanced judgment, not just speed.</p>
+        <div class="tool-tags">
+          <span class="tool-tag">Reasoning & synthesis</span>
+          <span class="tool-tag">Internal tooling</span>
+          <span class="tool-tag">Strategy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="philosophy-card">
+      <i class="ti ti-scale phil-icon"></i>
+      <div>
+        <div class="phil-label">My AI philosophy</div>
+        <p class="phil-text">The key to implementing AI at a company is knowing when to use the right tool for the right purpose — while ensuring it's the most cost-efficient choice for the business.</p>
+        <p class="phil-sub">Not every problem needs the most powerful model. Part of the work is matching capability to need: using a lighter, faster tool where that's sufficient, and reserving heavier infrastructure for where it actually moves the needle. Responsible AI adoption is as much about restraint as it is about reach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SAMSARA -->
+<section id="why">
+  <div class="container">
+    <div class="eyebrow">Why Samsara</div>
+    <h2>Work that matters to the world with people who care</h2>
+    <p class="section-sub">Every company I've wanted to work for has had two things in common: work that matters beyond a screen, and people who make you better just by being in the room. Samsara has both.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <i class="ti ti-heart-handshake why-icon"></i>
+        <div class="why-title">People-centered</div>
+        <p class="why-desc">The experience with the team so far has been genuinely exceptional — thoughtful, curious, and generous with their time. Samsara's reputation for its people in the tech industry isn't marketing. I've felt it firsthand.</p>
+      </div>
+      <div class="why-card">
+        <i class="ti ti-world why-icon"></i>
+        <div class="why-title">Work that moves the world</div>
+        <p class="why-desc">Fleet operations are the invisible infrastructure of modern life. The drivers, dispatchers, and operators Samsara serves keep supply chains moving and people safe. That's a category of impact most tech companies never get close to.</p>
+      </div>
+      <div class="why-card">
+        <i class="ti ti-users why-icon"></i>
+        <div class="why-title">DEI as a real commitment</div>
+        <p class="why-desc">Samsara's focus on diversity, equity, and inclusion shows up in who's in the room and who gets heard — a signal of the kind of culture where I do my best work.</p>
+      </div>
+      <div class="why-card">
+        <i class="ti ti-hammer why-icon"></i>
+        <div class="why-title">Builders who stay builders</div>
+        <p class="why-desc">Sanjit and John are still in the building. That founder-led energy — the urgency, the directness, the bias toward doing over discussing — is the environment where I've always contributed the most.</p>
+      </div>
+    </div>
+
+    <div class="closing-card">
+      <i class="ti ti-quote" style="font-size:24px;color:var(--amber);flex-shrink:0;margin-top:2px"></i>
+      <div>
+        <p class="closing-text">I'm not looking for the next job. I'm looking for the place where the work is hard, the people are exceptional, and what we build actually matters to the people using it. That's Samsara.</p>
+        <div class="closing-attr">— Why I'm here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built for Samsara · Product & Product Operations Interview
+</footer>
+
+</body>
+</html>
