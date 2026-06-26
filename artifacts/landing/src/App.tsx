@@ -343,7 +343,7 @@ export default function App() {
       </section>
 
       <footer>
-        Built for Samsara · Product &amp; Product Operations Interview
+        Built for Samsara · Product Operations Interview
       </footer>
     </>
   );
