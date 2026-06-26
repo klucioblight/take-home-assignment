@@ -77,7 +77,7 @@ export default function App() {
       {/* HERO */}
       <section id="hero">
         <div className="container">
-          <div className="eyebrow">Product &amp; Product Operations · Samsara Interview</div>
+          <div className="eyebrow">Product Operations · Samsara Interview</div>
           <span className="amber-bar"></span>
           <h1>Kim Blight</h1>
           <p className="hero-title">Product Operations Leader · Builder · Systems Thinker</p>
