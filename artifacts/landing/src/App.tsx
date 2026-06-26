@@ -290,6 +290,18 @@ export default function App() {
                 <span className="tool-tag">Strategy</span>
               </div>
             </div>
+            <div className="tool-card">
+              <div className="tool-top">
+                <div className="tool-logo" style={{ background: "#F0F4FF", color: "#4353FF" }}><i className="ti ti-world-bolt"></i></div>
+                <div><div className="tool-name">Replit</div><div className="tool-maker">Replit</div></div>
+              </div>
+              <p className="tool-use">Used to deploy web experiences quickly — from internal tools to interview pages like this one. Replit's AI agent lets me ship functional apps without a traditional dev environment.</p>
+              <div className="tool-tags">
+                <span className="tool-tag">Web deployment</span>
+                <span className="tool-tag">AI agent</span>
+                <span className="tool-tag">Rapid prototyping</span>
+              </div>
+            </div>
           </div>
 
           <div className="philosophy-card">
