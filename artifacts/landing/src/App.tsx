@@ -389,7 +389,7 @@ export default function App() {
                   <div className="work-domain">youtube.com</div>
                 </div>
               </div>
-              <p className="work-desc">Watch a recorded talk — speaking on stage to audiences ranging from hundreds to thousands.</p>
+              <p className="work-desc">I love talking about the craft of product operations and presenting is one of my favorite parts of my career.</p>
               <span className="work-link">Watch <i className="ti ti-arrow-up-right"></i></span>
             </a>
 
