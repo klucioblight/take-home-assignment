@@ -339,7 +339,7 @@ h3 {
 /* SEE MY WORK */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 .work-card {
@@ -353,6 +353,13 @@ h3 {
   text-decoration: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+.work-card-wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.work-card-wide .work-desc { flex: 1; }
 .work-card:hover {
   border-color: var(--accent);
   box-shadow: 0 2px 12px rgba(0, 119, 182, 0.1);

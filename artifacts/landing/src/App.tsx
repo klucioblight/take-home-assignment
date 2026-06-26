@@ -393,7 +393,7 @@ export default function App() {
               <span className="work-link">Watch <i className="ti ti-arrow-up-right"></i></span>
             </a>
 
-            <a className="work-card" href="/Kim_Blight_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a className="work-card work-card-wide" href="/Kim_Blight_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <div className="work-card-top">
                 <div className="work-logo" style={{ background: "var(--accent-light)", color: "var(--navy-light)" }}>
                   <i className="ti ti-file-cv"></i>
