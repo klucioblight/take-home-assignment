@@ -202,7 +202,7 @@ export default function App() {
                 <p className="how-desc">Matched VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</p>
               </div>
               <div className="how-item">
-                <i className="ti ti-handshake how-icon"></i>
+                <i className="ti ti-target-arrow how-icon"></i>
                 <h3>Engage at the right moment</h3>
                 <p className="how-desc">Product Ops coordinated with GTM to bring technical credibility into deals when trust was the blocker to close</p>
               </div>
