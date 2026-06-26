@@ -90,7 +90,7 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">What I bring</div>
           <h2>Three things Samsara cares about</h2>
-          <p className="section-sub">Your recruiter was clear. Here's how I map to each one.</p>
+
           <div className="pillars-grid">
             <div className="pillar-card">
               <i className="ti ti-flag-2 pillar-icon"></i>
