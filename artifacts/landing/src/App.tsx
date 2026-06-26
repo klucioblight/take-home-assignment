@@ -70,8 +70,8 @@ export default function App() {
           <li><a href="#stories">Stories</a></li>
           <li><a href="#advocacy">Advocacy</a></li>
           <li><a href="#ai">AI Tools</a></li>
-          <li><a href="#work">My Work</a></li>
           <li><a href="#why">Why Samsara</a></li>
+          <li><a href="#work">My Work</a></li>
         </ul>
       </nav>
 
@@ -303,6 +303,46 @@ export default function App() {
         </div>
       </section>
 
+      {/* WHY SAMSARA */}
+      <section id="why">
+        <div className="container">
+          <div className="eyebrow">Why Samsara</div>
+          <h2>Work that matters to the world with people who care</h2>
+          <p className="section-sub">Every company I've wanted to work for has had two things in common: work that matters beyond a screen, and people who make you better just by being in the room. Samsara has both.</p>
+
+          <div className="why-grid">
+            <div className="why-card">
+              <i className="ti ti-heart-handshake why-icon"></i>
+              <div className="why-title">People-centered</div>
+              <p className="why-desc">The experience with the team so far has been genuinely exceptional — thoughtful, curious, and generous with their time. Samsara's reputation for its people in the tech industry isn't marketing. I've felt it firsthand.</p>
+            </div>
+            <div className="why-card">
+              <i className="ti ti-world why-icon"></i>
+              <div className="why-title">Work that moves the world</div>
+              <p className="why-desc">Fleet operations are the invisible infrastructure of modern life. The drivers, dispatchers, and operators Samsara serves keep supply chains moving and people safe. That's a category of impact most tech companies never get close to.</p>
+            </div>
+            <div className="why-card">
+              <i className="ti ti-users why-icon"></i>
+              <div className="why-title">DEI as a real commitment</div>
+              <p className="why-desc">Samsara's focus on diversity, equity, and inclusion shows up in who's in the room and who gets heard — a signal of the kind of culture where I do my best work.</p>
+            </div>
+            <div className="why-card">
+              <i className="ti ti-hammer why-icon"></i>
+              <div className="why-title">Builders who stay builders</div>
+              <p className="why-desc">Sanjit and John are still in the building. That founder-led energy — the urgency, the directness, the bias toward doing over discussing — is the environment where I've always contributed the most.</p>
+            </div>
+          </div>
+
+          <div className="closing-card">
+            <i className="ti ti-quote" style={{ fontSize: "24px", color: "var(--amber)", flexShrink: 0, marginTop: "2px" }}></i>
+            <div>
+              <p className="closing-text">I'm not looking for the next job. I'm looking for the place where the work is hard, the people are exceptional, and what we build actually matters to the people using it. That's Samsara.</p>
+              <div className="closing-attr">— Why I'm here</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SEE MY WORK */}
       <section id="work" style={{ background: "#fff" }}>
         <div className="container">
@@ -366,46 +406,6 @@ export default function App() {
               <p className="work-desc">18+ years across product management, program management, and product & engineering operations.</p>
               <span className="work-link">Download PDF <i className="ti ti-arrow-up-right"></i></span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY SAMSARA */}
-      <section id="why">
-        <div className="container">
-          <div className="eyebrow">Why Samsara</div>
-          <h2>Work that matters to the world with people who care</h2>
-          <p className="section-sub">Every company I've wanted to work for has had two things in common: work that matters beyond a screen, and people who make you better just by being in the room. Samsara has both.</p>
-
-          <div className="why-grid">
-            <div className="why-card">
-              <i className="ti ti-heart-handshake why-icon"></i>
-              <div className="why-title">People-centered</div>
-              <p className="why-desc">The experience with the team so far has been genuinely exceptional — thoughtful, curious, and generous with their time. Samsara's reputation for its people in the tech industry isn't marketing. I've felt it firsthand.</p>
-            </div>
-            <div className="why-card">
-              <i className="ti ti-world why-icon"></i>
-              <div className="why-title">Work that moves the world</div>
-              <p className="why-desc">Fleet operations are the invisible infrastructure of modern life. The drivers, dispatchers, and operators Samsara serves keep supply chains moving and people safe. That's a category of impact most tech companies never get close to.</p>
-            </div>
-            <div className="why-card">
-              <i className="ti ti-users why-icon"></i>
-              <div className="why-title">DEI as a real commitment</div>
-              <p className="why-desc">Samsara's focus on diversity, equity, and inclusion shows up in who's in the room and who gets heard — a signal of the kind of culture where I do my best work.</p>
-            </div>
-            <div className="why-card">
-              <i className="ti ti-hammer why-icon"></i>
-              <div className="why-title">Builders who stay builders</div>
-              <p className="why-desc">Sanjit and John are still in the building. That founder-led energy — the urgency, the directness, the bias toward doing over discussing — is the environment where I've always contributed the most.</p>
-            </div>
-          </div>
-
-          <div className="closing-card">
-            <i className="ti ti-quote" style={{ fontSize: "24px", color: "var(--amber)", flexShrink: 0, marginTop: "2px" }}></i>
-            <div>
-              <p className="closing-text">I'm not looking for the next job. I'm looking for the place where the work is hard, the people are exceptional, and what we build actually matters to the people using it. That's Samsara.</p>
-              <div className="closing-attr">— Why I'm here</div>
-            </div>
           </div>
         </div>
       </section>
