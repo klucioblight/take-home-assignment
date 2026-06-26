@@ -336,6 +336,51 @@ h3 {
   border: 1px solid var(--border);
 }
 
+/* SEE MY WORK */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.work-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.work-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(0, 119, 182, 0.1);
+}
+.work-card-top { display: flex; align-items: center; gap: 10px; }
+.work-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+.work-title { font-size: 13px; font-weight: 600; color: var(--navy); }
+.work-domain { font-size: 11px; color: var(--text-muted); }
+.work-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
+.work-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
 /* PHILOSOPHY CALLOUT */
 .philosophy-card {
   background: var(--navy);

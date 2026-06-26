@@ -70,6 +70,7 @@ export default function App() {
           <li><a href="#stories">Stories</a></li>
           <li><a href="#advocacy">Advocacy</a></li>
           <li><a href="#ai">AI Tools</a></li>
+          <li><a href="#work">My Work</a></li>
           <li><a href="#why">Why Samsara</a></li>
         </ul>
       </nav>
@@ -298,6 +299,73 @@ export default function App() {
               <p className="phil-text">The key to implementing AI at a company is knowing when to use the right tool for the right purpose — while ensuring it's the most cost-efficient choice for the business.</p>
               <p className="phil-sub">Not every problem needs the most powerful model. Part of the work is matching capability to need: using a lighter, faster tool where that's sufficient, and reserving heavier infrastructure for where it actually moves the needle. Responsible AI adoption is as much about restraint as it is about reach.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEE MY WORK */}
+      <section id="work" style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="eyebrow">See my work on the web</div>
+          <h2>Writing, speaking &amp; thinking out loud</h2>
+          <p className="section-sub">A selection of public work — articles, author profiles, and a conference talk.</p>
+
+          <div className="work-grid">
+            <a className="work-card" href="https://kimblight.substack.com" target="_blank" rel="noopener noreferrer">
+              <div className="work-card-top">
+                <div className="work-logo" style={{ background: "#fff3e4", color: "#e06c00" }}>
+                  <i className="ti ti-pencil"></i>
+                </div>
+                <div>
+                  <div className="work-title">Substack</div>
+                  <div className="work-domain">kimblight.substack.com</div>
+                </div>
+              </div>
+              <p className="work-desc">Writing on product operations, women in tech, career growth, and building teams that last.</p>
+              <span className="work-link">Read <i className="ti ti-arrow-up-right"></i></span>
+            </a>
+
+            <a className="work-card" href="https://www.pendo.io/pendo-blog/blog-authors/kim-blight/" target="_blank" rel="noopener noreferrer">
+              <div className="work-card-top">
+                <div className="work-logo" style={{ background: "#e8f4ff", color: "#0062cc" }}>
+                  <i className="ti ti-article"></i>
+                </div>
+                <div>
+                  <div className="work-title">Pendo Blog</div>
+                  <div className="work-domain">pendo.io</div>
+                </div>
+              </div>
+              <p className="work-desc">Published author on the Pendo blog — product management, operations, and lessons from the field.</p>
+              <span className="work-link">Read <i className="ti ti-arrow-up-right"></i></span>
+            </a>
+
+            <a className="work-card" href="https://www.youtube.com/watch?v=f7n7u6FtldQ" target="_blank" rel="noopener noreferrer">
+              <div className="work-card-top">
+                <div className="work-logo" style={{ background: "#fff0f0", color: "#cc0000" }}>
+                  <i className="ti ti-brand-youtube"></i>
+                </div>
+                <div>
+                  <div className="work-title">Conference Talk</div>
+                  <div className="work-domain">youtube.com</div>
+                </div>
+              </div>
+              <p className="work-desc">Watch a recorded talk — speaking on stage to audiences ranging from hundreds to thousands.</p>
+              <span className="work-link">Watch <i className="ti ti-arrow-up-right"></i></span>
+            </a>
+
+            <a className="work-card" href="/Kim_Blight_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <div className="work-card-top">
+                <div className="work-logo" style={{ background: "var(--accent-light)", color: "var(--navy-light)" }}>
+                  <i className="ti ti-file-cv"></i>
+                </div>
+                <div>
+                  <div className="work-title">Résumé</div>
+                  <div className="work-domain">Kim Blight · 2026</div>
+                </div>
+              </div>
+              <p className="work-desc">18+ years across product management, program management, and product & engineering operations.</p>
+              <span className="work-link">Download PDF <i className="ti ti-arrow-up-right"></i></span>
+            </a>
           </div>
         </div>
       </section>
