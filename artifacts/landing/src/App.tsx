@@ -344,6 +344,49 @@ export default function App() {
                 </div>
               </div>
             </div>
+            <div className="agent-card" style={{ marginTop: "12px" }}>
+              <div className="agent-header">
+                <div className="agent-title-row">
+                  <div className="agent-logo"><i className="ti ti-mail-bolt"></i></div>
+                  <div>
+                    <div className="agent-name">stuck@ inbox agent</div>
+                    <div className="agent-stack">Gmail MCP · Google Drive MCP · Jira MCP · Confluence MCP · Claude</div>
+                  </div>
+                </div>
+                <p className="agent-desc">An agentic loop that watches an internal help alias, searches three knowledge sources simultaneously, and either auto-replies with a sourced answer or opens a Jira ticket — then writes every resolved answer back to the wiki so the same question never reaches a human twice.</p>
+              </div>
+              <div className="agent-pipeline agent-pipeline-5">
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#E8F4FF", color: "#0062CC" }}><i className="ti ti-mail-search"></i></div>
+                  <div className="pipeline-label">Watch inbox</div>
+                  <div className="pipeline-detail">Gmail MCP polls stuck@ continuously. Claude parses the core question, strips reply-chain noise, and deduplicates against Confluence so repeat asks never reach humans.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EAF3DE", color: "#27500A" }}><i className="ti ti-topology-star"></i></div>
+                  <div className="pipeline-label">Search in parallel</div>
+                  <div className="pipeline-detail">Google Drive, Jira, and Confluence MCPs fire simultaneously. Results come back ranked by relevance and recency before Claude writes a word.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "var(--amber-light)", color: "#7A4F00" }}><i className="ti ti-adjustments-horizontal"></i></div>
+                  <div className="pipeline-label">Apply /stuck skill</div>
+                  <div className="pipeline-detail">A purpose-built prompt formats the answer for an internal audience: direct, source-linked, under 200 words — and outputs a confidence score to gate auto-reply vs. escalation.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EEEDFE", color: "#3C3489" }}><i className="ti ti-git-pull-request"></i></div>
+                  <div className="pipeline-label">Reply or escalate</div>
+                  <div className="pipeline-detail">High confidence → auto-reply via Gmail. Low confidence → Jira ticket assigned to the right team, CC'd to stuck@, and a holding reply sent so the asker isn't left in silence.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#E1F5EE", color: "#085041" }}><i className="ti ti-books"></i></div>
+                  <div className="pipeline-label">Write the wiki</div>
+                  <div className="pipeline-detail">Once resolved — by agent or human — a Confluence page is created (or appended) with the question, verified answer, and source links. The next identical ask surfaces on the first search pass.</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="philosophy-card">

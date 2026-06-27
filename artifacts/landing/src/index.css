@@ -437,6 +437,9 @@ h3 {
   padding: 1.25rem 1.5rem;
   background: var(--off-white);
 }
+.agent-pipeline-5 {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+}
 .pipeline-step { display: flex; flex-direction: column; gap: 6px; }
 .pipeline-icon {
   width: 32px;
