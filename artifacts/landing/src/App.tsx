@@ -387,6 +387,49 @@ export default function App() {
                 </div>
               </div>
             </div>
+            <div className="agent-card" style={{ marginTop: "12px" }}>
+              <div className="agent-header">
+                <div className="agent-title-row">
+                  <div className="agent-logo"><i className="ti ti-presentation-analytics"></i></div>
+                  <div>
+                    <div className="agent-name">NPI QBR deck agent</div>
+                    <div className="agent-stack">Jira MCP · Claude · Google Drive MCP · Slack MCP</div>
+                  </div>
+                </div>
+                <p className="agent-desc">A quarterly cron that pulls the roadmap and changelog from Jira, translates engineering language into customer-ready copy, and injects it into the company slide template — so reps always have an accurate, current QBR deck without chasing product or PM for content.</p>
+              </div>
+              <div className="agent-pipeline agent-pipeline-5">
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#E8F4FF", color: "#0062CC" }}><i className="ti ti-inbox"></i></div>
+                  <div className="pipeline-label">Pull from Jira</div>
+                  <div className="pipeline-detail">Queries the roadmap board for customer-visible tickets and the last-90-day changelog. Also pulls linked customer-request tickets to surface which features real accounts asked for.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "var(--amber-light)", color: "#7A4F00" }}><i className="ti ti-cpu"></i></div>
+                  <div className="pipeline-label">Segment &amp; prioritize</div>
+                  <div className="pipeline-detail">Claude groups raw tickets into 3–5 customer-meaningful themes. Within each theme, items rank by linked customer-request count — so the deck leads with what matters to the account, not what shipped last.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EAF3DE", color: "#27500A" }}><i className="ti ti-writing"></i></div>
+                  <div className="pipeline-label">Write customer copy</div>
+                  <div className="pipeline-detail">"Refactor RBAC middleware" becomes "Control exactly who sees which dashboards." 25-word cap per bullet, no jargon, tense-framed for shipped vs. coming soon vs. horizon.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EEEDFE", color: "#3C3489" }}><i className="ti ti-layout-dashboard"></i></div>
+                  <div className="pipeline-label">Build the deck</div>
+                  <div className="pipeline-detail">Copy injects into the PowerPoint template from Google Drive. Title slide, one shipped slide per theme, a visual timeline, and a what's next slide — layout and branding untouched.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#E1F5EE", color: "#085041" }}><i className="ti ti-send"></i></div>
+                  <div className="pipeline-label">Publish &amp; notify</div>
+                  <div className="pipeline-detail">Deck uploads to <code>/QBR Assets/Q3 2026/</code> in Drive. Agent posts a link to #customer-success in Slack. Run on a quarterly cron — the folder stays current automatically.</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="philosophy-card">
