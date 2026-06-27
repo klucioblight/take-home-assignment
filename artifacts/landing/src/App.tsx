@@ -304,6 +304,48 @@ export default function App() {
             </div>
           </div>
 
+          {/* AGENT BUILDS */}
+          <div className="agent-section">
+            <div className="agent-section-label">Agent builds</div>
+            <div className="agent-card">
+              <div className="agent-header">
+                <div className="agent-title-row">
+                  <div className="agent-logo"><i className="ti ti-robot"></i></div>
+                  <div>
+                    <div className="agent-name">Bug triage &amp; auto-fix agent</div>
+                    <div className="agent-stack">Jira MCP · Claude · Windsurf Cascade · GitHub</div>
+                  </div>
+                </div>
+                <p className="agent-desc">An end-to-end agentic loop that ingests incoming bug tickets, classifies and triages them with Claude, and — for auto-fixable issues — writes the patch, generates a regression test, and opens a pull request, all without human intervention.</p>
+              </div>
+              <div className="agent-pipeline">
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#E8F4FF", color: "#0062CC" }}><i className="ti ti-brand-jira"></i></div>
+                  <div className="pipeline-label">Ingest</div>
+                  <div className="pipeline-detail">Polls Jira via MCP for new bug tickets. Pulls title, description, customer type, and ideal state.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "var(--amber-light)", color: "#7A4F00" }}><i className="ti ti-cpu"></i></div>
+                  <div className="pipeline-label">Classify</div>
+                  <div className="pipeline-detail">Claude reads each ticket: real bug, duplicate, or feature request? Ranks severity, identifies the subsystem from the stack trace, and scores auto-fix confidence.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EAF3DE", color: "#27500A" }}><i className="ti ti-git-branch"></i></div>
+                  <div className="pipeline-label">Fix</div>
+                  <div className="pipeline-detail">Windsurf Cascade reads the relevant source files, writes the patch, and generates a matching regression test — validated inside a sandboxed branch.</div>
+                </div>
+                <div className="pipeline-arrow"><i className="ti ti-arrow-right"></i></div>
+                <div className="pipeline-step">
+                  <div className="pipeline-icon" style={{ background: "#EEEDFE", color: "#3C3489" }}><i className="ti ti-git-pull-request"></i></div>
+                  <div className="pipeline-label">Ship or review</div>
+                  <div className="pipeline-detail">Tests pass → PR opened on a <code>fix/</code> branch with root cause, diff summary, and ticket link. Low-confidence fixes open as draft PRs for human review.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="philosophy-card">
             <i className="ti ti-scale phil-icon"></i>
             <div>
