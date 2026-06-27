@@ -320,7 +320,7 @@ export default function App() {
               </div>
               <div className="agent-pipeline">
                 <div className="pipeline-step">
-                  <div className="pipeline-icon" style={{ background: "#E8F4FF", color: "#0062CC" }}><i className="ti ti-brand-jira"></i></div>
+                  <div className="pipeline-icon" style={{ background: "#E8F4FF", color: "#0062CC" }}><i className="ti ti-inbox"></i></div>
                   <div className="pipeline-label">Ingest</div>
                   <div className="pipeline-detail">Polls Jira via MCP for new bug tickets. Pulls title, description, customer type, and ideal state.</div>
                 </div>
