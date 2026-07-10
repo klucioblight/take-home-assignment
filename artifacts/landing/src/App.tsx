@@ -430,6 +430,16 @@ export default function App() {
               <h3>Teams building in silos</h3>
               <p className="pillar-desc">Teams aren't talking across products about what they're building, leading to duplicate effort and missed opportunities to accelerate development.</p>
             </div>
+            <div className="pillar-card">
+              <i className="ti ti-heart-handshake pillar-icon"></i>
+              <h3>Good people, missing a bridge</h3>
+              <p className="pillar-desc">Really kind people who genuinely want to do the right thing — they just need a bridge to help them communicate it clearly across teams.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-robot pillar-icon"></i>
+              <h3>Unclear AI tool strategy</h3>
+              <p className="pillar-desc">Understanding which AI tools to use, and how to apply them, is still a gap standing between teams and faster development.</p>
+            </div>
           </div>
 
           <div className="philosophy-card">
