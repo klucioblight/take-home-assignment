@@ -69,6 +69,7 @@ export default function App() {
         <ul className="nav-links">
           <li><a href="#stories">Stories</a></li>
           <li><a href="#ai">AI Tools</a></li>
+          <li><a href="#themes">Themes</a></li>
           <li><a href="#why">Why Samsara</a></li>
           <li><a href="#advocacy">Advocacy</a></li>
           <li><a href="#work">My Work</a></li>
@@ -386,6 +387,57 @@ export default function App() {
               <div className="phil-label">My AI philosophy</div>
               <p className="phil-text">The key to implementing AI at a company is knowing when to use the right tool for the right purpose — while ensuring it's the most cost-efficient choice for the business.</p>
               <p className="phil-sub">Not every problem needs the most powerful model. Part of the work is matching capability to need: using a lighter, faster tool where that's sufficient, and reserving heavier infrastructure for where it actually moves the needle. Responsible AI adoption is as much about restraint as it is about reach.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PANEL THEMES */}
+      <section id="themes" style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="eyebrow">What I heard</div>
+          <h2>Themes I heard in my panel discussions</h2>
+          <p className="section-sub">Across every conversation, a few patterns kept surfacing — independent of who I was talking to or which team they sat on.</p>
+
+          <div className="why-grid" style={{ marginBottom: "1.5rem" }}>
+            <div className="pillar-card">
+              <i className="ti ti-database-search pillar-icon"></i>
+              <h3>Scattered data systems</h3>
+              <p className="pillar-desc">Knowing where to find the specific data to solve a problem or measure success is, itself, a problem.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-git-compare pillar-icon"></i>
+              <h3>Multiple sources of truth</h3>
+              <p className="pillar-desc">Teams ship roadmaps through different tools, making the experience inconsistent and heavily dependent on humans stitching it together for new product introductions.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-help-circle pillar-icon"></i>
+              <h3>Underused product operations</h3>
+              <p className="pillar-desc">PMs aren't sure how — or when — they can tap product operations as a resource, so the function's leverage goes underutilized.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-clock-hour-4 pillar-icon"></i>
+              <h3>VPs buried in admin work</h3>
+              <p className="pillar-desc">VPs of Product are spending more than half their time on "admin" work — all-hands decks, planning docs — instead of product strategy.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-users-group pillar-icon"></i>
+              <h3>No room to deliberate</h3>
+              <p className="pillar-desc">Bringing decision-makers together to deliberate and discuss — rather than decide in silos — is a structural gap, not a one-off ask.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-copy pillar-icon"></i>
+              <h3>Teams building in silos</h3>
+              <p className="pillar-desc">Teams aren't talking across products about what they're building, leading to duplicate effort and missed opportunities to accelerate development.</p>
+            </div>
+          </div>
+
+          <div className="philosophy-card">
+            <i className="ti ti-bulb phil-icon"></i>
+            <div>
+              <div className="phil-label">Why this matters to me</div>
+              <p className="phil-text">Every one of these is a problem a Product Operations leader should be able to walk in and solve.</p>
+              <p className="phil-sub">Scattered data, fragmented tooling, underused ops capacity, VP time sunk in admin work, missing forums for decision-making, and teams building in silos — these are exactly the bottlenecks I've spent my career eliminating. The job isn't to point at the problem; it's to build the system, forum, or tool that removes it and accelerates the team's time to ship.</p>
             </div>
           </div>
         </div>
