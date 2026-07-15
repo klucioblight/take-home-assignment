@@ -262,7 +262,7 @@ export default function App() {
                   <div className="agent-logo"><i className="ti ti-robot"></i></div>
                   <div>
                     <div className="agent-name">Bug triage &amp; auto-fix agent</div>
-                    <div className="agent-stack">Jira MCP · Claude · Windsurf Cascade · GitHub</div>
+                    <div className="agent-stack">Jira MCP · Claude 3.5 Sonnet · Windsurf Cascade · GitHub</div>
                   </div>
                 </div>
                 <p className="agent-desc">An end-to-end agentic loop that ingests incoming bug tickets, classifies and triages them with Claude, and — for auto-fixable issues — writes the patch, generates a regression test, and opens a pull request, all without human intervention.</p>
@@ -299,7 +299,7 @@ export default function App() {
                   <div className="agent-logo"><i className="ti ti-mail-bolt"></i></div>
                   <div>
                     <div className="agent-name">stuck@ inbox agent</div>
-                    <div className="agent-stack">Gmail MCP · Google Drive MCP · Jira MCP · Confluence MCP · Claude</div>
+                    <div className="agent-stack">Gmail MCP · Google Drive MCP · Jira MCP · Confluence MCP · Claude 3.7 Sonnet</div>
                   </div>
                 </div>
                 <p className="agent-desc">An agentic loop that watches an internal help alias, searches three knowledge sources simultaneously, and either auto-replies with a sourced answer or opens a Jira ticket — then writes every resolved answer back to the wiki so the same question never reaches a human twice.</p>
@@ -342,7 +342,7 @@ export default function App() {
                   <div className="agent-logo"><i className="ti ti-presentation-analytics"></i></div>
                   <div>
                     <div className="agent-name">NPI QBR deck agent</div>
-                    <div className="agent-stack">Jira MCP · Claude · Google Drive MCP · Slack MCP</div>
+                    <div className="agent-stack">Jira MCP · Claude Opus 4 · Google Drive MCP · Slack MCP</div>
                   </div>
                 </div>
                 <p className="agent-desc">A quarterly cron that pulls the roadmap and changelog from Jira, translates engineering language into customer-ready copy, and injects it into the company slide template — so reps always have an accurate, current QBR deck without chasing product or PM for content.</p>
