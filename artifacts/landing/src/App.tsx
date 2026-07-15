@@ -292,6 +292,10 @@ export default function App() {
                   <div className="pipeline-detail">Tests pass → PR opened on a <code>fix/</code> branch with root cause, diff summary, and ticket link. Low-confidence fixes open as draft PRs for human review.</div>
                 </div>
               </div>
+              <div className="agent-model-note">
+                <i className="ti ti-cpu"></i>
+                <span><strong>Why Claude 3.5 Sonnet:</strong> Fast and cost-efficient for high-volume classification — the right choice for a continuous triage loop that needs reliable structured output without burning budget on every ticket.</span>
+              </div>
             </div>
             <div className="agent-card" style={{ marginTop: "12px" }}>
               <div className="agent-header">
@@ -335,6 +339,10 @@ export default function App() {
                   <div className="pipeline-detail">Once resolved — by agent or human — a Confluence page is created (or appended) with the question, verified answer, and source links. The next identical ask surfaces on the first search pass.</div>
                 </div>
               </div>
+              <div className="agent-model-note">
+                <i className="ti ti-cpu"></i>
+                <span><strong>Why Claude 3.7 Sonnet:</strong> Stronger reasoning handles the ambiguity of natural-language help requests and multi-source synthesis — extended thinking lets it reconcile conflicting results across Confluence, Drive, and Jira before committing to a reply.</span>
+              </div>
             </div>
             <div className="agent-card" style={{ marginTop: "12px" }}>
               <div className="agent-header">
@@ -377,6 +385,10 @@ export default function App() {
                   <div className="pipeline-label">Publish &amp; notify</div>
                   <div className="pipeline-detail">Deck uploads to <code>/QBR Assets/Q3 2026/</code> in Drive. Agent posts a link to #customer-success in Slack. Run on a quarterly cron — the folder stays current automatically.</div>
                 </div>
+              </div>
+              <div className="agent-model-note">
+                <i className="ti ti-cpu"></i>
+                <span><strong>Why Claude Opus 4:</strong> The output goes directly to customers in a QBR room, so copy quality can't be an afterthought. Opus 4 produces the tightest, most polished prose — worth the cost when every bullet has to be accurate, concise, and on-brand.</span>
               </div>
             </div>
           </div>
