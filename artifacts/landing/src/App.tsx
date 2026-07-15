@@ -183,7 +183,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo logo-gemini"><i className="ti ti-sparkles"></i></div>
-                <div><div className="tool-name">Gemini</div><div className="tool-maker">Google</div></div>
+                <div><div className="tool-name">Gemini</div></div>
               </div>
               <p className="tool-use">Built the first internal Gems for P&E — automating changelogs, PRD drafts, meeting prep, and customer feedback intake. The foundation of our AI workflow stack.</p>
               <div className="tool-tags">
@@ -195,7 +195,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo logo-cursor"><i className="ti ti-terminal-2"></i></div>
-                <div><div className="tool-name">Cursor</div><div className="tool-maker">Anysphere</div></div>
+                <div><div className="tool-name">Cursor</div></div>
               </div>
               <p className="tool-use">Deployed for engineers to accelerate code writing and review — getting builders out of boilerplate and into architecture and product thinking.</p>
               <div className="tool-tags">
@@ -206,7 +206,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo logo-opencode"><i className="ti ti-code"></i></div>
-                <div><div className="tool-name">Opencode</div><div className="tool-maker">Charm</div></div>
+                <div><div className="tool-name">Opencode</div></div>
               </div>
               <p className="tool-use">Built skill files to auto-generate PRD first drafts with embedded customer notes, wiki context, and data. Removed the blank-page problem for PMs entirely.</p>
               <div className="tool-tags">
@@ -218,7 +218,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo logo-windsurf"><i className="ti ti-wind"></i></div>
-                <div><div className="tool-name">Windsurf</div><div className="tool-maker">Codeium</div></div>
+                <div><div className="tool-name">Windsurf</div></div>
               </div>
               <p className="tool-use">Rolled out for agentic coding workflows — letting engineers delegate longer-horizon tasks and iterate faster on prototypes.</p>
               <div className="tool-tags">
@@ -230,7 +230,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo logo-anthropic"><i className="ti ti-cpu"></i></div>
-                <div><div className="tool-name">Anthropic / Claude</div><div className="tool-maker">Anthropic</div></div>
+                <div><div className="tool-name">Anthropic / Claude</div></div>
               </div>
               <p className="tool-use">Used for reasoning-heavy work — complex document synthesis, cross-functional alignment prep, and internal tools that needed nuanced judgment, not just speed.</p>
               <div className="tool-tags">
@@ -242,7 +242,7 @@ export default function App() {
             <div className="tool-card">
               <div className="tool-top">
                 <div className="tool-logo" style={{ background: "#F0F4FF", color: "#4353FF" }}><i className="ti ti-world-bolt"></i></div>
-                <div><div className="tool-name">Replit</div><div className="tool-maker">Replit</div></div>
+                <div><div className="tool-name">Replit</div></div>
               </div>
               <p className="tool-use">Used to deploy web experiences quickly — from internal tools to interview pages like this one. Replit's AI agent lets me ship functional apps without a traditional dev environment.</p>
               <div className="tool-tags">
