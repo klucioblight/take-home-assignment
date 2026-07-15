@@ -440,6 +440,16 @@ export default function App() {
               <h3>Unclear AI tool strategy</h3>
               <p className="pillar-desc">Understanding which AI tools to use, and how to apply them, is still a gap standing between teams and faster development.</p>
             </div>
+            <div className="pillar-card">
+              <i className="ti ti-eye pillar-icon"></i>
+              <h3>Blind spots in launch visibility</h3>
+              <p className="pillar-desc">There's no consistent mechanism for internal teams to see what's coming — especially Tier 3 launches: the smaller features that ship quietly but carry real weight for customers.</p>
+            </div>
+            <div className="pillar-card">
+              <i className="ti ti-speakerphone pillar-icon"></i>
+              <h3>An untapped PMM partnership</h3>
+              <p className="pillar-desc">The relationship between product operations and PMM is one of the highest-leverage cross-functional partnerships — and there's a real opportunity to build it intentionally.</p>
+            </div>
           </div>
 
           <div className="philosophy-card">
