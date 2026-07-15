@@ -409,53 +409,53 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">What I heard</div>
           <h2>Themes I heard in my panel discussions</h2>
-          <p className="section-sub">Across every conversation, a few patterns kept surfacing — independent of who I was talking to or which team they sat on.</p>
+          <p className="section-sub">Across every conversation, a few consistent themes emerged — shared thoughtfully by people who care deeply about doing great work together.</p>
 
           <div className="why-grid" style={{ marginBottom: "1.5rem" }}>
             <div className="pillar-card">
               <i className="ti ti-database-search pillar-icon"></i>
               <h3>Scattered data systems</h3>
-              <p className="pillar-desc">Knowing where to find the specific data to solve a problem or measure success is, itself, a problem.</p>
+              <p className="pillar-desc">There's a real opportunity to make data more discoverable — so teams spend less time hunting for answers and more time acting on them.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-git-compare pillar-icon"></i>
               <h3>Multiple sources of truth</h3>
-              <p className="pillar-desc">Teams ship roadmaps through different tools, making the experience inconsistent and heavily dependent on humans stitching it together for new product introductions.</p>
+              <p className="pillar-desc">Different teams naturally gravitate toward different tools — and there's real upside in bringing those workflows closer together to create a more consistent, scalable NPI experience.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-help-circle pillar-icon"></i>
               <h3>Underused product operations</h3>
-              <p className="pillar-desc">PMs aren't sure how — or when — they can tap product operations as a resource, so the function's leverage goes underutilized.</p>
+              <p className="pillar-desc">There's a big opportunity to make product operations more visible and accessible — so PMs know exactly when and how to pull the function in to unblock their work.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-clock-hour-4 pillar-icon"></i>
               <h3>VPs buried in admin work</h3>
-              <p className="pillar-desc">VPs of Product are spending more than half their time on "admin" work — all-hands decks, planning docs — instead of product strategy.</p>
+              <p className="pillar-desc">VPs of Product have enormous strategic capacity — and there's meaningful room to reclaim more of it by lifting the administrative weight off their plates.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-users-group pillar-icon"></i>
               <h3>No room to deliberate</h3>
-              <p className="pillar-desc">Bringing decision-makers together to deliberate and discuss — rather than decide in silos — is a structural gap, not a one-off ask.</p>
+              <p className="pillar-desc">There's appetite to create better forums where the right people can come together, think through hard problems, and move forward with shared confidence.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-copy pillar-icon"></i>
               <h3>Teams building in silos</h3>
-              <p className="pillar-desc">Teams aren't talking across products about what they're building, leading to duplicate effort and missed opportunities to accelerate development.</p>
+              <p className="pillar-desc">There's an exciting opportunity to build more cross-product visibility — so teams can spot where they're moving in the same direction and accelerate together instead of in parallel.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-heart-handshake pillar-icon"></i>
               <h3>Good people, missing a bridge</h3>
-              <p className="pillar-desc">Really kind people who genuinely want to do the right thing — they just need a bridge to help them communicate it clearly across teams.</p>
+              <p className="pillar-desc">Genuinely great people who care deeply about doing right by each other — they'd benefit from a stronger bridge to communicate that intent clearly across teams.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-robot pillar-icon"></i>
               <h3>Unclear AI tool strategy</h3>
-              <p className="pillar-desc">Understanding which AI tools to use, and how to apply them, is still a gap standing between teams and faster development.</p>
+              <p className="pillar-desc">There's a real appetite for AI — and a clear opportunity to help teams identify the right tools and put them to work in ways that actually speed up development.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-eye pillar-icon"></i>
               <h3>Blind spots in launch visibility</h3>
-              <p className="pillar-desc">There's no consistent mechanism for internal teams to see what's coming — especially Tier 3 launches: the smaller features that ship quietly but carry real weight for customers.</p>
+              <p className="pillar-desc">There's a great opportunity to give internal teams better visibility into what's on the horizon — especially the Tier 3 launches that may be smaller in scope but carry real weight for customers.</p>
             </div>
             <div className="pillar-card">
               <i className="ti ti-speakerphone pillar-icon"></i>
@@ -468,8 +468,8 @@ export default function App() {
             <i className="ti ti-bulb phil-icon"></i>
             <div>
               <div className="phil-label">Why this matters to me</div>
-              <p className="phil-text">Every one of these is a problem a Product Operations leader should be able to walk in and solve.</p>
-              <p className="phil-sub">Scattered data, fragmented tooling, underused ops capacity, VP time sunk in admin work, missing forums for decision-making, and teams building in silos — these are exactly the bottlenecks I've spent my career eliminating. The job isn't to point at the problem; it's to build the system, forum, or tool that removes it and accelerates the team's time to ship.</p>
+              <p className="phil-text">Every one of these is an opportunity a Product Operations leader is built to address.</p>
+              <p className="phil-sub">Better data discovery, more consistent tooling, a more visible ops function, freed-up VP bandwidth, stronger forums for deliberation, cross-product connection — these are exactly the conditions a great Product Ops leader helps create. The job is to build the systems, bridges, and forums that make it easier for great people to do their best work — and ship faster as a result.</p>
             </div>
           </div>
         </div>
