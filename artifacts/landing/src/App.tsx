@@ -81,7 +81,7 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">Product Operations · Samsara Interview</div>
           <span className="amber-bar"></span>
-          <h1>Kim Blight</h1>
+          <h1><span className="amber-underline">Kim Blight</span></h1>
           <p className="hero-title">Product Operations Leader · Builder · Systems Thinker</p>
           <p className="hero-tagline">I build lightweight frameworks that let fast-moving teams move even faster — without the overhead that slows them down. I use AI tooling to unlock what humans can't do alone, and I bring alignment to rooms full of opinionated builders.</p>
         </div>
