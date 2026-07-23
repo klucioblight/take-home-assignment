@@ -390,14 +390,6 @@ export default function App() {
             </div>
           </div>
 
-          <div className="philosophy-card">
-            <i className="ti ti-scale phil-icon"></i>
-            <div>
-              <div className="phil-label">My AI philosophy</div>
-              <p className="phil-text">The key to implementing AI at a company is knowing when to use the right tool for the right purpose — while ensuring it's the most cost-efficient choice for the business.</p>
-              <p className="phil-sub">Not every problem needs the most powerful model. Part of the work is matching capability to need: using a lighter, faster tool where that's sufficient, and reserving heavier infrastructure for where it actually moves the needle. Responsible AI adoption is as much about restraint as it is about reach.</p>
-            </div>
-          </div>
         </div>
       </section>
 
