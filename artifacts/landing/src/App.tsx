@@ -23,6 +23,44 @@ export default function App() {
         </div>
       </section>
 
+      {/* EXEC SUMMARY */}
+      <section id="summary" style={{ background: "#fff", borderTop: "none" }}>
+        <div className="container">
+          <div className="exec-summary">
+            <div className="exec-thesis">
+              <div className="eyebrow">At a glance</div>
+              <p className="exec-statement">18+ years building systems, programs, and teams that create measurable business impact. Current focus: AI-augmented workflows that eliminate friction at scale.</p>
+            </div>
+            <div className="exec-stats">
+              <div className="exec-stat">
+                <span className="exec-stat-num">18+</span>
+                <span className="exec-stat-label">years in product &amp; engineering ops</span>
+              </div>
+              <div className="exec-divider"></div>
+              <div className="exec-stat">
+                <span className="exec-stat-num">~$20M</span>
+                <span className="exec-stat-label">ACV from one program I built</span>
+              </div>
+              <div className="exec-divider"></div>
+              <div className="exec-stat">
+                <span className="exec-stat-num">80%</span>
+                <span className="exec-stat-label">fewer GTM launch surprises</span>
+              </div>
+              <div className="exec-divider"></div>
+              <div className="exec-stat">
+                <span className="exec-stat-num">40%</span>
+                <span className="exec-stat-label">faster ticket resolution</span>
+              </div>
+              <div className="exec-divider"></div>
+              <div className="exec-stat">
+                <span className="exec-stat-num">3+</span>
+                <span className="exec-stat-label">AI agents designed &amp; shipped</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PILLARS */}
       <section id="pillars" style={{ background: "#fff" }}>
         <div className="container">
