@@ -86,10 +86,13 @@ export default function App() {
                 <div className="pt-outcome-note">Removed an entire editorial review step from the comms process</div>
               </div>
               <div className="pt-cell pt-col-video">
-                <a href="#" className="pt-video-btn">
-                  <i className="ti ti-player-play"></i>
-                  <span>Watch</span>
-                </a>
+                <div className="pt-loom-wrap">
+                  <iframe
+                    src="https://www.loom.com/embed/YOUR_LOOM_ID_1"
+                    allowFullScreen
+                    className="pt-loom-iframe"
+                  />
+                </div>
               </div>
             </div>
 
@@ -112,10 +115,13 @@ export default function App() {
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Tiger team structure adopted as the company model for future cross-functional bets</div>
               </div>
               <div className="pt-cell pt-col-video">
-                <a href="#" className="pt-video-btn">
-                  <i className="ti ti-player-play"></i>
-                  <span>Watch</span>
-                </a>
+                <div className="pt-loom-wrap">
+                  <iframe
+                    src="https://www.loom.com/embed/YOUR_LOOM_ID_2"
+                    allowFullScreen
+                    className="pt-loom-iframe"
+                  />
+                </div>
               </div>
             </div>
 
@@ -138,10 +144,13 @@ export default function App() {
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Rapid prototyping became the team default; late-stage rework and surprises dropped</div>
               </div>
               <div className="pt-cell pt-col-video">
-                <a href="#" className="pt-video-btn">
-                  <i className="ti ti-player-play"></i>
-                  <span>Watch</span>
-                </a>
+                <div className="pt-loom-wrap">
+                  <iframe
+                    src="https://www.loom.com/embed/YOUR_LOOM_ID_3"
+                    allowFullScreen
+                    className="pt-loom-iframe"
+                  />
+                </div>
               </div>
             </div>
           </div>
