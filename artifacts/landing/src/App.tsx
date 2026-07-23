@@ -343,26 +343,6 @@ export default function App() {
 
             <div className="pt-row">
               <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Good people, missing a bridge</p>
-                <p className="pt-problem-desc">Genuine care across teams that isn't always translating into clear, consistent communication across functions.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Be the bridge — translate across functions so intent lands the way it was meant</li>
-                  <li>Connect people directly rather than building structures around connection</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Cross-team collaboration satisfaction score</li>
-                  <li>Reduction in escalation frequency</li>
-                  <li>Retrospective feedback quality</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
                 <p className="pt-problem-title">Unclear AI tool strategy</p>
                 <p className="pt-problem-desc">Real appetite for AI with no clear map of which tools to use for which problems — and risk of redundant spend.</p>
               </div>
