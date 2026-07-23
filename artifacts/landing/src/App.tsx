@@ -54,7 +54,7 @@ export default function App() {
       <section id="stories" style={{ background: "var(--off-white)" }}>
         <div className="container">
           <div className="eyebrow">My work · In detail</div>
-          <h2>Problem. What I did. Outcome.</h2>
+          <h2>Case studies</h2>
           <p className="section-sub">Three examples of exactly how I operate — the problem I walked into, what I built or changed, and what happened as a result.</p>
 
           <div className="portfolio-table">
