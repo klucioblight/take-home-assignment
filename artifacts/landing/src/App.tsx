@@ -62,7 +62,6 @@ export default function App() {
               <div className="pt-cell pt-col-problem">Problem</div>
               <div className="pt-cell pt-col-action">Exactly what I did</div>
               <div className="pt-cell pt-col-outcome">Outcome</div>
-              <div className="pt-cell pt-col-video">Deep dive</div>
             </div>
 
             <div className="pt-row">
@@ -85,15 +84,6 @@ export default function App() {
                 <div className="pt-outcome-label">reclaimed across triage, meeting prep, and NPI</div>
                 <div className="pt-outcome-note">Removed an entire editorial review step from the comms process</div>
               </div>
-              <div className="pt-cell pt-col-video">
-                <div className="pt-loom-wrap">
-                  <iframe
-                    src="https://www.loom.com/embed/YOUR_LOOM_ID_1"
-                    allowFullScreen
-                    className="pt-loom-iframe"
-                  />
-                </div>
-              </div>
             </div>
 
             <div className="pt-row">
@@ -113,15 +103,6 @@ export default function App() {
                 <div className="pt-outcome-stat">On time &amp; on budget</div>
                 <div className="pt-outcome-label">certification delivered, new government vertical unlocked</div>
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Tiger team structure adopted as the company model for future cross-functional bets</div>
-              </div>
-              <div className="pt-cell pt-col-video">
-                <div className="pt-loom-wrap">
-                  <iframe
-                    src="https://www.loom.com/embed/YOUR_LOOM_ID_2"
-                    allowFullScreen
-                    className="pt-loom-iframe"
-                  />
-                </div>
               </div>
             </div>
 
@@ -143,15 +124,6 @@ export default function App() {
                 <div className="pt-outcome-label">months-long features now shipping in weeks</div>
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Rapid prototyping became the team default; late-stage rework and surprises dropped</div>
               </div>
-              <div className="pt-cell pt-col-video">
-                <div className="pt-loom-wrap">
-                  <iframe
-                    src="https://www.loom.com/embed/YOUR_LOOM_ID_3"
-                    allowFullScreen
-                    className="pt-loom-iframe"
-                  />
-                </div>
-              </div>
             </div>
             <div className="pt-row">
               <div className="pt-cell pt-col-problem">
@@ -172,15 +144,6 @@ export default function App() {
                 <div className="pt-outcome-stat">80% fewer</div>
                 <div className="pt-outcome-label">launch surprises for GTM teams</div>
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>The remaining 20% — fast-moving innovations — now reach GTM at the same time as customers. Chipping away at that daily.</div>
-              </div>
-              <div className="pt-cell pt-col-video">
-                <div className="pt-loom-wrap">
-                  <iframe
-                    src="https://www.loom.com/embed/YOUR_LOOM_ID_4"
-                    allowFullScreen
-                    className="pt-loom-iframe"
-                  />
-                </div>
               </div>
             </div>
           </div>
