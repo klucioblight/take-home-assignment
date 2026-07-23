@@ -54,7 +54,7 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">My work · In detail</div>
           <h2>Case studies</h2>
-          <p className="section-sub">Three examples of exactly how I operate — the problem I walked into, what I built or changed, and what happened as a result.</p>
+          <p className="section-sub">Examples of how I approach my work within organizations.</p>
 
           <div className="portfolio-table">
             <div className="pt-header">
