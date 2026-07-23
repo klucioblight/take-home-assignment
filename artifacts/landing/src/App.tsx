@@ -236,9 +236,9 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-outcome">
                 <ul className="pt-action-list">
-                  <li>PM awareness score (survey)</li>
-                  <li>Number of Product Ops engagements per quarter</li>
-                  <li>PM satisfaction with Ops support</li>
+                  <li>Features shipping faster after Product Ops gets involved</li>
+                  <li>Fewer blockers sitting unresolved between planning and execution</li>
+                  <li>PMs spending more time on product decisions, less on coordination</li>
                 </ul>
               </div>
             </div>
