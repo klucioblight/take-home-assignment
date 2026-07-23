@@ -1,66 +1,3 @@
-import { useState } from "react";
-
-interface StoryProps {
-  tag: string;
-  tagClass: string;
-  title: string;
-  sub: string;
-  situation: string;
-  task: string;
-  action: string;
-  result: string;
-  results: { icon: string; label: string; text: string }[];
-  defaultOpen?: boolean;
-}
-
-function StoryCard({ tag, tagClass, title, sub, situation, task, action, result, results, defaultOpen }: StoryProps) {
-  const [open, setOpen] = useState(!!defaultOpen);
-  return (
-    <div className={`story-card ${open ? "open" : ""}`}>
-      <div className="story-header" onClick={() => setOpen(!open)}>
-        <div>
-          <span className={`tag ${tagClass}`}>{tag}</span>
-          <p className="story-title">{title}</p>
-          <p className="story-sub">{sub}</p>
-        </div>
-        <i className="ti ti-chevron-down chevron"></i>
-      </div>
-      <div className="story-body">
-        <div className="star-grid">
-          <div className="star-item">
-            <div className="star-label">Situation</div>
-            <p className="star-text">{situation}</p>
-          </div>
-          <div className="star-item">
-            <div className="star-label">Task</div>
-            <p className="star-text">{task}</p>
-          </div>
-          <div className="star-item">
-            <div className="star-label">Action</div>
-            <p className="star-text">{action}</p>
-          </div>
-          <div className="star-item">
-            <div className="star-label">Result</div>
-            <p className="star-text">{result}</p>
-          </div>
-        </div>
-        <hr className="story-divider" />
-        <div className="results-row">
-          {results.map((r, i) => (
-            <div className="result-chip" key={i}>
-              <i className={`ti ${r.icon} result-icon`}></i>
-              <div>
-                <div className="result-label">{r.label}</div>
-                <p className="result-text">{r.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function App() {
   return (
     <>
@@ -113,62 +50,101 @@ export default function App() {
         </div>
       </section>
 
-      {/* STAR STORIES */}
+      {/* PORTFOLIO TABLE */}
       <section id="stories" style={{ background: "var(--off-white)" }}>
         <div className="container">
-          <div className="eyebrow">My stories · STAR format</div>
-          <h2>Click each to expand</h2>
-          <p className="section-sub">Short and sweet — the result and the impact, always front and center.</p>
+          <div className="eyebrow">My work · In detail</div>
+          <h2>Problem. What I did. Outcome.</h2>
+          <p className="section-sub">Three examples of exactly how I operate — the problem I walked into, what I built or changed, and what happened as a result.</p>
 
-          <StoryCard
-            defaultOpen
-            tag="Ownership"
-            tagClass="tag-ownership"
-            title="Scaling AI across product, engineering, and GTM"
-            sub="Built from zero — agentic tools, company-wide training, and measurable time back"
-            situation="Our product and engineering teams were doing repetitive, low-leverage work manually — changelogs, PRD drafts, customer meeting prep, bug filing — with no consistent AI tooling in place to address it."
-            task="My role was Product Operations, but I saw the opportunity to drive company-wide leverage. I took ownership of building and rolling out our entire internal AI capability — beyond what was asked of me."
-            action="Started with Gemini Gems to automate core P&E workflows: changelog review, PRD creation, customer feedback loops, bug intake, and NPI materials. As tooling matured, I introduced Windsurf and Opencode for builders, then led company-wide training to equip every team member with the skills to automate their repeatable work."
-            result="Measurable time savings across support, communications, and product operations — with faster resolution cycles and a new capability baseline across the entire org."
-            results={[
-              { icon: "ti-clock", label: "Support tickets", text: "40% faster time to resolution — 2 weeks down to 5 working days by automating intake and assignment of escalated tickets" },
-              { icon: "ti-file-text", label: "Blog review", text: "Removed an entire step from the comms process by automating style and tone review before editor handoff" },
-              { icon: "ti-code", label: "PRD generation", text: "Built an Opencode skill that auto-generates a first-pass PRD with customer notes, data, and wiki context already embedded" },
-              { icon: "ti-calendar", label: "~20 hrs/month saved", text: "Across triage, meeting prep, and NPI materials for GTM teams via skill files that standardize format and tone automatically" },
-            ]}
-          />
+          <div className="portfolio-table">
+            <div className="pt-header">
+              <div className="pt-cell pt-col-problem">Problem</div>
+              <div className="pt-cell pt-col-action">Exactly what I did</div>
+              <div className="pt-cell pt-col-outcome">Outcome</div>
+              <div className="pt-cell pt-col-video">Deep dive</div>
+            </div>
 
-          <StoryCard
-            tag="Complexity"
-            tagClass="tag-complexity"
-            title="Steering a cross-org FedRAMP High certification decision"
-            sub="6+ months of effort, VP-level disagreement, and a new vertical on the line"
-            situation="We were considering FedRAMP High certification — a 6+ month, all-hands effort touching every product and engineering team. The project had strong opinions on all sides: legacy vs. new codebases, competing customer segment priorities, and real debate about whether the government vertical was worth the disruption to global roadmaps."
-            task="I was brought in to facilitate the product workstream. But as the complexity became clear, I expanded my role to become the central coordinator driving the entire cross-functional decision — VPs across product, engineering, design, marketing, and legal."
-            action="I convened all stakeholders and structured the decision around data: financial analysis of the government sector vs. other verticals, effort estimates by team, and a clear cost-of-waiting model. I presented back a recommendation with confidence — framing the tradeoffs clearly enough for executives to make a call. The path chosen was a tiger team model: focused squads on certification work rather than taxing full teams, which accelerated time to market."
-            result="Certification delivered on time and on budget. We broke into a new customer vertical, and the tiger team structure became the model for how we'd tackle future cross-functional bets."
-            results={[
-              { icon: "ti-users", label: "Stakeholders aligned", text: "VPs across 5 functions — product, engineering, design, marketing, and legal — brought to a single decision with clear tradeoffs" },
-              { icon: "ti-building", label: "New vertical unlocked", text: "Certification completed on time and on budget, opening the government sector as a net-new customer segment" },
-            ]}
-          />
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <span className="pt-tag pt-tag-ownership">Ownership</span>
+                <p className="pt-problem-title">No AI tooling across the org</p>
+                <p className="pt-problem-desc">P&amp;E and GTM were doing changelogs, PRD drafts, meeting prep, and bug filing manually — with no consistent tooling or training in place.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Built Gemini Gems for core P&amp;E workflows: changelogs, PRD drafts, customer feedback loops, and NPI materials</li>
+                  <li>Introduced Windsurf and Opencode for engineering teams; wrote skill files that standardized format and tone automatically</li>
+                  <li>Led company-wide AI training — every team member equipped to automate their own repeatable work</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <div className="pt-outcome-stat">40% faster</div>
+                <div className="pt-outcome-label">support ticket resolution (2 weeks → 5 days)</div>
+                <div className="pt-outcome-stat" style={{ marginTop: "0.75rem" }}>~20 hrs/month</div>
+                <div className="pt-outcome-label">reclaimed across triage, meeting prep, and NPI</div>
+                <div className="pt-outcome-note">Removed an entire editorial review step from the comms process</div>
+              </div>
+              <div className="pt-cell pt-col-video">
+                <a href="#" className="pt-video-btn">
+                  <i className="ti ti-player-play"></i>
+                  <span>Watch</span>
+                </a>
+              </div>
+            </div>
 
-          <StoryCard
-            tag="Impact"
-            tagClass="tag-impact"
-            title="Cutting the product development lifecycle from 10 steps to 3"
-            sub="Months to weeks — by building a minimal viable process for all of Engineering, Product, and Design (EPD)"
-            situation="When I joined, the product development lifecycle had 10 sequential steps — discovery, planning, roadmap commitment, PRD, design brief, engineering plan, beta, feedback, testing, ship. Complexity and effort were unknown until after commitment, which created bottlenecks, rework, and slow time to customer value."
-            task="My first mandate as head of Product Operations was to review the process. I approached it the same way I'd approach a product: find the MVP — in this case, the minimal viable process."
-            action="Audited every step for real value vs. paper-trailing overhead. Eliminated steps that added friction without adding signal. Rebuilt the lifecycle around three phases: iterate, implement, ship — with engineering, product, and design having shared ownership of the roadmap from the start."
-            result="Features that previously took months now shipped in weeks. EPD alignment improved because all three functions had a stake in decisions earlier, and customer voice was embedded directly into plans rather than arriving as late feedback."
-            results={[
-              { icon: "ti-scissors", label: "10 steps → 3", text: "Eliminated 7 sequential handoff steps and the paper-trailing overhead that slowed every feature from commit to ship" },
-              { icon: "ti-rocket", label: "Months → weeks", text: "Faster time to value for customers through rapid prototyping, quicker feedback loops, and stronger VoC data in plans" },
-              { icon: "ti-chart-bar", label: "EPD alignment", text: "Engineering, product, and design gained shared roadmap ownership — reducing rework and late-stage surprises" },
-              { icon: "ti-user-check", label: "Rapid prototyping as the norm", text: "Shifted the team's default from sequential documentation to iterative building with customer feedback baked in" },
-            ]}
-          />
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <span className="pt-tag pt-tag-complexity">Complexity</span>
+                <p className="pt-problem-title">FedRAMP High decision stalled across 5 functions</p>
+                <p className="pt-problem-desc">A 6+ month all-hands effort with VP-level disagreement on all sides — legacy vs. new codebases, competing priorities, no clear path to a decision.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Expanded from product workstream facilitator to central cross-functional decision owner across product, engineering, design, marketing, and legal</li>
+                  <li>Built the decision framework: financial analysis of gov sector vs. other verticals, effort estimates by team, cost-of-waiting model</li>
+                  <li>Presented a recommendation to executives; proposed and got buy-in on a tiger team model to accelerate time to market</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <div className="pt-outcome-stat">On time &amp; on budget</div>
+                <div className="pt-outcome-label">certification delivered, new government vertical unlocked</div>
+                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Tiger team structure adopted as the company model for future cross-functional bets</div>
+              </div>
+              <div className="pt-cell pt-col-video">
+                <a href="#" className="pt-video-btn">
+                  <i className="ti ti-player-play"></i>
+                  <span>Watch</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <span className="pt-tag pt-tag-impact">Impact</span>
+                <p className="pt-problem-title">10-step dev lifecycle causing bottlenecks</p>
+                <p className="pt-problem-desc">Sequential handoffs meant complexity and effort were unknown until after commitment — creating rework, missed deadlines, and slow time to customer value.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Audited every step for real signal vs. paper-trailing overhead; eliminated 7 of 10 steps</li>
+                  <li>Rebuilt the lifecycle into 3 phases — iterate, implement, ship — with engineering, product, and design sharing roadmap ownership from day one</li>
+                  <li>Embedded customer voice directly into plans rather than arriving as late-stage feedback</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <div className="pt-outcome-stat">10 steps → 3</div>
+                <div className="pt-outcome-label">months-long features now shipping in weeks</div>
+                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Rapid prototyping became the team default; late-stage rework and surprises dropped</div>
+              </div>
+              <div className="pt-cell pt-col-video">
+                <a href="#" className="pt-video-btn">
+                  <i className="ti ti-player-play"></i>
+                  <span>Watch</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
