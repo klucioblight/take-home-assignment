@@ -156,7 +156,7 @@ export default function App() {
                   <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
                   <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
                   <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
-                  <li>Acted as the connective layer between Product and Engineering and GTM, two orgs that rarely spoke before this program</li>
+                  <li>Acted as the connective layer between Product and Engineering and GTM, two orgs that rarely proactively spoke before this program</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
