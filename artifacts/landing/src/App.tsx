@@ -6,7 +6,7 @@ export default function App() {
         <ul className="nav-links">
           <li><a href="#stories">Case Studies</a></li>
           <li><a href="#ai">AI Tools</a></li>
-          <li><a href="#themes">Themes</a></li>
+          <li><a href="#themes">What I Heard</a></li>
           <li><a href="#why">Why Samsara</a></li>
           <li><a href="#work">My Work</a></li>
         </ul>
@@ -165,6 +165,224 @@ export default function App() {
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Enterprise deals closing within-quarter after technical advocate engagement — a direct revenue contribution from Product Operations</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT I HEARD */}
+      <section id="themes" style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="eyebrow">What I heard</div>
+          <h2>Themes from my Samsara panel discussions</h2>
+          <p className="section-sub">Observations from conversations across the team — and how I'd think about addressing each one.</p>
+
+          <div className="portfolio-table">
+            <div className="pt-header">
+              <div className="pt-cell pt-col-problem">Theme I heard</div>
+              <div className="pt-cell pt-col-action">Ideas for how to improve</div>
+              <div className="pt-cell pt-col-outcome">Possible ways to measure success</div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Scattered data systems</p>
+                <p className="pt-problem-desc">Teams spend too much time hunting for answers instead of acting on them.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Build a unified data directory or dashboard with designated owners per domain</li>
+                  <li>Introduce tagging standards across tools so data is findable regardless of where it lives</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Reduction in "where is X?" Slack messages</li>
+                  <li>Time-to-answer for recurring data requests</li>
+                  <li>Adoption rate of shared dashboards</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Multiple sources of truth</p>
+                <p className="pt-problem-desc">Different teams use different tools — no consistent, scalable NPI experience across functions.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Audit existing tools and designate a canonical source per workflow type</li>
+                  <li>Migrate NPI workflows to one agreed platform; create a "source of truth" map teams can reference</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Reduction in duplicate or conflicting documents</li>
+                  <li>NPI cycle time before and after consolidation</li>
+                  <li>Cross-team alignment meeting frequency</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Underused product operations</p>
+                <p className="pt-problem-desc">PMs don't always know when or how to pull Product Ops in to unblock their work.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Publish a "how to work with Product Ops" guide and embed it into PM onboarding</li>
+                  <li>Create a simple intake process so teams can request Ops support without friction</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>PM awareness score (survey)</li>
+                  <li>Number of Product Ops engagements per quarter</li>
+                  <li>PM satisfaction with Ops support</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">VPs buried in admin work</p>
+                <p className="pt-problem-desc">VPs of Product have strategic capacity that's being consumed by prep, reporting, and coordination overhead.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Audit VP time allocation to identify the highest-volume admin tasks</li>
+                  <li>Automate recurring report generation; delegate prep work to Product Ops</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Hours reclaimed per VP per week</li>
+                  <li>VP satisfaction with Ops support</li>
+                  <li>Reduction in prep time per planning or review cycle</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">No room to deliberate</p>
+                <p className="pt-problem-desc">Teams want better forums to think through hard problems together before committing to a direction.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Create a standing cross-functional forum with clear agenda norms and async pre-reads</li>
+                  <li>Build decision-making templates that separate divergent thinking from convergent decision-making</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Decision reversal rate post-commitment</li>
+                  <li>Forum attendance and qualitative engagement</li>
+                  <li>Decision velocity for cross-functional initiatives</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Teams building in silos</p>
+                <p className="pt-problem-desc">Teams moving in the same direction without visibility into each other's work — leading to duplication and missed leverage.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Launch a cross-product visibility digest or shared roadmap view</li>
+                  <li>Introduce cross-team roadmap reviews at the start of each planning cycle</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Reduction in duplicate features discovered late</li>
+                  <li>Cross-team collaboration instances per quarter</li>
+                  <li>Roadmap overlap flagged before development starts</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Good people, missing a bridge</p>
+                <p className="pt-problem-desc">Genuine care across teams that isn't always translating into clear, consistent communication across functions.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Create structured cross-functional touchpoints and shared language norms</li>
+                  <li>Facilitate lightweight relationship-building forums that don't feel like extra meetings</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Cross-team collaboration satisfaction score</li>
+                  <li>Reduction in escalation frequency</li>
+                  <li>Retrospective feedback quality</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Unclear AI tool strategy</p>
+                <p className="pt-problem-desc">Real appetite for AI with no clear map of which tools to use for which problems — and risk of redundant spend.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Conduct an AI tool audit; create a recommended stack by use case and team type</li>
+                  <li>Run hands-on training sessions with clear "start here" workflows per role</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Tool adoption rates by team</li>
+                  <li>Time saved per workflow after rollout</li>
+                  <li>Reduction in redundant AI subscriptions</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Blind spots in launch visibility</p>
+                <p className="pt-problem-desc">Internal teams — especially for Tier 3 launches — not seeing what's shipping until it's already out.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Build a tiered launch calendar with automated GTM alerts for upcoming releases</li>
+                  <li>Publish a weekly "what's shipping" digest that covers all tiers, not just major launches</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>GTM launch surprise rate (before vs. after)</li>
+                  <li>Internal awareness score at time of launch</li>
+                  <li>Tier 3 coverage in customer-facing comms</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">An untapped PMM partnership</p>
+                <p className="pt-problem-desc">The Product Ops ↔ PMM relationship is one of the highest-leverage cross-functional partnerships — and it's not being built intentionally.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Create shared workflows between Product Ops and PMM; align on launch readiness criteria together</li>
+                  <li>Build joint planning rhythms so both functions are working from the same inputs</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>PMM satisfaction with Product Ops support</li>
+                  <li>Launch prep cycle time reduction</li>
+                  <li>Quality and consistency of joint output</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -393,76 +611,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* PANEL THEMES */}
-      <section id="themes" style={{ background: "#fff" }}>
-        <div className="container">
-          <div className="eyebrow">What I heard</div>
-          <h2>Themes I heard in my panel discussions</h2>
-          <p className="section-sub">Across every conversation, a few consistent themes emerged — shared thoughtfully by people who care deeply about doing great work together.</p>
-
-          <div className="why-grid" style={{ marginBottom: "1.5rem" }}>
-            <div className="pillar-card">
-              <i className="ti ti-database-search pillar-icon"></i>
-              <h3>Scattered data systems</h3>
-              <p className="pillar-desc">There's a real opportunity to make data more discoverable — so teams spend less time hunting for answers and more time acting on them.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-git-compare pillar-icon"></i>
-              <h3>Multiple sources of truth</h3>
-              <p className="pillar-desc">Different teams naturally gravitate toward different tools — and there's real upside in bringing those workflows closer together to create a more consistent, scalable NPI experience.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-help-circle pillar-icon"></i>
-              <h3>Underused product operations</h3>
-              <p className="pillar-desc">There's a big opportunity to make product operations more visible and accessible — so PMs know exactly when and how to pull the function in to unblock their work.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-clock-hour-4 pillar-icon"></i>
-              <h3>VPs buried in admin work</h3>
-              <p className="pillar-desc">VPs of Product have enormous strategic capacity — and there's meaningful room to reclaim more of it by lifting the administrative weight off their plates.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-users-group pillar-icon"></i>
-              <h3>No room to deliberate</h3>
-              <p className="pillar-desc">There's appetite to create better forums where the right people can come together, think through hard problems, and move forward with shared confidence.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-copy pillar-icon"></i>
-              <h3>Teams building in silos</h3>
-              <p className="pillar-desc">There's an exciting opportunity to build more cross-product visibility — so teams can spot where they're moving in the same direction and accelerate together instead of in parallel.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-heart-handshake pillar-icon"></i>
-              <h3>Good people, missing a bridge</h3>
-              <p className="pillar-desc">Genuinely great people who care deeply about doing right by each other — they'd benefit from a stronger bridge to communicate that intent clearly across teams.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-robot pillar-icon"></i>
-              <h3>Unclear AI tool strategy</h3>
-              <p className="pillar-desc">There's a real appetite for AI — and a clear opportunity to help teams identify the right tools and put them to work in ways that actually speed up development.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-eye pillar-icon"></i>
-              <h3>Blind spots in launch visibility</h3>
-              <p className="pillar-desc">There's a great opportunity to give internal teams better visibility into what's on the horizon — especially the Tier 3 launches that may be smaller in scope but carry real weight for customers.</p>
-            </div>
-            <div className="pillar-card">
-              <i className="ti ti-speakerphone pillar-icon"></i>
-              <h3>An untapped PMM partnership</h3>
-              <p className="pillar-desc">The relationship between product operations and PMM is one of the highest-leverage cross-functional partnerships — and there's a real opportunity to build it intentionally.</p>
-            </div>
-          </div>
-
-          <div className="philosophy-card">
-            <i className="ti ti-bulb phil-icon"></i>
-            <div>
-              <div className="phil-label">Why this matters to me</div>
-              <p className="phil-text">Every one of these is an opportunity a Product Operations leader is built to address.</p>
-              <p className="phil-sub">Better data discovery, more consistent tooling, a more visible ops function, freed-up VP bandwidth, stronger forums for deliberation, cross-product connection — these are exactly the conditions a great Product Ops leader helps create. The job is to build the systems, bridges, and forums that make it easier for great people to do their best work — and ship faster as a result.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* WHY SAMSARA */}
       <section id="why">
