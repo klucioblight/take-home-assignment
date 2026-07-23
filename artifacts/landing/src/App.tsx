@@ -153,6 +153,36 @@ export default function App() {
                 </div>
               </div>
             </div>
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <span className="pt-tag pt-tag-impact">Impact</span>
+                <p className="pt-problem-title">GTM kept getting blindsided by product updates</p>
+                <p className="pt-problem-desc">New features were shipping without GTM having enough notice — causing customer friction, internal tension, and a breakdown of trust between Product and GTM teams.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Launched a bi-weekly email to GTM leaders with known upcoming launches — sourced entirely from data Product and Engineering already used, adding zero new process for them</li>
+                  <li>Built an external-facing changelog updated by Product Ops at ship time, so teams saw updates in real time alongside customers</li>
+                  <li>Created a Jira dashboard surfacing tickets with a target completion date within the next two weeks — a always-on "preview" of what's coming</li>
+                  <li>Introduced an AI agent that let teams search upcoming customer-facing items expected to ship in ~2 weeks, so they could prepare proactively</li>
+                  <li>Added a 3-month post-launch support ticket review per feature — Product Ops helped respond and fed insights directly into Help Center documentation</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <div className="pt-outcome-stat">80% fewer</div>
+                <div className="pt-outcome-label">launch surprises for GTM teams</div>
+                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>The remaining 20% — fast-moving innovations — now reach GTM at the same time as customers. Chipping away at that daily.</div>
+              </div>
+              <div className="pt-cell pt-col-video">
+                <div className="pt-loom-wrap">
+                  <iframe
+                    src="https://www.loom.com/embed/YOUR_LOOM_ID_4"
+                    allowFullScreen
+                    className="pt-loom-iframe"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
