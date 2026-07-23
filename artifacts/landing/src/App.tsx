@@ -19,7 +19,7 @@ export default function App() {
           <span className="amber-bar"></span>
           <h1><span className="amber-underline">Kim Blight</span></h1>
           <p className="hero-title">Product Operations Leader · Builder · Systems Thinker</p>
-          <p className="hero-tagline">I build lightweight frameworks that let fast-moving teams move even faster — without the overhead that slows them down. I use AI tooling to unlock what humans can't do alone, and I bring alignment to rooms full of opinionated builders.</p>
+          <p className="hero-tagline">I build systems that let fast-moving teams move even faster — without the overhead that slows them down. I use AI to unlock what humans can't do alone, and I bring alignment to rooms full of opinionated builders.</p>
         </div>
       </section>
 
@@ -54,7 +54,7 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">My work · In detail</div>
           <h2>Case studies</h2>
-          <p className="section-sub">Examples of how I approach my work within organizations.</p>
+          <p className="section-sub">Five real examples — the problem I walked into, exactly what I did, and what came out the other side.</p>
 
           <div className="portfolio-table">
             <div className="pt-header">
@@ -94,7 +94,7 @@ export default function App() {
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
                   <li>Expanded from product workstream facilitator to central cross-functional decision owner across product, engineering, design, marketing, and legal</li>
-                  <li>Built the decision framework: financial analysis of gov sector vs. other verticals, effort estimates by team, cost-of-waiting model</li>
+                  <li>Built the decision case: financial analysis of the gov sector vs. other verticals, per-team effort estimates, and a clear cost-of-waiting argument for executives</li>
                   <li>Presented a recommendation to executives; proposed and got buy-in on a tiger team model to accelerate time to market</li>
                 </ul>
               </div>
@@ -113,7 +113,7 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Audited every step for real signal vs. paper-trailing overhead; eliminated 7 of 10 steps</li>
+                  <li>Eliminated 7 of 10 steps by cutting everything that created paper trail without creating signal</li>
                   <li>Rebuilt the lifecycle into 3 phases — iterate, implement, ship — with engineering, product, and design sharing roadmap ownership from day one</li>
                   <li>Embedded customer voice directly into plans rather than arriving as late-stage feedback</li>
                 </ul>
@@ -134,7 +134,7 @@ export default function App() {
                 <ul className="pt-action-list">
                   <li>Launched a bi-weekly email to GTM leaders with known upcoming launches — sourced entirely from data Product and Engineering already used, adding zero new process for them</li>
                   <li>Built an external-facing changelog updated by Product Ops at ship time, so teams saw updates in real time alongside customers</li>
-                  <li>Created a Jira dashboard surfacing tickets with a target completion date within the next two weeks — a always-on "preview" of what's coming</li>
+                  <li>Created a Jira dashboard surfacing tickets with a target completion date within the next two weeks — an always-on "preview" of what's coming</li>
                   <li>Introduced an AI agent that let teams search upcoming customer-facing items expected to ship in ~2 weeks, so they could prepare proactively</li>
                   <li>Added a 3-month post-launch support ticket review per feature — Product Ops helped respond and fed insights directly into Help Center documentation</li>
                 </ul>
@@ -156,7 +156,7 @@ export default function App() {
                   <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
                   <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
                   <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
-                  <li>Acted as the connective layer between Product and Engineering and GTM, two orgs that rarely proactively spoke before this program</li>
+                  <li>Acted as the connective layer between Product, Engineering, and GTM — two orgs that rarely proactively spoke before this program</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -173,8 +173,8 @@ export default function App() {
       <section id="themes" style={{ background: "#fff" }}>
         <div className="container">
           <div className="eyebrow">What I heard</div>
-          <h2>Themes from my Samsara panel discussions</h2>
-          <p className="section-sub">Observations from conversations across the team — and how I'd think about addressing each one.</p>
+          <h2>Themes from my conversations with the Samsara team</h2>
+          <p className="section-sub">Ten things I heard — and how I'd tackle each one.</p>
 
           <div className="portfolio-table">
             <div className="pt-header">
@@ -720,7 +720,7 @@ export default function App() {
                   <div className="work-domain">youtube.com</div>
                 </div>
               </div>
-              <p className="work-desc">I love talking about the craft of product operations and presenting is one of my favorite parts of my career.</p>
+              <p className="work-desc">A conference talk on the craft of product operations — the systems, the influence, and what it actually takes to build teams that ship.</p>
               <span className="work-link">Watch <i className="ti ti-arrow-up-right"></i></span>
             </a>
 
