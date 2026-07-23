@@ -70,16 +70,15 @@ export default function App() {
               </blockquote>
             </div>
             <div className="obs-proof-wrap">
-              <div className="obs-connector">
-                <i className="ti ti-arrow-right"></i>
-                <span>I've tackled this before.</span>
+              <div className="proof-case-label">
+                <i className="ti ti-briefcase"></i> GTM launch visibility · Previous role
               </div>
-              <div className="proof-stat-row">
+              <div className="proof-stat-block">
                 <span className="proof-stat">80% fewer</span>
                 <span className="proof-stat-label">launch surprises for GTM teams</span>
               </div>
               <p className="proof-context">
-                Built a system at my previous company that gave GTM full visibility into everything shipping — before it shipped. The remaining 20% of fast-moving changes now reach GTM at the same time as customers.
+                Built a system that gave GTM full visibility into everything shipping — before it shipped.
               </p>
               <button className="expand-toggle" onClick={() => toggle('obs1')}>
                 <span>How I did it</span>
@@ -110,20 +109,19 @@ export default function App() {
               </blockquote>
             </div>
             <div className="obs-proof-wrap">
-              <div className="obs-connector">
-                <i className="ti ti-arrow-right"></i>
-                <span>I built this playbook from scratch.</span>
+              <div className="proof-case-label">
+                <i className="ti ti-briefcase"></i> AI tooling rollout · Current role
               </div>
-              <div className="proof-stat-row">
+              <div className="proof-stat-block">
                 <span className="proof-stat">40% faster</span>
                 <span className="proof-stat-label">support ticket resolution (2 weeks → 5 days)</span>
               </div>
-              <div className="proof-stat-row" style={{ marginTop: "0.5rem" }}>
+              <div className="proof-stat-block" style={{ marginTop: "0.75rem" }}>
                 <span className="proof-stat">~20 hrs/month</span>
                 <span className="proof-stat-label">reclaimed across triage, meeting prep, and NPI</span>
               </div>
               <p className="proof-context">
-                Took an org with no AI tooling to a fully deployed stack — Gemini Gems, Windsurf, Opencode, and a company-wide training program. Removed an entire editorial review step from the comms process.
+                Took an org with zero AI tooling to a fully deployed stack — with training, workflows, and measurable outcomes attached.
               </p>
               <button className="expand-toggle" onClick={() => toggle('obs2')}>
                 <span>How I did it</span>
@@ -152,16 +150,15 @@ export default function App() {
               </blockquote>
             </div>
             <div className="obs-proof-wrap">
-              <div className="obs-connector">
-                <i className="ti ti-arrow-right"></i>
-                <span>I built the bridge that connected Product, Engineering, and GTM.</span>
+              <div className="proof-case-label">
+                <i className="ti ti-briefcase"></i> Customer Advocate Program · Previous role
               </div>
-              <div className="proof-stat-row">
+              <div className="proof-stat-block">
                 <span className="proof-stat">~$20M ACV</span>
                 <span className="proof-stat-label">generated through a program I built from scratch</span>
               </div>
               <p className="proof-context">
-                Created a Customer Advocate Program that matched VP-level Product and Engineering leaders to enterprise deals at exactly the moment trust was the blocker to close — connecting two orgs that rarely spoke before this program existed.
+                Matched VP-level Product and Engineering leaders to enterprise deals at exactly the moment trust was the blocker to close.
               </p>
               <button className="expand-toggle" onClick={() => toggle('obs3')}>
                 <span>How I did it</span>
