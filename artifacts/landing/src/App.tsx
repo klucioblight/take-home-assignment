@@ -228,8 +228,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Build a single place where teams can find answers — so the data exists in one spot regardless of which tool it lives in</li>
-                  <li>Make the most-searched data automatically surfaced rather than requiring teams to know where to look</li>
+                  <li>Build an agent that scans all spaces with relevant information — so teams can find answers regardless of which tool the data lives in, without needing to know where to look</li>
+                  <li>Surface the most-searched data proactively, so recurring questions get answered before they become Slack threads</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
