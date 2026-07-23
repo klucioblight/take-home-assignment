@@ -248,8 +248,7 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Pick one home for NPI workflows and move everything there — fewer tools, less confusion</li>
-                  <li>Make it easy for teams to know where to go without having to ask</li>
+                  <li>Have Product Operations be the central bridge for cross-functional teams to get answers to roadmap questions</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
