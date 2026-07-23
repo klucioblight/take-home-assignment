@@ -1,12 +1,16 @@
+import { useState } from "react";
+
 export default function App() {
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const toggle = (id: string) => setOpen(prev => ({ ...prev, [id]: !prev[id] }));
+
   return (
     <>
       <nav>
         <div className="nav-logo">Interview · <span>Samsara</span></div>
         <ul className="nav-links">
-          <li><a href="#stories">Case Studies</a></li>
+          <li><a href="#observations">What I Heard</a></li>
           <li><a href="#ai">AI Tools</a></li>
-          <li><a href="#themes">What I Heard</a></li>
           <li><a href="#why">Why Samsara</a></li>
           <li><a href="#work">My Work</a></li>
         </ul>
@@ -28,7 +32,6 @@ export default function App() {
         <div className="container">
           <div className="eyebrow">What I bring</div>
           <h2>Three things Samsara cares about</h2>
-
           <div className="pillars-grid">
             <div className="pillar-card">
               <i className="ti ti-flag-2 pillar-icon"></i>
@@ -49,368 +52,139 @@ export default function App() {
         </div>
       </section>
 
-      {/* PORTFOLIO TABLE */}
-      <section id="stories" style={{ background: "var(--off-white)" }}>
+      {/* OBSERVATIONS */}
+      <section id="observations" style={{ background: "var(--off-white)" }}>
         <div className="container">
-          <div className="eyebrow">My work · In detail</div>
-          <h2>Case studies</h2>
-          <p className="section-sub">Five real examples — the problem I walked into, exactly what I did, and what came out the other side.</p>
+          <div className="eyebrow">What I heard · What I've done</div>
+          <h2>Three themes — and proof I've tackled each one</h2>
+          <p className="section-sub">Observations from my conversations with the Samsara team, connected to work I've already shipped.</p>
 
-          <div className="portfolio-table">
-            <div className="pt-header">
-              <div className="pt-cell pt-col-problem">Problem</div>
-              <div className="pt-cell pt-col-action">Exactly what I did</div>
-              <div className="pt-cell pt-col-outcome">Outcome</div>
+          {/* Observation 1 */}
+          <div className="obs-block">
+            <div className="obs-heard">
+              <div className="obs-heard-label">
+                <i className="ti ti-ear"></i> What I heard from the Samsara team
+              </div>
+              <blockquote className="obs-quote">
+                "GTM teams aren't seeing what's shipping until it's already out — even for launches they care about."
+              </blockquote>
             </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <span className="pt-tag pt-tag-ownership">Ownership</span>
-                <p className="pt-problem-title">No AI tooling across the org</p>
-                <p className="pt-problem-desc">Product, Engineering, and GTM were doing changelogs, PRD drafts, meeting prep, and bug filing manually — with no consistent tooling or training in place.</p>
+            <div className="obs-proof-wrap">
+              <div className="obs-connector">
+                <i className="ti ti-arrow-right"></i>
+                <span>I've tackled this before.</span>
               </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Built Gemini Gems for core Product and Engineering workflows: changelogs, PRD drafts, customer feedback loops, and NPI materials</li>
-                  <li>Introduced Windsurf and Opencode for engineering teams; wrote skill files that standardized format and tone automatically</li>
-                  <li>Led company-wide AI training — every team member equipped to automate their own repeatable work</li>
-                </ul>
+              <div className="proof-stat-row">
+                <span className="proof-stat">80% fewer</span>
+                <span className="proof-stat-label">launch surprises for GTM teams</span>
               </div>
-              <div className="pt-cell pt-col-outcome">
-                <div className="pt-outcome-stat">40% faster</div>
-                <div className="pt-outcome-label">support ticket resolution (2 weeks → 5 days)</div>
-                <div className="pt-outcome-stat" style={{ marginTop: "0.75rem" }}>~20 hrs/month</div>
-                <div className="pt-outcome-label">reclaimed across triage, meeting prep, and NPI</div>
-                <div className="pt-outcome-note">Removed an entire editorial review step from the comms process</div>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <span className="pt-tag pt-tag-complexity">Complexity</span>
-                <p className="pt-problem-title">FedRAMP High decision stalled across 5 functions</p>
-                <p className="pt-problem-desc">A 6+ month all-hands effort with VP-level disagreement on all sides — legacy vs. new codebases, competing priorities, no clear path to a decision.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Expanded from product workstream facilitator to central cross-functional decision owner across product, engineering, design, marketing, and legal</li>
-                  <li>Built the decision case: financial analysis of the gov sector vs. other verticals, per-team effort estimates, and a clear cost-of-waiting argument for executives</li>
-                  <li>Presented a recommendation to executives; proposed and got buy-in on a tiger team model to accelerate time to market</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <div className="pt-outcome-stat">On time &amp; on budget</div>
-                <div className="pt-outcome-label">certification delivered, new government vertical unlocked</div>
-                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Tiger team structure adopted as the company model for future cross-functional bets</div>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <span className="pt-tag pt-tag-impact">Impact</span>
-                <p className="pt-problem-title">10-step dev lifecycle causing bottlenecks</p>
-                <p className="pt-problem-desc">Sequential handoffs meant complexity and effort were unknown until after commitment — creating rework, missed deadlines, and slow time to customer value.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Eliminated 7 of 10 steps by cutting everything that created paper trail without creating signal</li>
-                  <li>Rebuilt the lifecycle into 3 phases — iterate, implement, ship — with engineering, product, and design sharing roadmap ownership from day one</li>
-                  <li>Embedded customer voice directly into plans rather than arriving as late-stage feedback</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <div className="pt-outcome-stat">10 steps → 3</div>
-                <div className="pt-outcome-label">months-long features now shipping in weeks</div>
-                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Rapid prototyping became the team default; late-stage rework and surprises dropped</div>
-              </div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <span className="pt-tag pt-tag-impact">Impact</span>
-                <p className="pt-problem-title">GTM kept getting blindsided by product updates</p>
-                <p className="pt-problem-desc">New features were shipping without GTM having enough notice — causing customer friction, internal tension, and a breakdown of trust between Product and GTM teams.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Launched a bi-weekly email to GTM leaders with known upcoming launches — sourced entirely from data Product and Engineering already used, adding zero new process for them</li>
-                  <li>Built an external-facing changelog updated by Product Ops at ship time, so teams saw updates in real time alongside customers</li>
-                  <li>Created a Jira dashboard surfacing tickets with a target completion date within the next two weeks — an always-on "preview" of what's coming</li>
-                  <li>Introduced an AI agent that let teams search upcoming customer-facing items expected to ship in ~2 weeks, so they could prepare proactively</li>
-                  <li>Added a 3-month post-launch support ticket review per feature — Product Ops helped respond and fed insights directly into Help Center documentation</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <div className="pt-outcome-stat">80% fewer</div>
-                <div className="pt-outcome-label">launch surprises for GTM teams</div>
-                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>The remaining 20% — fast-moving innovations — now reach GTM at the same time as customers. Chipping away at that daily.</div>
-              </div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <span className="pt-tag pt-tag-ownership">Ownership</span>
-                <p className="pt-problem-title">Product and Engineering expertise wasn't reaching enterprise deals</p>
-                <p className="pt-problem-desc">GTM was losing or stalling enterprise deals where technical credibility was the missing ingredient — and Product and Engineering had no structured way to show up in the sales cycle.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
-                  <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
-                  <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
-                  <li>Acted as the connective layer between Product, Engineering, and GTM — two orgs that rarely proactively spoke before this program</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <div className="pt-outcome-stat">~$20M ACV</div>
-                <div className="pt-outcome-label">generated for the business through the program to date</div>
-                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Enterprise deals closing within-quarter after technical advocate engagement — a direct revenue contribution from Product Operations</div>
-              </div>
+              <p className="proof-context">
+                Built a system at my previous company that gave GTM full visibility into everything shipping — before it shipped. The remaining 20% of fast-moving changes now reach GTM at the same time as customers.
+              </p>
+              <button className="expand-toggle" onClick={() => toggle('obs1')}>
+                <span>How I did it</span>
+                <i className={`ti ${open['obs1'] ? 'ti-chevron-up' : 'ti-chevron-down'}`}></i>
+              </button>
+              {open['obs1'] && (
+                <div className="expand-content">
+                  <ul className="expand-list">
+                    <li>Launched a bi-weekly email to GTM leaders with known upcoming launches — sourced entirely from data Product and Engineering already used, adding zero new process for them</li>
+                    <li>Built an external-facing changelog updated by Product Ops at ship time, so teams saw updates in real time alongside customers</li>
+                    <li>Created a Jira dashboard surfacing tickets with a target completion date within the next two weeks — an always-on "preview" of what's coming</li>
+                    <li>Introduced an AI agent that let teams search upcoming customer-facing items expected to ship in ~2 weeks, so they could prepare proactively</li>
+                    <li>Added a 3-month post-launch support ticket review per feature — Product Ops helped respond and fed insights directly into Help Center documentation</li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* WHAT I HEARD */}
-      <section id="themes" style={{ background: "#fff" }}>
-        <div className="container">
-          <div className="eyebrow">What I heard</div>
-          <h2>Themes from my conversations with the Samsara team</h2>
-          <p className="section-sub">Ten things I heard — and how I'd tackle each one.</p>
-
-          <div className="portfolio-table">
-            <div className="pt-header">
-              <div className="pt-cell pt-col-problem">Theme I heard</div>
-              <div className="pt-cell pt-col-action">Ideas for how to improve</div>
-              <div className="pt-cell pt-col-outcome">Possible ways to measure success</div>
+          {/* Observation 2 */}
+          <div className="obs-block">
+            <div className="obs-heard">
+              <div className="obs-heard-label">
+                <i className="ti ti-ear"></i> What I heard from the Samsara team
+              </div>
+              <blockquote className="obs-quote">
+                "There's real appetite for AI tools, but no clear map of what to use for what — and real risk of redundant spend."
+              </blockquote>
             </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Scattered data systems</p>
-                <p className="pt-problem-desc">Teams spend too much time hunting for answers instead of acting on them.</p>
+            <div className="obs-proof-wrap">
+              <div className="obs-connector">
+                <i className="ti ti-arrow-right"></i>
+                <span>I built this playbook from scratch.</span>
               </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Build a single place where teams can find answers — so the data exists in one spot regardless of which tool it lives in</li>
-                  <li>Make the most-searched data automatically surfaced rather than requiring teams to know where to look</li>
-                </ul>
+              <div className="proof-stat-row">
+                <span className="proof-stat">40% faster</span>
+                <span className="proof-stat-label">support ticket resolution (2 weeks → 5 days)</span>
               </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Reduction in "where is X?" Slack messages</li>
-                  <li>Time-to-answer for recurring data requests</li>
-                  <li>Adoption rate of shared dashboards</li>
-                </ul>
+              <div className="proof-stat-row" style={{ marginTop: "0.5rem" }}>
+                <span className="proof-stat">~20 hrs/month</span>
+                <span className="proof-stat-label">reclaimed across triage, meeting prep, and NPI</span>
               </div>
+              <p className="proof-context">
+                Took an org with no AI tooling to a fully deployed stack — Gemini Gems, Windsurf, Opencode, and a company-wide training program. Removed an entire editorial review step from the comms process.
+              </p>
+              <button className="expand-toggle" onClick={() => toggle('obs2')}>
+                <span>How I did it</span>
+                <i className={`ti ${open['obs2'] ? 'ti-chevron-up' : 'ti-chevron-down'}`}></i>
+              </button>
+              {open['obs2'] && (
+                <div className="expand-content">
+                  <ul className="expand-list">
+                    <li>Built Gemini Gems for core Product and Engineering workflows: changelogs, PRD drafts, customer feedback loops, and NPI materials</li>
+                    <li>Introduced Windsurf and Opencode for engineering teams; wrote skill files that standardized format and tone automatically</li>
+                    <li>Led company-wide AI training — every team member equipped to automate their own repeatable work</li>
+                  </ul>
+                </div>
+              )}
             </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Multiple sources of truth</p>
-                <p className="pt-problem-desc">Different teams use different tools — no consistent, scalable NPI experience across functions.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Pick one home for NPI workflows and move everything there — fewer tools, less confusion</li>
-                  <li>Make it easy for teams to know where to go without having to ask</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Reduction in duplicate or conflicting documents</li>
-                  <li>NPI cycle time before and after consolidation</li>
-                  <li>Cross-team alignment meeting frequency</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Underused product operations</p>
-                <p className="pt-problem-desc">PMs don't always know when or how to pull Product Ops in to unblock their work.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Show up in the right rooms before PMs think to ask — make the value visible through doing, not explaining</li>
-                  <li>Be easy to reach and fast to respond so the bar to pull Ops in stays low</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Features shipping faster after Product Ops gets involved</li>
-                  <li>Fewer blockers sitting unresolved between planning and execution</li>
-                  <li>PMs spending more time on product decisions, less on coordination</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">VPs buried in admin work</p>
-                <p className="pt-problem-desc">VPs of Product have strategic capacity that's being consumed by prep, reporting, and coordination overhead.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Take the prep, reporting, and coordination work off VP plates directly — no ask needed</li>
-                  <li>Automate recurring reports so VPs walk into rooms ready, not building the deck the night before</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Hours reclaimed per VP per week</li>
-                  <li>VP satisfaction with Ops support</li>
-                  <li>Reduction in prep time per planning or review cycle</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">No room to deliberate</p>
-                <p className="pt-problem-desc">Teams want better forums to think through hard problems together before committing to a direction.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Make space for the right people to think through hard problems together — before decisions get made, not after</li>
-                  <li>Give teams room to disagree early so they commit with confidence later</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Decision reversal rate post-commitment</li>
-                  <li>Forum attendance and qualitative engagement</li>
-                  <li>Decision velocity for cross-functional initiatives</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Teams building in silos</p>
-                <p className="pt-problem-desc">Teams moving in the same direction without visibility into each other's work — leading to duplication and missed leverage.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Surface what teams are building to each other before work is too far in to change direction</li>
-                  <li>Connect people who are solving the same problem so they can move faster together</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Reduction in duplicate features discovered late</li>
-                  <li>Cross-team collaboration instances per quarter</li>
-                  <li>Roadmap overlap flagged before development starts</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Good people, missing a bridge</p>
-                <p className="pt-problem-desc">Genuine care across teams that isn't always translating into clear, consistent communication across functions.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Be the bridge — translate across functions so intent lands the way it was meant</li>
-                  <li>Connect people directly rather than building structures around connection</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Cross-team collaboration satisfaction score</li>
-                  <li>Reduction in escalation frequency</li>
-                  <li>Retrospective feedback quality</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Unclear AI tool strategy</p>
-                <p className="pt-problem-desc">Real appetite for AI with no clear map of which tools to use for which problems — and risk of redundant spend.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Get hands-on with the tools teams are already using and give an opinionated recommendation on what to use for what</li>
-                  <li>Run hands-on sessions so teams leave knowing exactly how to start, not just that they should</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Tool adoption rates by team</li>
-                  <li>Time saved per workflow after rollout</li>
-                  <li>Reduction in redundant AI subscriptions</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Blind spots in launch visibility</p>
-                <p className="pt-problem-desc">Internal teams — especially for Tier 3 launches — not seeing what's shipping until it's already out.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Build a tiered launch calendar with automated GTM alerts for upcoming releases</li>
-                  <li>Publish a weekly "what's shipping" digest that covers all tiers, not just major launches</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>GTM launch surprise rate (before vs. after)</li>
-                  <li>Internal awareness score at time of launch</li>
-                  <li>Tier 3 coverage in customer-facing comms</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">An untapped PMM partnership</p>
-                <p className="pt-problem-desc">The Product Ops ↔ PMM relationship is one of the highest-leverage cross-functional partnerships — and it's not being built intentionally.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Work side-by-side with PMM on launches — so messaging and positioning are built together, not handed off at the end</li>
-                  <li>Make sure Product Ops and PMM are always working from the same inputs before anything ships</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>PMM satisfaction with Product Ops support</li>
-                  <li>Launch prep cycle time reduction</li>
-                  <li>Quality and consistency of joint output</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">
-                <p className="pt-problem-title">Hardware team carrying too much admin overhead</p>
-                <p className="pt-problem-desc">The hardware team is fielding internal communication requests that take them away from building — and don't need to come to them directly at all.</p>
-              </div>
-              <div className="pt-cell pt-col-action">
-                <ul className="pt-action-list">
-                  <li>Understand where internal requests are landing on the hardware team and step in front of them before they arrive</li>
-                  <li>Have Product Ops own the routing of internal communications — intercepting requests and getting information to the right teams so hardware doesn't have to</li>
-                  <li>Proactively build and maintain the right customer list for hardware use cases, so teams aren't coming to hardware to ask who to talk to</li>
-                  <li>Anticipate hardware needs by deeply understanding their end-to-end build process and identifying friction points before they surface</li>
-                </ul>
-              </div>
-              <div className="pt-cell pt-col-outcome">
-                <ul className="pt-action-list">
-                  <li>Hardware team is speaking to the right customers for their use cases more frequently — without extra coordination effort</li>
-                  <li>No new admin overhead added to the hardware team as a result of Product Ops involvement</li>
-                  <li>Product Ops is the bridge to PMM, so teams are only reaching the hardware team when it's genuinely necessary</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
+
+          {/* Observation 3 */}
+          <div className="obs-block">
+            <div className="obs-heard">
+              <div className="obs-heard-label">
+                <i className="ti ti-ear"></i> What I heard from the Samsara team
+              </div>
+              <blockquote className="obs-quote">
+                "There's genuine care across teams — but it doesn't always translate into alignment across functions."
+              </blockquote>
+            </div>
+            <div className="obs-proof-wrap">
+              <div className="obs-connector">
+                <i className="ti ti-arrow-right"></i>
+                <span>I built the bridge that connected Product, Engineering, and GTM.</span>
+              </div>
+              <div className="proof-stat-row">
+                <span className="proof-stat">~$20M ACV</span>
+                <span className="proof-stat-label">generated through a program I built from scratch</span>
+              </div>
+              <p className="proof-context">
+                Created a Customer Advocate Program that matched VP-level Product and Engineering leaders to enterprise deals at exactly the moment trust was the blocker to close — connecting two orgs that rarely spoke before this program existed.
+              </p>
+              <button className="expand-toggle" onClick={() => toggle('obs3')}>
+                <span>How I did it</span>
+                <i className={`ti ${open['obs3'] ? 'ti-chevron-up' : 'ti-chevron-down'}`}></i>
+              </button>
+              {open['obs3'] && (
+                <div className="expand-content">
+                  <ul className="expand-list">
+                    <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
+                    <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
+                    <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
+                    <li>Acted as the connective layer between Product, Engineering, and GTM — two orgs that rarely proactively spoke before this program</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* AI TOOLS */}
-      <section id="ai" style={{ background: "var(--off-white)" }}>
+      <section id="ai" style={{ background: "#fff" }}>
         <div className="container">
           <div className="eyebrow">AI toolkit</div>
           <h2>Tools I've implemented and shipped with</h2>
@@ -632,7 +406,6 @@ export default function App() {
 
         </div>
       </section>
-
 
       {/* WHY SAMSARA */}
       <section id="why">
