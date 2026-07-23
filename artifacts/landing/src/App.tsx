@@ -383,6 +383,28 @@ export default function App() {
               </div>
             </div>
 
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <p className="pt-problem-title">Hardware team carrying too much admin overhead</p>
+                <p className="pt-problem-desc">The hardware team is fielding internal communication requests that take them away from building — and don't need to come to them directly at all.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Map the current systems in place to understand where communication is landing on the hardware team unnecessarily</li>
+                  <li>Have Product Ops own the routing of internal communications — intercepting requests and getting information to the right teams so hardware doesn't have to</li>
+                  <li>Proactively build and maintain the right customer list for hardware use cases, so teams aren't coming to hardware to ask who to talk to</li>
+                  <li>Anticipate hardware needs by deeply understanding their end-to-end build process and identifying friction points before they surface</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <ul className="pt-action-list">
+                  <li>Hardware team is speaking to the right customers for their use cases more frequently — without extra coordination effort</li>
+                  <li>No new admin overhead added to the hardware team as a result of Product Ops involvement</li>
+                  <li>Product Ops is the bridge to PMM, so teams are only reaching the hardware team when it's genuinely necessary</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
