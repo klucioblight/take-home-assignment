@@ -190,8 +190,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Build a unified data directory or dashboard with designated owners per domain</li>
-                  <li>Introduce tagging standards across tools so data is findable regardless of where it lives</li>
+                  <li>Build a single place where teams can find answers — so the data exists in one spot regardless of which tool it lives in</li>
+                  <li>Make the most-searched data automatically surfaced rather than requiring teams to know where to look</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -210,8 +210,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Audit existing tools and designate a canonical source per workflow type</li>
-                  <li>Migrate NPI workflows to one agreed platform; create a "source of truth" map teams can reference</li>
+                  <li>Pick one home for NPI workflows and move everything there — fewer tools, less confusion</li>
+                  <li>Make it easy for teams to know where to go without having to ask</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -230,8 +230,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Publish a "how to work with Product Ops" guide and embed it into PM onboarding</li>
-                  <li>Create a simple intake process so teams can request Ops support without friction</li>
+                  <li>Show up in the right rooms before PMs think to ask — make the value visible through doing, not explaining</li>
+                  <li>Be easy to reach and fast to respond so the bar to pull Ops in stays low</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -250,8 +250,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Audit VP time allocation to identify the highest-volume admin tasks</li>
-                  <li>Automate recurring report generation; delegate prep work to Product Ops</li>
+                  <li>Take the prep, reporting, and coordination work off VP plates directly — no ask needed</li>
+                  <li>Automate recurring reports so VPs walk into rooms ready, not building the deck the night before</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -270,8 +270,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Create a standing cross-functional forum with clear agenda norms and async pre-reads</li>
-                  <li>Build decision-making templates that separate divergent thinking from convergent decision-making</li>
+                  <li>Make space for the right people to think through hard problems together — before decisions get made, not after</li>
+                  <li>Give teams room to disagree early so they commit with confidence later</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -290,8 +290,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Launch a cross-product visibility digest or shared roadmap view</li>
-                  <li>Introduce cross-team roadmap reviews at the start of each planning cycle</li>
+                  <li>Surface what teams are building to each other before work is too far in to change direction</li>
+                  <li>Connect people who are solving the same problem so they can move faster together</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -310,8 +310,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Create structured cross-functional touchpoints and shared language norms</li>
-                  <li>Facilitate lightweight relationship-building forums that don't feel like extra meetings</li>
+                  <li>Be the bridge — translate across functions so intent lands the way it was meant</li>
+                  <li>Connect people directly rather than building structures around connection</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -330,8 +330,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Conduct an AI tool audit; create a recommended stack by use case and team type</li>
-                  <li>Run hands-on training sessions with clear "start here" workflows per role</li>
+                  <li>Get hands-on with the tools teams are already using and give an opinionated recommendation on what to use for what</li>
+                  <li>Run hands-on sessions so teams leave knowing exactly how to start, not just that they should</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -370,8 +370,8 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Create shared workflows between Product Ops and PMM; align on launch readiness criteria together</li>
-                  <li>Build joint planning rhythms so both functions are working from the same inputs</li>
+                  <li>Work side-by-side with PMM on launches — so messaging and positioning are built together, not handed off at the end</li>
+                  <li>Make sure Product Ops and PMM are always working from the same inputs before anything ships</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -390,7 +390,7 @@ export default function App() {
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Map the current systems in place to understand where communication is landing on the hardware team unnecessarily</li>
+                  <li>Understand where internal requests are landing on the hardware team and step in front of them before they arrive</li>
                   <li>Have Product Ops own the routing of internal communications — intercepting requests and getting information to the right teams so hardware doesn't have to</li>
                   <li>Proactively build and maintain the right customer list for hardware use cases, so teams aren't coming to hardware to ask who to talk to</li>
                   <li>Anticipate hardware needs by deeply understanding their end-to-end build process and identifying friction points before they surface</li>
