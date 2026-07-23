@@ -4,11 +4,10 @@ export default function App() {
       <nav>
         <div className="nav-logo">Interview · <span>Samsara</span></div>
         <ul className="nav-links">
-          <li><a href="#stories">Stories</a></li>
+          <li><a href="#stories">Case Studies</a></li>
           <li><a href="#ai">AI Tools</a></li>
           <li><a href="#themes">Themes</a></li>
           <li><a href="#why">Why Samsara</a></li>
-          <li><a href="#advocacy">Advocacy</a></li>
           <li><a href="#work">My Work</a></li>
         </ul>
       </nav>
@@ -144,6 +143,26 @@ export default function App() {
                 <div className="pt-outcome-stat">80% fewer</div>
                 <div className="pt-outcome-label">launch surprises for GTM teams</div>
                 <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>The remaining 20% — fast-moving innovations — now reach GTM at the same time as customers. Chipping away at that daily.</div>
+              </div>
+            </div>
+            <div className="pt-row">
+              <div className="pt-cell pt-col-problem">
+                <span className="pt-tag pt-tag-ownership">Ownership</span>
+                <p className="pt-problem-title">P&amp;E expertise wasn't reaching enterprise deals</p>
+                <p className="pt-problem-desc">GTM was losing or stalling enterprise deals where technical credibility was the missing ingredient — and P&amp;E had no structured way to show up in the sales cycle.</p>
+              </div>
+              <div className="pt-cell pt-col-action">
+                <ul className="pt-action-list">
+                  <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
+                  <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
+                  <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
+                  <li>Acted as the connective layer between P&amp;E and GTM, two orgs that rarely spoke before this program</li>
+                </ul>
+              </div>
+              <div className="pt-cell pt-col-outcome">
+                <div className="pt-outcome-stat">~$20M ACV</div>
+                <div className="pt-outcome-label">generated for the business through the program to date</div>
+                <div className="pt-outcome-note" style={{ marginTop: "0.75rem" }}>Enterprise deals closing within-quarter after technical advocate engagement — a direct revenue contribution from Product Operations</div>
               </div>
             </div>
           </div>
@@ -488,58 +507,6 @@ export default function App() {
             <div>
               <p className="closing-text">I'm not looking for the next job. I'm looking for the place where the work is hard, the people are exceptional, and what we build actually matters to the people using it. That's Samsara.</p>
               <div className="closing-attr">— Why I'm here</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CUSTOMER ADVOCACY */}
-      <section id="advocacy" style={{ background: "#fff" }}>
-        <div className="container">
-          <div className="eyebrow">Customer advocacy</div>
-          <h2>Bridging product &amp; engineering to close enterprise deals</h2>
-          <p className="section-sub">I built and led a Customer Advocate Program that put the right technical partner in the room at the right moment in the sales cycle — turning P&amp;E expertise into a direct revenue lever for the GTM org.</p>
-
-          <div className="metrics-row">
-            <div className="metric-card">
-              <div className="metric-val">~$20M <span>ACV</span></div>
-              <div className="metric-label">Generated for the business through the program to date</div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-val">Enterprise <span>↑</span></div>
-              <div className="metric-label">Deals closing within-quarter after the right technical advocate was engaged</div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-val">P&amp;E + GTM</div>
-              <div className="metric-label">Product Ops as the connective layer between two orgs that rarely spoke</div>
-            </div>
-          </div>
-
-          <div className="inner-card">
-            <div className="inner-title">How it worked</div>
-            <div className="how-grid">
-              <div className="how-item">
-                <i className="ti ti-users-group how-icon"></i>
-                <h3>Identify the right advocate</h3>
-                <p className="how-desc">Matched VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</p>
-              </div>
-              <div className="how-item">
-                <i className="ti ti-target-arrow how-icon"></i>
-                <h3>Engage at the right moment</h3>
-                <p className="how-desc">Product Ops coordinated with GTM to bring technical credibility into deals when trust was the blocker to close</p>
-              </div>
-              <div className="how-item">
-                <i className="ti ti-repeat how-icon"></i>
-                <h3>Systematize the motion</h3>
-                <p className="how-desc">Built the program infrastructure so it scaled beyond individual relationships — a repeatable playbook, not a one-off favor</p>
-              </div>
-            </div>
-            <div className="acv-bar">
-              <i className="ti ti-trending-up" style={{ fontSize: "22px", color: "#D4860A", flexShrink: 0 }}></i>
-              <div>
-                <div className="acv-bar-text">~$20M in additional ACV generated</div>
-                <div className="acv-bar-sub">Enterprise deals closing within-quarter after technical advocate engagement — a direct revenue contribution from Product Operations</div>
-              </div>
             </div>
           </div>
         </div>
