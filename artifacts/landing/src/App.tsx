@@ -236,7 +236,7 @@ export default function App() {
                 <ul className="pt-action-list">
                   <li>Reduction in "where is X?" Slack messages</li>
                   <li>Time-to-answer for recurring data requests</li>
-
+                  <li>Use of agents by cross-functional teams to find answers</li>
                 </ul>
               </div>
             </div>
