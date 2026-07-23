@@ -256,6 +256,7 @@ export default function App() {
                   <li>Reduction in duplicate or conflicting documents</li>
                   <li>NPI cycle time before and after consolidation</li>
                   <li>Cross-team alignment meeting frequency</li>
+                  <li>PMs have more time with customers</li>
                 </ul>
               </div>
             </div>
