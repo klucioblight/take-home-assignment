@@ -67,11 +67,11 @@ export default function App() {
               <div className="pt-cell pt-col-problem">
                 <span className="pt-tag pt-tag-ownership">Ownership</span>
                 <p className="pt-problem-title">No AI tooling across the org</p>
-                <p className="pt-problem-desc">P&amp;E and GTM were doing changelogs, PRD drafts, meeting prep, and bug filing manually — with no consistent tooling or training in place.</p>
+                <p className="pt-problem-desc">Product, Engineering, and GTM were doing changelogs, PRD drafts, meeting prep, and bug filing manually — with no consistent tooling or training in place.</p>
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
-                  <li>Built Gemini Gems for core P&amp;E workflows: changelogs, PRD drafts, customer feedback loops, and NPI materials</li>
+                  <li>Built Gemini Gems for core Product and Engineering workflows: changelogs, PRD drafts, customer feedback loops, and NPI materials</li>
                   <li>Introduced Windsurf and Opencode for engineering teams; wrote skill files that standardized format and tone automatically</li>
                   <li>Led company-wide AI training — every team member equipped to automate their own repeatable work</li>
                 </ul>
@@ -148,15 +148,15 @@ export default function App() {
             <div className="pt-row">
               <div className="pt-cell pt-col-problem">
                 <span className="pt-tag pt-tag-ownership">Ownership</span>
-                <p className="pt-problem-title">P&amp;E expertise wasn't reaching enterprise deals</p>
-                <p className="pt-problem-desc">GTM was losing or stalling enterprise deals where technical credibility was the missing ingredient — and P&amp;E had no structured way to show up in the sales cycle.</p>
+                <p className="pt-problem-title">Product and Engineering expertise wasn't reaching enterprise deals</p>
+                <p className="pt-problem-desc">GTM was losing or stalling enterprise deals where technical credibility was the missing ingredient — and Product and Engineering had no structured way to show up in the sales cycle.</p>
               </div>
               <div className="pt-cell pt-col-action">
                 <ul className="pt-action-list">
                   <li>Built and led a Customer Advocate Program from scratch — matching VP-level product and engineering leaders to enterprise deals based on domain expertise and relationship fit</li>
                   <li>Coordinated with GTM to bring technical advocates into deals at the exact moment trust was the blocker to close</li>
                   <li>Built the program infrastructure as a repeatable playbook — systematized so it scaled beyond individual relationships and one-off favors</li>
-                  <li>Acted as the connective layer between P&amp;E and GTM, two orgs that rarely spoke before this program</li>
+                  <li>Acted as the connective layer between Product and Engineering and GTM, two orgs that rarely spoke before this program</li>
                 </ul>
               </div>
               <div className="pt-cell pt-col-outcome">
@@ -182,11 +182,11 @@ export default function App() {
                 <div className="tool-logo logo-gemini"><i className="ti ti-sparkles"></i></div>
                 <div><div className="tool-name">Gemini</div></div>
               </div>
-              <p className="tool-use">Built the first internal Gems for P&E — automating changelogs, PRD drafts, meeting prep, and customer feedback intake. The foundation of our AI workflow stack.</p>
+              <p className="tool-use">Built the first internal Gems for Product and Engineering — automating changelogs, PRD drafts, meeting prep, and customer feedback intake. The foundation of our AI workflow stack.</p>
               <div className="tool-tags">
                 <span className="tool-tag">Workflow automation</span>
                 <span className="tool-tag">Gems / agents</span>
-                <span className="tool-tag">P&amp;E ops</span>
+                <span className="tool-tag">Product and Engineering ops</span>
               </div>
             </div>
             <div className="tool-card">
