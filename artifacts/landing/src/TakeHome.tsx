@@ -506,85 +506,6 @@ export default function TakeHome() {
         </div>
       </section>
 
-      {/* THE PROMPTS */}
-      <section style={{ background: "#fff" }}>
-        <div className="container">
-          <div className="eyebrow">Behind the prototype</div>
-          <h2>The exact prompts I used</h2>
-          <p className="section-sub">
-            Nine turns in Claude to go from a blank page to a working prototype with a Samsara
-            design system, Slack integration, Zendesk publish flow, and architecture one-pager.
-            User prompts are verbatim.
-          </p>
-
-          <div className="th-prompts-timeline">
-            {[
-              {
-                turn: 1,
-                prompt: "I am a product operations leader who wants to automate the way product release documentation is completed. I'd like to make a working prototype that does the following:\n\n• Takes raw data from a PRD or text source\n• Creates an internal release note for teams to understand the feature, how it works, who it is available to, and any links to more information\n• Creates an external release note and includes the steps to automatically push the release note to https://kb.samsara.com/hc/en-us/p/support_home\n\nUse this feature in the example for the prototype:\n\n• AI Multicam: Drivers can now add up to four additional HD cameras, providing a 360-degree view to reduce blindspots, all accessible through an in-cab monitor. In addition, the AI Multicam actively notifies drivers in real-time of hazards, such as pedestrians and cyclists. Whether using a Samsara camera or a third-party device, administrators can retrieve historic video footage and corresponding audio to help quickly resolve incidents.",
-                result: "Created release-note-pipeline.jsx — working React prototype with live Claude API call, pre-loaded AI Multicam PRD, internal note + external note + Zendesk publish flow"
-              },
-              {
-                turn: 2,
-                prompt: "Can you add a step on internal release note where the internal note can publish directly to Slack?",
-                result: "Added Slack Block Kit builder, webhook send, and Publish to Slack section on the internal note tab"
-              },
-              {
-                turn: 3,
-                prompt: "Yes, have it publish to #product-releases on slack immediately",
-                result: "Moved Slack config to input panel, added auto-publish-on-generate for #product-releases, converted internal-tab Slack box to a status/resend surface"
-              },
-              {
-                turn: 4,
-                prompt: "Yes, please sketch the architecture",
-                result: "Created release-pipeline-architecture.html — one-pager with SVG system diagram covering the full six-step production path"
-              },
-              {
-                turn: 5,
-                prompt: "Can you put all the information you've worked on here into a notion-style format so I can paste to notion? How can I ensure the team can click the prototype?",
-                result: "Created release-note-pipeline-notion.md — full project consolidated into Notion-ready markdown with sharing instructions"
-              },
-              {
-                turn: 6,
-                prompt: "Can you publish the link to the prototype so I can include it in my document?",
-                result: "Explained that publishing must be done by the artifact owner from the Claude interface"
-              },
-              {
-                turn: 7,
-                prompt: "Can you create a design system that matches the samsara brand and implement across the prototype and any other items built: https://www.samsara.com",
-                result: "Created samsara-design-system.html (v1) — fetched samsara.com, extracted tokens (navy #00263E, Samsara Blue, orange as signal), applied across all deliverables"
-              },
-              {
-                turn: 8,
-                prompt: "Samsara redesigned their brand and announced this last week, the design system above is pulling the old colors of brand. New brand colors and font are shown here: https://www.samsara.com/blog/builtwithoperators",
-                result: "Rewrote design-system.html as v2 — fetched rebrand announcement, rebuilt around hi-vis yellow #EAF400, asphalt near-black, signal stripe motif, re-applied across all deliverables"
-              },
-              {
-                turn: 9,
-                prompt: "I need to share the exact prompts/conversation I had with claude to create this prototype. Can you share a file that I can view the full conversation?",
-                result: "Created conversation-transcript.md — full reconstructed session with verbatim user prompts and bracketed notes on files created/edited"
-              }
-            ].map(({ turn, prompt, result }) => (
-              <div key={turn} className="th-prompt-item">
-                <div className="th-prompt-turn">
-                  <div className="th-prompt-turn-num">{turn}</div>
-                  <div className="th-prompt-turn-line"></div>
-                </div>
-                <div className="th-prompt-body">
-                  <div className="th-prompt-bubble">
-                    <div className="th-prompt-who"><i className="ti ti-user"></i> Prompt</div>
-                    <div className="th-prompt-text">{prompt}</div>
-                  </div>
-                  <div className="th-prompt-result">
-                    <i className="ti ti-robot"></i> {result}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* THE AI LEDGER */}
       <section style={{ background: "var(--navy)" }}>
         <div className="container">
@@ -688,6 +609,147 @@ export default function TakeHome() {
               able to come in, take on some of the biggest pain points, show immediate value, and use those
               examples to set the tone for how teams can partner with product operations is the key.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* THE PROMPTS */}
+      <section style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="eyebrow">Behind the prototype</div>
+          <h2>The exact prompts I used</h2>
+          <p className="section-sub">
+            Nine turns in Claude to go from a blank page to a working prototype with a Samsara
+            design system, Slack integration, Zendesk publish flow, and architecture one-pager.
+            User prompts are verbatim.
+          </p>
+
+          <div className="th-prompts-timeline">
+            {[
+              {
+                turn: 1,
+                prompt: "I am a product operations leader who wants to automate the way product release documentation is completed. I'd like to make a working prototype that does the following:\n\n• Takes raw data from a PRD or text source\n• Creates an internal release note for teams to understand the feature, how it works, who it is available to, and any links to more information\n• Creates an external release note and includes the steps to automatically push the release note to https://kb.samsara.com/hc/en-us/p/support_home\n\nUse this feature in the example for the prototype:\n\n• AI Multicam: Drivers can now add up to four additional HD cameras, providing a 360-degree view to reduce blindspots, all accessible through an in-cab monitor. In addition, the AI Multicam actively notifies drivers in real-time of hazards, such as pedestrians and cyclists. Whether using a Samsara camera or a third-party device, administrators can retrieve historic video footage and corresponding audio to help quickly resolve incidents.",
+                result: "Created release-note-pipeline.jsx — working React prototype with live Claude API call, pre-loaded AI Multicam PRD, internal note + external note + Zendesk publish flow"
+              },
+              {
+                turn: 2,
+                prompt: "Can you add a step on internal release note where the internal note can publish directly to Slack?",
+                result: "Added Slack Block Kit builder, webhook send, and Publish to Slack section on the internal note tab"
+              },
+              {
+                turn: 3,
+                prompt: "Yes, have it publish to #product-releases on slack immediately",
+                result: "Moved Slack config to input panel, added auto-publish-on-generate for #product-releases, converted internal-tab Slack box to a status/resend surface"
+              },
+              {
+                turn: 4,
+                prompt: "Yes, please sketch the architecture",
+                result: "Created release-pipeline-architecture.html — one-pager with SVG system diagram covering the full six-step production path"
+              },
+              {
+                turn: 5,
+                prompt: "Can you put all the information you've worked on here into a notion-style format so I can paste to notion? How can I ensure the team can click the prototype?",
+                result: "Created release-note-pipeline-notion.md — full project consolidated into Notion-ready markdown with sharing instructions"
+              },
+              {
+                turn: 6,
+                prompt: "Can you publish the link to the prototype so I can include it in my document?",
+                result: "Explained that publishing must be done by the artifact owner from the Claude interface"
+              },
+              {
+                turn: 7,
+                prompt: "Can you create a design system that matches the samsara brand and implement across the prototype and any other items built: https://www.samsara.com",
+                result: "Created samsara-design-system.html (v1) — fetched samsara.com, extracted tokens (navy #00263E, Samsara Blue, orange as signal), applied across all deliverables"
+              },
+              {
+                turn: 8,
+                prompt: "Samsara redesigned their brand and announced this last week, the design system above is pulling the old colors of brand. New brand colors and font are shown here: https://www.samsara.com/blog/builtwithoperators",
+                result: "Rewrote design-system.html as v2 — fetched rebrand announcement, rebuilt around hi-vis yellow #EAF400, asphalt near-black, signal stripe motif, re-applied across all deliverables"
+              },
+              {
+                turn: 9,
+                prompt: "I need to share the exact prompts/conversation I had with claude to create this prototype. Can you share a file that I can view the full conversation?",
+                result: "Created conversation-transcript.md — full reconstructed session with verbatim user prompts and bracketed notes on files created/edited"
+              }
+            ].map(({ turn, prompt, result }) => (
+              <div key={turn} className="th-prompt-item">
+                <div className="th-prompt-turn">
+                  <div className="th-prompt-turn-num">{turn}</div>
+                  <div className="th-prompt-turn-line"></div>
+                </div>
+                <div className="th-prompt-body">
+                  <div className="th-prompt-bubble">
+                    <div className="th-prompt-who"><i className="ti ti-user"></i> Prompt</div>
+                    <div className="th-prompt-text">{prompt}</div>
+                  </div>
+                  <div className="th-prompt-result">
+                    <i className="ti ti-robot"></i> {result}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* THANK YOU */}
+      <section style={{ background: "var(--navy)", borderTop: "3px solid var(--amber)" }}>
+        <div className="container" style={{ textAlign: "center", padding: "4rem 2rem" }}>
+          <div className="eyebrow" style={{ color: "var(--amber)", justifyContent: "center", display: "flex" }}>Thank you</div>
+          <h2 style={{ color: "#fff", marginBottom: "1rem" }}>It was a pleasure putting this together</h2>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.8, maxWidth: 540, margin: "0 auto 2rem" }}>
+            I genuinely enjoyed working through this assignment — it gave me a chance to show not just
+            what I know, but how I think and build. I hope it gives you a clear sense of how I'd show
+            up in this role. I would love to connect.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
+            <a
+              href="mailto:kblight815@gmail.com"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "var(--amber)",
+                color: "var(--navy)",
+                fontWeight: 700,
+                fontSize: 14,
+                padding: "0.7rem 1.4rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                letterSpacing: "0.02em",
+                transition: "opacity 0.15s"
+              }}
+              onMouseOver={e => (e.currentTarget.style.opacity = "0.85")}
+              onMouseOut={e => (e.currentTarget.style.opacity = "1")}
+            >
+              <i className="ti ti-mail" style={{ fontSize: 16 }}></i>
+              kblight815@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kimberlylucioblight/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.25)",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 14,
+                padding: "0.7rem 1.4rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                letterSpacing: "0.02em",
+                transition: "background 0.15s"
+              }}
+              onMouseOver={e => (e.currentTarget.style.background = "rgba(255,255,255,0.18)")}
+              onMouseOut={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+            >
+              <i className="ti ti-brand-linkedin" style={{ fontSize: 16 }}></i>
+              LinkedIn
+            </a>
           </div>
         </div>
       </section>
