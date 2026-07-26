@@ -191,6 +191,29 @@ export default function TakeHome() {
             <span className="th-status-owner">Owner: Product Operations</span>
           </div>
 
+          {/* Live prototype launch card */}
+          <a
+            href="https://claude.ai/public/artifacts/10cafa38-3c4f-40c8-898b-de027b9d98a9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="th-prototype-card"
+          >
+            <div className="th-prototype-left">
+              <div className="th-prototype-icon">
+                <i className="ti ti-player-play"></i>
+              </div>
+              <div>
+                <div className="th-prototype-card-title">Open the live prototype</div>
+                <div className="th-prototype-card-desc">
+                  Paste a PRD → Claude drafts internal + external release notes → ready to post to Slack and Zendesk
+                </div>
+              </div>
+            </div>
+            <div className="th-prototype-cta">
+              Try it <i className="ti ti-arrow-right"></i>
+            </div>
+          </a>
+
           {/* Problem */}
           <div className="th-problem-box">
             <div className="th-problem-label">The problem today</div>
