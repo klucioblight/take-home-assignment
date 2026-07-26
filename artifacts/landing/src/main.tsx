@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import TakeHome from "./TakeHome";
 import Prototype from "./Prototype";
-import Architecture from "./Architecture";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -12,7 +11,6 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/" element={<App />} />
       <Route path="/take-home-assignment" element={<TakeHome />} />
       <Route path="/prototype" element={<Prototype />} />
-      <Route path="/architecture" element={<Architecture />} />
     </Routes>
   </BrowserRouter>
 );

@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function TakeHome() {
+  const [archOpen, setArchOpen] = useState(false);
   return (
     <>
       <nav>
@@ -166,9 +169,14 @@ export default function TakeHome() {
                 <span className="th-split-badge th-split-badge-green">
                   <i className="ti ti-check"></i> Working prototype
                 </span>
-                <a href="/architecture" className="th-split-badge th-split-badge-blue" style={{ textDecoration: "none", cursor: "pointer" }}>
-                  <i className="ti ti-layout-board"></i> Production architecture drafted <i className="ti ti-arrow-right" style={{ fontSize: 10 }}></i>
-                </a>
+                <button
+                  onClick={() => setArchOpen(o => !o)}
+                  className="th-split-badge th-split-badge-blue"
+                  style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", fontSize: "inherit" }}
+                >
+                  <i className="ti ti-layout-board"></i> Production architecture drafted{" "}
+                  <i className={`ti ${archOpen ? "ti-chevron-up" : "ti-chevron-down"}`} style={{ fontSize: 10 }}></i>
+                </button>
               </div>
             </div>
 
@@ -233,6 +241,199 @@ export default function TakeHome() {
               </div>
             </div>
           </div>
+
+          {/* ARCHITECTURE DROPDOWN */}
+          {archOpen && (
+            <div style={{
+              marginTop: "1rem",
+              border: "1px solid var(--border)",
+              borderRadius: "var(--radius-lg)",
+              overflow: "hidden",
+              background: "var(--off-white)"
+            }}>
+              {/* Diagram */}
+              <div style={{ background: "var(--navy)", padding: "1.5rem 1.5rem 1.25rem" }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--amber)", marginBottom: "0.25rem" }}>
+                  Six-step happy path
+                </div>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: "1rem", fontFamily: "'Space Grotesk', sans-serif" }}>
+                  System Diagram
+                </div>
+                <svg viewBox="0 0 820 300" width="100%" style={{ display: "block", minWidth: 480 }} aria-label="Release Pipeline Architecture Diagram">
+                  <defs>
+                    <marker id="arrow-w" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                      <path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,0.4)" />
+                    </marker>
+                    <marker id="arrow-a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                      <path d="M0,0 L0,6 L8,3 z" fill="#F5A623" />
+                    </marker>
+                  </defs>
+                  {/* Step 1 */}
+                  <rect x="10" y="90" width="110" height="80" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+                  <text x="65" y="118" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 1</text>
+                  <text x="65" y="136" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">PM submits</text>
+                  <text x="65" y="150" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">PRD</text>
+                  <text x="65" y="165" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">via form / webhook</text>
+                  <line x1="122" y1="130" x2="148" y2="130" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" markerEnd="url(#arrow-w)" />
+                  {/* Step 2 */}
+                  <rect x="150" y="90" width="120" height="80" rx="10" fill="rgba(0,119,182,0.2)" stroke="rgba(0,119,182,0.5)" strokeWidth="1" />
+                  <text x="210" y="118" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 2</text>
+                  <text x="210" y="136" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">Claude drafts</text>
+                  <text x="210" y="150" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">both notes</text>
+                  <text x="210" y="165" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">validated JSON</text>
+                  <line x1="272" y1="130" x2="298" y2="130" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" markerEnd="url(#arrow-w)" />
+                  {/* Step 3 */}
+                  <rect x="300" y="90" width="110" height="80" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+                  <text x="355" y="118" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 3</text>
+                  <text x="355" y="136" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">Persist with</text>
+                  <text x="355" y="150" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">audit trail</text>
+                  <text x="355" y="165" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">DB + version log</text>
+                  <line x1="412" y1="130" x2="438" y2="130" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" markerEnd="url(#arrow-w)" />
+                  {/* Step 4 */}
+                  <rect x="440" y="90" width="120" height="80" rx="10" fill="rgba(245,166,35,0.15)" stroke="rgba(245,166,35,0.45)" strokeWidth="1" />
+                  <text x="500" y="118" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 4</text>
+                  <text x="500" y="136" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">Post internal</text>
+                  <text x="500" y="150" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="600">note to Slack</text>
+                  <text x="500" y="165" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">#product-releases</text>
+                  <line x1="562" y1="130" x2="588" y2="130" stroke="#F5A623" strokeWidth="1.5" markerEnd="url(#arrow-a)" />
+                  {/* Step 5 */}
+                  <rect x="590" y="90" width="110" height="80" rx="10" fill="rgba(245,166,35,0.25)" stroke="#F5A623" strokeWidth="1.5" />
+                  <text x="645" y="112" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 5</text>
+                  <text x="645" y="130" textAnchor="middle" fill="#F5A623" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="700">Human</text>
+                  <text x="645" y="145" textAnchor="middle" fill="#F5A623" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="700">approves</text>
+                  <text x="645" y="160" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">external gate</text>
+                  <text x="645" y="173" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize="9" fontFamily="Inter,sans-serif">one click in Slack</text>
+                  <line x1="702" y1="130" x2="728" y2="130" stroke="#F5A623" strokeWidth="1.5" markerEnd="url(#arrow-a)" />
+                  {/* Step 6 */}
+                  <rect x="730" y="90" width="80" height="80" rx="10" fill="rgba(39,80,10,0.35)" stroke="#6dbb3a" strokeWidth="1.5" />
+                  <text x="770" y="112" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">STEP 6</text>
+                  <text x="770" y="130" textAnchor="middle" fill="#a8e06a" fontSize="11" fontFamily="Space Grotesk,sans-serif" fontWeight="700">Published ✓</text>
+                  <text x="770" y="153" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9.5" fontFamily="Inter,sans-serif">kb.samsara.com</text>
+                  <text x="770" y="166" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize="9" fontFamily="Inter,sans-serif">+ Slack thread</text>
+                  {/* Pipeline service bracket */}
+                  <rect x="140" y="62" width="590" height="4" rx="2" fill="rgba(0,119,182,0.3)" />
+                  <text x="435" y="57" textAnchor="middle" fill="rgba(0,119,182,0.7)" fontSize="9.5" fontFamily="Space Grotesk,sans-serif" fontWeight="600" letterSpacing="1">RELEASE PIPELINE SERVICE</text>
+                  <line x1="140" y1="62" x2="140" y2="90" stroke="rgba(0,119,182,0.3)" strokeWidth="1" />
+                  <line x1="730" y1="62" x2="730" y2="90" stroke="rgba(0,119,182,0.3)" strokeWidth="1" />
+                  {/* Secrets manager */}
+                  <ellipse cx="355" cy="245" rx="90" ry="26" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" strokeWidth="1" strokeDasharray="4 3" />
+                  <text x="355" y="241" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="10" fontFamily="Space Grotesk,sans-serif" fontWeight="600">Secrets Manager</text>
+                  <text x="355" y="256" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize="9" fontFamily="Inter,sans-serif">Anthropic · Slack · Zendesk</text>
+                  <line x1="265" y1="240" x2="210" y2="172" stroke="rgba(255,255,255,0.15)" strokeWidth="1" strokeDasharray="3 3" />
+                  <line x1="355" y1="219" x2="500" y2="172" stroke="rgba(255,255,255,0.15)" strokeWidth="1" strokeDasharray="3 3" />
+                </svg>
+                {/* Legend */}
+                <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "0.75rem" }}>
+                  {[
+                    { color: "rgba(255,255,255,0.15)", border: "rgba(255,255,255,0.3)", label: "Automated step" },
+                    { color: "rgba(245,166,35,0.25)", border: "#F5A623", label: "Human gate (external only)" },
+                    { color: "rgba(39,80,10,0.35)", border: "#6dbb3a", label: "Published state" },
+                  ].map(({ color, border, label }) => (
+                    <div key={label} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <div style={{ width: 12, height: 12, borderRadius: 2, background: color, border: `1.5px solid ${border}`, flexShrink: 0 }} />
+                      <span style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Three decisions */}
+              <div style={{ padding: "1.25rem 1.5rem", borderBottom: "1px solid var(--border)" }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.75rem" }}>
+                  Architecture decisions
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10 }}>
+                  {[
+                    {
+                      color: "var(--accent)",
+                      label: "Decision 1",
+                      title: "Bot token replaces the webhook",
+                      body: "In production, Slack's chat.postMessage with a bot token gives delivery receipts, threading, and interactive Approve / Edit buttons directly on the release message — things the prototype's webhook can't do.",
+                    },
+                    {
+                      color: "var(--amber)",
+                      label: "Decision 2",
+                      title: "Asymmetric approval gates",
+                      body: "Internal notes auto-ship instantly. The external path requires one human click before the Zendesk article goes live. It's a per-destination config flag — easy to tighten or loosen later without a code change.",
+                    },
+                    {
+                      color: "#27500A",
+                      label: "Decision 3",
+                      title: "Credentials in secrets manager",
+                      body: "All three tokens — Anthropic, Slack, Zendesk — live in a secrets manager the service reads at runtime. No more pasting a webhook per session; credential rotation never touches the UI.",
+                    },
+                  ].map(({ color, label, title, body }) => (
+                    <div key={label} style={{
+                      background: "#fff",
+                      border: "1px solid var(--border)",
+                      borderTop: `3px solid ${color}`,
+                      borderRadius: "var(--radius-md)",
+                      padding: "0.85rem 1rem"
+                    }}>
+                      <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color, marginBottom: "0.35rem" }}>{label}</div>
+                      <div style={{ fontSize: 12.5, fontWeight: 600, color: "var(--navy)", marginBottom: "0.4rem" }}>{title}</div>
+                      <div style={{ fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>{body}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Build scope */}
+              <div style={{ padding: "1.25rem 1.5rem", borderBottom: "1px solid var(--border)" }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.75rem" }}>
+                  Build scope — 1–2 engineer-weeks for the full happy path
+                </div>
+                <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-md)", overflow: "hidden", background: "#fff" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "32% 1fr auto", background: "var(--navy)" }}>
+                    {["Component", "What it does", "Effort"].map(h => (
+                      <div key={h} style={{ padding: "0.5rem 0.85rem", fontSize: 9.5, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>{h}</div>
+                    ))}
+                  </div>
+                  {[
+                    { c: "Pipeline Service API", d: "Accepts PRD, calls Claude, stores result, fires Slack + Zendesk side effects", e: "3–5 days", bg: "#fff" },
+                    { c: "State machine", d: "Tracks each release: Draft → Internal Sent → Approved → Published. Prevents double-publishing.", e: "2–3 days", bg: "var(--off-white)" },
+                    { c: "Slack bot + approval blocks", d: "Bot token replaces webhook. Adds interactive Approve / Edit buttons in Slack.", e: "1–2 days", bg: "#fff" },
+                    { c: "Zendesk draft → live", d: "On approval, flips article from draft to published and threads 'Published ✓ + link' back to Slack.", e: "1 day", bg: "var(--off-white)" },
+                    { c: "Secrets manager wiring", d: "Pull Anthropic, Slack, and Zendesk credentials at runtime. No secrets in env vars or browser.", e: "½ day", bg: "#fff" },
+                  ].map(({ c, d, e, bg }) => (
+                    <div key={c} style={{ display: "grid", gridTemplateColumns: "32% 1fr auto", borderTop: "1px solid var(--border)", background: bg }}>
+                      <div style={{ padding: "0.65rem 0.85rem", fontSize: 12, fontWeight: 600, color: "var(--navy)", lineHeight: 1.5 }}>{c}</div>
+                      <div style={{ padding: "0.65rem 0.85rem", fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.55, borderLeft: "1px solid var(--border)" }}>{d}</div>
+                      <div style={{ padding: "0.65rem 0.85rem", borderLeft: "1px solid var(--border)", display: "flex", alignItems: "center" }}>
+                        <span style={{ fontSize: 10.5, fontWeight: 700, background: "var(--accent-light)", color: "var(--navy-light)", borderRadius: 3, padding: "2px 7px", whiteSpace: "nowrap" }}>{e}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Phase 2 */}
+              <div style={{ padding: "1.25rem 1.5rem" }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.75rem" }}>
+                  Phase 2 — additive, no breaking changes to the pipeline
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: 10 }}>
+                  {[
+                    { icon: "ti-webhook", title: "PRD folder webhook trigger", desc: "Watch a Google Drive or Notion folder for new PRDs. Auto-trigger the pipeline when a doc moves to 'Ready for Release Notes' — zero manual steps." },
+                    { icon: "ti-send", title: "#sales-enablement routing", desc: "A second Slack destination for external-facing teams. Same pipeline, different Block Kit template with GTM-friendly language." },
+                    { icon: "ti-calendar-repeat", title: "Weekly release digest", desc: "Cron job that aggregates all notes published in the last 7 days and posts a summary digest to a broader channel." },
+                    { icon: "ti-chart-bar", title: "Metrics + feedback loop", desc: "Track opens on the KB article, collect PM ratings on note quality, and feed low-quality examples back into prompt fine-tuning." },
+                  ].map(({ icon, title, desc }) => (
+                    <div key={title} style={{
+                      background: "#fff",
+                      border: "1px solid var(--border)",
+                      borderRadius: "var(--radius-md)",
+                      padding: "0.85rem 1rem"
+                    }}>
+                      <i className={`ti ${icon}`} style={{ fontSize: 18, color: "var(--accent)", marginBottom: "0.4rem", display: "block" }}></i>
+                      <div style={{ fontSize: 12.5, fontWeight: 600, color: "var(--navy)", marginBottom: "0.3rem" }}>{title}</div>
+                      <div style={{ fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>{desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Philosophy */}
           <div className="th-philosophy-block th-philosophy-light" style={{ marginTop: "1.25rem" }}>
