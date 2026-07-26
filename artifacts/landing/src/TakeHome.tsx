@@ -36,7 +36,7 @@ export default function TakeHome() {
           <div className="th-themes">
             <div className="th-theme-card th-theme-white">
               <div className="th-theme-label">Theme 1</div>
-              <div className="th-theme-title">Operational rhythms to drive cross-functional alignment</div>
+              <div className="th-theme-title">Operational rhythms to drive alignment</div>
               <ul className="th-theme-list">
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Consistent planning rituals — baked into operating rhythm</li>
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Executive reporting for monthly reviews — data automated, strategy human-owned</li>
