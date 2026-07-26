@@ -135,9 +135,7 @@ export default function TakeHome() {
 
           {/* Live prototype launch card */}
           <a
-            href="https://claude.ai/public/artifacts/10cafa38-3c4f-40c8-898b-de027b9d98a9"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/prototype"
             className="th-prototype-card"
           >
             <div className="th-prototype-left">
@@ -147,7 +145,7 @@ export default function TakeHome() {
               <div>
                 <div className="th-prototype-card-title">Open the live prototype</div>
                 <div className="th-prototype-card-desc">
-                  Paste a PRD → Claude drafts internal + external release notes → ready to post to Slack and Zendesk
+                  Paste a PRD → AI drafts internal + external release notes → ready to post to Slack and Zendesk
                 </div>
               </div>
             </div>
@@ -314,6 +312,85 @@ export default function TakeHome() {
               <i className="ti ti-circle-dot"></i>
               Phase 2 candidates: PRD-folder webhook trigger · #sales-enablement routing · weekly digest
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* THE PROMPTS */}
+      <section style={{ background: "#fff" }}>
+        <div className="container">
+          <div className="eyebrow">Behind the prototype</div>
+          <h2>The exact prompts I used</h2>
+          <p className="section-sub">
+            Nine turns in Claude to go from a blank page to a working prototype with a Samsara
+            design system, Slack integration, Zendesk publish flow, and architecture one-pager.
+            User prompts are verbatim.
+          </p>
+
+          <div className="th-prompts-timeline">
+            {[
+              {
+                turn: 1,
+                prompt: "I am a product operations leader who wants to automate the way product release documentation is completed. I'd like to make a working prototype that does the following:\n\n• Takes raw data from a PRD or text source\n• Creates an internal release note for teams to understand the feature, how it works, who it is available to, and any links to more information\n• Creates an external release note and includes the steps to automatically push the release note to https://kb.samsara.com/hc/en-us/p/support_home\n\nUse this feature in the example for the prototype:\n\n• AI Multicam: Drivers can now add up to four additional HD cameras, providing a 360-degree view to reduce blindspots, all accessible through an in-cab monitor. In addition, the AI Multicam actively notifies drivers in real-time of hazards, such as pedestrians and cyclists. Whether using a Samsara camera or a third-party device, administrators can retrieve historic video footage and corresponding audio to help quickly resolve incidents.",
+                result: "Created release-note-pipeline.jsx — working React prototype with live Claude API call, pre-loaded AI Multicam PRD, internal note + external note + Zendesk publish flow"
+              },
+              {
+                turn: 2,
+                prompt: "Can you add a step on internal release note where the internal note can publish directly to Slack?",
+                result: "Added Slack Block Kit builder, webhook send, and Publish to Slack section on the internal note tab"
+              },
+              {
+                turn: 3,
+                prompt: "Yes, have it publish to #product-releases on slack immediately",
+                result: "Moved Slack config to input panel, added auto-publish-on-generate for #product-releases, converted internal-tab Slack box to a status/resend surface"
+              },
+              {
+                turn: 4,
+                prompt: "Yes, please sketch the architecture",
+                result: "Created release-pipeline-architecture.html — one-pager with SVG system diagram covering the full six-step production path"
+              },
+              {
+                turn: 5,
+                prompt: "Can you put all the information you've worked on here into a notion-style format so I can paste to notion? How can I ensure the team can click the prototype?",
+                result: "Created release-note-pipeline-notion.md — full project consolidated into Notion-ready markdown with sharing instructions"
+              },
+              {
+                turn: 6,
+                prompt: "Can you publish the link to the prototype so I can include it in my document?",
+                result: "Explained that publishing must be done by the artifact owner from the Claude interface"
+              },
+              {
+                turn: 7,
+                prompt: "Can you create a design system that matches the samsara brand and implement across the prototype and any other items built: https://www.samsara.com",
+                result: "Created samsara-design-system.html (v1) — fetched samsara.com, extracted tokens (navy #00263E, Samsara Blue, orange as signal), applied across all deliverables"
+              },
+              {
+                turn: 8,
+                prompt: "Samsara redesigned their brand and announced this last week, the design system above is pulling the old colors of brand. New brand colors and font are shown here: https://www.samsara.com/blog/builtwithoperators",
+                result: "Rewrote design-system.html as v2 — fetched rebrand announcement, rebuilt around hi-vis yellow #EAF400, asphalt near-black, signal stripe motif, re-applied across all deliverables"
+              },
+              {
+                turn: 9,
+                prompt: "I need to share the exact prompts/conversation I had with claude to create this prototype. Can you share a file that I can view the full conversation?",
+                result: "Created conversation-transcript.md — full reconstructed session with verbatim user prompts and bracketed notes on files created/edited"
+              }
+            ].map(({ turn, prompt, result }) => (
+              <div key={turn} className="th-prompt-item">
+                <div className="th-prompt-turn">
+                  <div className="th-prompt-turn-num">{turn}</div>
+                  <div className="th-prompt-turn-line"></div>
+                </div>
+                <div className="th-prompt-body">
+                  <div className="th-prompt-bubble">
+                    <div className="th-prompt-who"><i className="ti ti-user"></i> Prompt</div>
+                    <div className="th-prompt-text">{prompt}</div>
+                  </div>
+                  <div className="th-prompt-result">
+                    <i className="ti ti-robot"></i> {result}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
