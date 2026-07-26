@@ -762,6 +762,9 @@ export default function App() {
 
       <footer>
         Built for Samsara · Product Operations Interview
+        <a href="https://github.com/klucioblight/take-home-assignment" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "1.25rem", display: "inline-flex", alignItems: "center", gap: "5px", color: "inherit", opacity: 0.7, textDecoration: "none", fontSize: "0.85em" }}>
+          <i className="ti ti-brand-github" style={{ fontSize: "1.1em" }}></i> View on GitHub
+        </a>
       </footer>
     </>
   );
