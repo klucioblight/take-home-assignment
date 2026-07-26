@@ -9,6 +9,7 @@ export default function App() {
           <li><a href="#themes">What I Heard</a></li>
           <li><a href="#why">Why Samsara</a></li>
           <li><a href="#work">My Work</a></li>
+          <li><a href="/take-home-assignment" className="nav-link-highlight">Take Home Assignment</a></li>
         </ul>
       </nav>
 
