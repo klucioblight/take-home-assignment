@@ -166,9 +166,9 @@ export default function TakeHome() {
                 <span className="th-split-badge th-split-badge-green">
                   <i className="ti ti-check"></i> Working prototype
                 </span>
-                <span className="th-split-badge th-split-badge-blue">
-                  <i className="ti ti-layout-board"></i> Production architecture drafted
-                </span>
+                <a href="/architecture" className="th-split-badge th-split-badge-blue" style={{ textDecoration: "none", cursor: "pointer" }}>
+                  <i className="ti ti-layout-board"></i> Production architecture drafted <i className="ti ti-arrow-right" style={{ fontSize: 10 }}></i>
+                </a>
               </div>
             </div>
 
