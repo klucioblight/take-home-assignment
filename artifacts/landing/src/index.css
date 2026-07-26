@@ -79,7 +79,7 @@ nav {
   padding: 0 2rem;
 }
 
-section { padding: 4rem 0; }
+section { padding: 3rem 0; }
 section + section { border-top: 1px solid var(--border); }
 
 /* EYEBROW + TITLES */
@@ -125,7 +125,7 @@ h3 {
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 580px;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 /* AMBER BAR */
@@ -719,7 +719,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 .th-principle-card {
   background: rgba(255,255,255,0.07);
@@ -746,7 +746,7 @@ h3 {
 
 /* TAKE HOME — PHILOSOPHY BLOCKS */
 .th-philosophy-block {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
   border-left: 3px solid var(--amber);
@@ -797,8 +797,8 @@ h3 {
 .th-ledger-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 1.5rem;
+  gap: 12px;
+  margin-bottom: 1.25rem;
 }
 .th-ledger-col {
   border-radius: var(--radius-lg);
@@ -870,8 +870,8 @@ h3 {
 .th-charter-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 1.5rem;
+  gap: 12px;
+  margin-bottom: 1.25rem;
 }
 .th-charter-card {
   background: rgba(255,255,255,0.07);
@@ -1010,9 +1010,9 @@ h3 {
   background: var(--navy);
   border: 1px solid var(--navy-mid);
   border-radius: var(--radius-lg);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   text-decoration: none;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   transition: background 0.2s, box-shadow 0.2s;
 }
 .th-prototype-card:hover {
@@ -1063,7 +1063,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 .th-status-badge {
@@ -1089,11 +1089,11 @@ h3 {
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1rem 1.25rem;
+  padding: 0.9rem 1.1rem;
   font-size: 13.5px;
   color: var(--text-secondary);
   line-height: 1.65;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .th-problem-label {
   font-size: 10px;
@@ -1112,8 +1112,8 @@ h3 {
   background: var(--off-white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .th-pipe-step {
   flex: 1;
@@ -1156,8 +1156,8 @@ h3 {
 .th-outputs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 1.5rem;
+  gap: 12px;
+  margin-bottom: 1.25rem;
 }
 .th-output-card {
   background: var(--off-white);

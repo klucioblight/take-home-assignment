@@ -133,6 +133,14 @@ export default function TakeHome() {
             <span className="th-status-owner">Owner: Product Operations</span>
           </div>
 
+          {/* Problem */}
+          <div className="th-problem-box">
+            <div className="th-problem-label">The problem today</div>
+            Release documentation is manual: someone reads the PRD, writes an internal note, rewrites it for customers,
+            pastes it into Slack, and separately updates the knowledge base. This pipeline turns that into <strong>one step
+            with a review gate</strong> — every launch ships with consistent docs in minutes.
+          </div>
+
           {/* Live prototype launch card */}
           <a
             href="/prototype"
@@ -153,14 +161,6 @@ export default function TakeHome() {
               Try it <i className="ti ti-arrow-right"></i>
             </div>
           </a>
-
-          {/* Problem */}
-          <div className="th-problem-box">
-            <div className="th-problem-label">The problem today</div>
-            Release documentation is manual: someone reads the PRD, writes an internal note, rewrites it for customers,
-            pastes it into Slack, and separately updates the knowledge base. This pipeline turns that into <strong>one step
-            with a review gate</strong> — every launch ships with consistent docs in minutes.
-          </div>
 
           {/* Pipeline stages */}
           <div className="th-pipeline">
@@ -234,7 +234,7 @@ export default function TakeHome() {
           </div>
 
           {/* Production architecture */}
-          <div className="eyebrow" style={{ marginTop: "2rem", marginBottom: "0.75rem" }}>Production architecture · Key decisions</div>
+          <div className="eyebrow" style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>Production architecture · Key decisions</div>
           <div className="portfolio-table">
             <div className="pt-header">
               <div className="pt-cell pt-col-problem">Decision</div>
