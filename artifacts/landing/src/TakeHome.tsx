@@ -45,6 +45,9 @@ export default function TakeHome() {
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Executive reporting for monthly reviews — data automated, strategy human-owned</li>
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Central force keeping Product, Eng, Design, GTM, and Leadership in sync</li>
               </ul>
+              <div style={{ marginTop: "0.85rem", padding: "0.6rem 0.85rem", background: "rgba(0,38,62,0.05)", borderLeft: "2px solid rgba(0,38,62,0.2)", borderRadius: "0 4px 4px 0", fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                <span style={{ fontWeight: 600, color: "var(--navy)" }}>Human owned:</span> All AI-assisted items have a human aspect to ownership. AI serves as the assistant to a human producing the work within product operations.
+              </div>
             </div>
             <div className="th-theme-card th-theme-amber">
               <div className="th-theme-label">Theme 2</div>
@@ -54,6 +57,9 @@ export default function TakeHome() {
                 <li><span className="th-tag th-tag-auto">Fully automated</span> Release documentation automation — trigger a PR once a ticket closes</li>
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Rigorous operationalization of AI tools — lower barrier, find champions</li>
               </ul>
+              <div style={{ marginTop: "0.85rem", padding: "0.6rem 0.85rem", background: "rgba(0,38,62,0.05)", borderLeft: "2px solid rgba(245,166,35,0.4)", borderRadius: "0 4px 4px 0", fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                <span style={{ fontWeight: 600, color: "var(--navy)" }}>Human owned:</span> All AI-assisted items have a human aspect to ownership. AI serves as the assistant to a human producing the work within product operations.
+              </div>
             </div>
           </div>
         </div>
