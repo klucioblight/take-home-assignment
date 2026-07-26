@@ -94,24 +94,24 @@ export default function TakeHome() {
             <div className="th-principle-card">
               <div className="th-principle-icon"><i className="ti ti-antenna"></i></div>
               <div className="th-principle-label">Proactive, not administrative</div>
-              <div className="th-principle-desc">[ description coming ]</div>
+              <div className="th-principle-desc">Anticipating the needs of the product organization before they need them — building roadmaps from planning artifacts, reviewing customer feedback for beta candidates, preparing all-hands slides before they're asked for, and keeping an eye on support queues before they become a problem.</div>
             </div>
             <div className="th-principle-card">
               <div className="th-principle-icon"><i className="ti ti-chart-bar"></i></div>
               <div className="th-principle-label">Evidence over opinion</div>
-              <div className="th-principle-desc">[ description coming ]</div>
+              <div className="th-principle-desc">Showing the work instead of just talking about it. Building dashboards, automating release systems, and taking actual work off product managers' plates to demonstrate the need for a true product operations partner.</div>
             </div>
             <div className="th-principle-card">
               <div className="th-principle-icon"><i className="ti ti-road"></i></div>
               <div className="th-principle-label">In service of the roadmap</div>
-              <div className="th-principle-desc">[ description coming ]</div>
+              <div className="th-principle-desc">A customer-focused mindset on removing every barrier so product and engineering teams can deliver with minimal distractions — ensuring all data is available for product decisions and that clear adoption metrics are measured and reviewed.</div>
             </div>
           </div>
 
           {/* Charter philosophy */}
           <div className="th-philosophy-block">
             <div className="th-philosophy-eyebrow"><i className="ti ti-bulb"></i> My thinking — why this charter</div>
-            <div className="th-philosophy-body">[ philosophy coming ]</div>
+            <div className="th-philosophy-body">Product Operations should serve as both the bridge to all cross-functional teams and a true partner to product — not above or below the PM team. This means being the source of answers for questions from other teams, the place to bring pain points that need improvement, and the go-to for anything that falls in between. The two pillars reflect that dual mandate: one facing inward to keep the product org aligned and moving, one facing outward to remove the friction that slows everyone else down.</div>
           </div>
         </div>
       </section>
@@ -279,7 +279,7 @@ export default function TakeHome() {
           {/* Track B philosophy */}
           <div className="th-philosophy-block th-philosophy-light">
             <div className="th-philosophy-eyebrow"><i className="ti ti-bulb"></i> My thinking — why these decisions</div>
-            <div className="th-philosophy-body">[ philosophy coming ]</div>
+            <div className="th-philosophy-body">Release documentation came up repeatedly in my interviews — teams are often surprised by releases and see them at the same time as, or after, a customer. Fixing that is a quick win with high visibility. Starting with internal notes lets us see what the outputs look like, collect feedback from PMs and internal stakeholders, and iterate before anything goes external. External notes require approval until we feel fully confident the system is pulling the right information and the language is clear for a customer audience — that human gate stays until we've earned the trust to remove it.</div>
           </div>
         </div>
       </section>
