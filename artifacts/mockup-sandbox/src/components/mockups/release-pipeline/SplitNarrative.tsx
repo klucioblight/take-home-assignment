@@ -129,10 +129,16 @@ export function SplitNarrative() {
               </div>
             </div>
 
-            <button className="group w-full bg-[#F5A623] hover:bg-[#d9901c] text-[#00263E] font-space font-bold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg mb-8">
-              Try the live prototype
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <div className="mb-8 relative">
+              <div className="absolute -inset-1 bg-[#F5A623] rounded-2xl opacity-30 blur-md"></div>
+              <button className="group relative w-full bg-[#F5A623] hover:bg-[#fbb82d] text-[#00263E] font-space font-bold py-5 px-6 rounded-xl transition-all duration-200 flex flex-col items-center justify-center gap-1 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
+                <span className="flex items-center gap-2 text-xl">
+                  Try the live prototype
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <span className="text-[#00263E]/60 font-inter font-normal text-xs tracking-wide">Paste a PRD → get internal + external notes in seconds</span>
+              </button>
+            </div>
 
             <div className="bg-[#001b2c] rounded-xl p-5 border border-[#0077B6]/20">
               <h4 className="font-space text-xs text-blue-200/50 uppercase tracking-wider mb-3">Architecture Decisions</h4>
