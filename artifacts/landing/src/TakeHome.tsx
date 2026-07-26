@@ -370,9 +370,19 @@ export default function TakeHome() {
                 <div className="th-ledger-item">
                   <div className="th-ledger-item-title">Release Notes prototype</div>
                   <div className="th-ledger-item-desc">
-                    Mocking up the flow of the prototype. Building the actual clickable prototype. Writing the
-                    implementation instructions for engineering. The Slack integration feature. Reviewing
-                    Samsara's website to match the tone and color palette.
+                    Mocking up the flow of the prototype. Building the actual clickable prototype. The Slack integration feature.
+                  </div>
+                </div>
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">Voice of customer research</div>
+                  <div className="th-ledger-item-desc">
+                    Reviewed Samsara's online artifacts — website, help center, release content — to pull voice of customer and understand how Samsara discusses products and features with their audience.
+                  </div>
+                </div>
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">Engineering guidelines</div>
+                  <div className="th-ledger-item-desc">
+                    Generated implementation guidelines for engineering to use if the team decides to move forward with building the prototype internally.
                   </div>
                 </div>
               </div>
