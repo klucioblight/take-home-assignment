@@ -633,6 +633,23 @@ export default function TakeHome() {
             </div>
           </div>
 
+          {/* When AI didn't hit the mark */}
+          <div style={{
+            marginTop: "1.25rem",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            borderLeft: "3px solid rgba(245,166,35,0.6)",
+            borderRadius: "0 var(--radius-lg) var(--radius-lg) 0",
+            padding: "1.1rem 1.4rem"
+          }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--amber)", marginBottom: "0.6rem", display: "flex", alignItems: "center", gap: 7 }}>
+              <i className="ti ti-alert-triangle"></i> When AI didn't hit the mark
+            </div>
+            <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, margin: 0 }}>
+              A few areas where AI missed the mark were: matching Samsara's exact brand requirements, assumptions about tone of voice before checking brand materials, and making a recommendation for how to implement the prototype without understanding the engineering tech stack.
+            </p>
+          </div>
+
           {/* What this implies */}
           <div className="th-ledger-implication">
             <div className="th-ledger-impl-label">What this implies about how this role should be shaped</div>
