@@ -34,7 +34,7 @@ export default function TakeHome() {
           </p>
 
           <div className="th-themes">
-            <div className="th-theme-card th-theme-blue">
+            <div className="th-theme-card th-theme-white">
               <div className="th-theme-label">Theme 1</div>
               <div className="th-theme-title">Operational rhythms to drive cross-functional alignment</div>
               <ul className="th-theme-list">
@@ -69,7 +69,6 @@ export default function TakeHome() {
           <div className="th-charter-grid">
             <div className="th-charter-card">
               <div className="th-charter-icon"><i className="ti ti-repeat"></i></div>
-              <div className="th-charter-num">1</div>
               <div className="th-charter-name">Operational Rhythms &amp; Cross-Functional Alignment</div>
               <ul className="th-charter-list">
                 <li>Own consistent planning rituals across the product org</li>
@@ -80,7 +79,6 @@ export default function TakeHome() {
             </div>
             <div className="th-charter-card">
               <div className="th-charter-icon"><i className="ti ti-robot"></i></div>
-              <div className="th-charter-num">2</div>
               <div className="th-charter-name">Tooling, AI &amp; Process Standardization</div>
               <ul className="th-charter-list">
                 <li>Establish a centralized home for product tools, templates, and documentation</li>
@@ -91,85 +89,29 @@ export default function TakeHome() {
             </div>
           </div>
 
-          <div className="th-operating-row">
-            <div className="th-op-pill"><i className="ti ti-antenna"></i> Proactive, not administrative</div>
-            <div className="th-op-pill"><i className="ti ti-chart-bar"></i> Evidence over opinion</div>
-            <div className="th-op-pill"><i className="ti ti-road"></i> In service of the roadmap</div>
-          </div>
-        </div>
-      </section>
-
-      {/* FIRST PROJECT — ROADMAP CLARITY CHECKER */}
-      <section style={{ background: "var(--off-white)" }}>
-        <div className="container">
-          <div className="eyebrow">First project</div>
-          <h2>Roadmap Clarity Checker</h2>
-          <p className="section-sub">
-            Before building anything recurring, I needed to understand what data exists and what counts
-            as "the roadmap" at Samsara. Rather than writing a spec from scratch, I used Claude as a
-            Socratic interviewer — one question at a time, with follow-ups on every vague answer.
-          </p>
-
-          <div className="th-process-rail">
-            <div className="th-process-step">
-              <div className="th-process-dot th-dot-blue"></div>
-              <div className="th-process-label">Round 1–2</div>
-              <div className="th-process-text">Defined the actual problem: a discovery audit of what roadmap data exists — not a recurring check yet.</div>
+          {/* Operating principles — expanded */}
+          <div className="th-principles-grid">
+            <div className="th-principle-card">
+              <div className="th-principle-icon"><i className="ti ti-antenna"></i></div>
+              <div className="th-principle-label">Proactive, not administrative</div>
+              <div className="th-principle-desc">[ description coming ]</div>
             </div>
-            <div className="th-process-line"></div>
-            <div className="th-process-step">
-              <div className="th-process-dot th-dot-blue"></div>
-              <div className="th-process-label">Round 3–5</div>
-              <div className="th-process-text">Made "needs attention" measurable — blank target date only; conflicting priorities broken into three detectable types.</div>
+            <div className="th-principle-card">
+              <div className="th-principle-icon"><i className="ti ti-chart-bar"></i></div>
+              <div className="th-principle-label">Evidence over opinion</div>
+              <div className="th-principle-desc">[ description coming ]</div>
             </div>
-            <div className="th-process-line"></div>
-            <div className="th-process-step">
-              <div className="th-process-dot th-dot-blue"></div>
-              <div className="th-process-label">Round 6–7</div>
-              <div className="th-process-text">Weekly cadence, three audiences (Slack digest / CPO dashboard / GTM dashboard). Confidence scoring deferred to V2.</div>
-            </div>
-            <div className="th-process-line"></div>
-            <div className="th-process-step">
-              <div className="th-process-dot th-dot-amber"></div>
-              <div className="th-process-label">Output</div>
-              <div className="th-process-text">Full spec + repo scaffold: schema, flag logic, pipeline stub, and a discovery-audit interview template.</div>
+            <div className="th-principle-card">
+              <div className="th-principle-icon"><i className="ti ti-road"></i></div>
+              <div className="th-principle-label">In service of the roadmap</div>
+              <div className="th-principle-desc">[ description coming ]</div>
             </div>
           </div>
 
-          <div className="th-spec-cards">
-            <div className="th-spec-item">
-              <div className="th-spec-label">Phase 0</div>
-              <div className="th-spec-val">Discovery audit — map every system that holds roadmap data before building anything recurring</div>
-            </div>
-            <div className="th-spec-item">
-              <div className="th-spec-label">Flagged (V1)</div>
-              <div className="th-spec-val">Blank target date · Cross-doc priority mismatch · OKR overlap · Stated PM disagreement</div>
-            </div>
-            <div className="th-spec-item">
-              <div className="th-spec-label">Cadence</div>
-              <div className="th-spec-val">Weekly checks · Quarterly reset aligned to planning boundaries</div>
-            </div>
-            <div className="th-spec-item">
-              <div className="th-spec-label">Pilot</div>
-              <div className="th-spec-val">Safety team only for V1; discovery audit runs company-wide</div>
-            </div>
-            <div className="th-spec-item">
-              <div className="th-spec-label">Success signals</div>
-              <div className="th-spec-val">% reduction in blank-date items · Faster conflict resolution · Fewer "when is this shipping?" questions to PMs</div>
-            </div>
-            <div className="th-spec-item">
-              <div className="th-spec-label">V2 items</div>
-              <div className="th-spec-val">Confidence scoring · Automated OKR-overlap detection · Expansion past Safety team</div>
-            </div>
-          </div>
-
-          <div className="philosophy-card" style={{ marginTop: "1.5rem" }}>
-            <i className="ti ti-bulb phil-icon"></i>
-            <div>
-              <div className="phil-label">Why this approach</div>
-              <div className="phil-text">Socratic structure kept me honest — every vague answer got turned into something checkable before we moved on. Unknowns were labeled, not hidden.</div>
-              <div className="phil-sub">The output is usable, not just readable: a schema, flag logic, and a pipeline stub mean whoever picks this up next isn't starting from a blank page.</div>
-            </div>
+          {/* Charter philosophy */}
+          <div className="th-philosophy-block">
+            <div className="th-philosophy-eyebrow"><i className="ti ti-bulb"></i> My thinking — why this charter</div>
+            <div className="th-philosophy-body">[ philosophy coming ]</div>
           </div>
         </div>
       </section>
@@ -328,19 +270,30 @@ export default function TakeHome() {
             </div>
           </div>
 
-          <div className="th-estimate-bar">
-            <i className="ti ti-clock"></i>
-            <span><strong>Build estimate:</strong> ~1–2 engineer-weeks for the happy path. Phase 2: auto-trigger from PRD doc updates, multi-channel routing, scheduled digests.</span>
+          {/* Next step */}
+          <div className="th-nextstep-bar">
+            <i className="ti ti-arrow-right-circle"></i>
+            <span><strong>Next step:</strong> Partner with engineering or IT to determine who can help us set this up internally.</span>
+          </div>
+
+          {/* Track B philosophy */}
+          <div className="th-philosophy-block th-philosophy-light">
+            <div className="th-philosophy-eyebrow"><i className="ti ti-bulb"></i> My thinking — why these decisions</div>
+            <div className="th-philosophy-body">[ philosophy coming ]</div>
           </div>
         </div>
       </section>
 
-      {/* OPEN ITEMS */}
+      {/* WHAT I WOULD DO NEXT */}
       <section style={{ background: "var(--off-white)" }}>
         <div className="container">
-          <div className="eyebrow">Open items</div>
-          <h2>What's still TBD</h2>
+          <div className="eyebrow">After gathering feedback</div>
+          <h2>What I would do next</h2>
           <div className="th-open-grid">
+            <div className="th-open-item">
+              <i className="ti ti-circle-dot"></i>
+              Gather feedback on the prototype from the team and implement prioritized changes
+            </div>
             <div className="th-open-item">
               <i className="ti ti-circle-dot"></i>
               Fill TBDs in internal note template defaults (plans, regions) with real launch policy
@@ -355,12 +308,92 @@ export default function TakeHome() {
             </div>
             <div className="th-open-item">
               <i className="ti ti-circle-dot"></i>
-              Eng review of the architecture one-pager → scope phase 1
+              Partner with engineering or IT to scope and staff phase 1 build
             </div>
             <div className="th-open-item">
               <i className="ti ti-circle-dot"></i>
               Phase 2 candidates: PRD-folder webhook trigger · #sales-enablement routing · weekly digest
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* THE AI LEDGER */}
+      <section style={{ background: "var(--navy)" }}>
+        <div className="container">
+          <div className="eyebrow" style={{ color: "var(--amber)" }}>The AI ledger</div>
+          <h2 style={{ color: "#fff" }}>How I used AI — and where I didn't</h2>
+          <p className="section-sub" style={{ color: "rgba(255,255,255,0.65)" }}>
+            An honest accounting of what I delegated to AI and what I deliberately kept for myself.
+          </p>
+
+          <div className="th-ledger-grid">
+            {/* Human-owned */}
+            <div className="th-ledger-col">
+              <div className="th-ledger-header th-ledger-human">
+                <i className="ti ti-user"></i> Kept human
+              </div>
+              <div className="th-ledger-items">
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">The mission and charter</div>
+                  <div className="th-ledger-item-desc">
+                    Coming into this role, I wanted to bring my real experience from over 10 years working in product
+                    operations. The charter needs to speak to experience and focus on the key tenets of Samsara's
+                    culture: shipping fast, removing barriers, and empowering all teams to own their work and have
+                    time for what matters most — the customer.
+                  </div>
+                </div>
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">Determining AI-assisted vs. automated</div>
+                  <div className="th-ledger-item-desc">
+                    This was pulled from experience building similar tools and what I have learned from those tools.
+                    Knowing which workstreams benefit from a human in the loop versus those that are safe to fully
+                    automate is a judgment call that comes from having done it before.
+                  </div>
+                </div>
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">Release note decisions</div>
+                  <div className="th-ledger-item-desc">
+                    Whether the prototype should auto-publish, and where. How long and how specific the release notes
+                    should be — calibrated for internal teams versus external customers.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* AI-assisted */}
+            <div className="th-ledger-col">
+              <div className="th-ledger-header th-ledger-ai">
+                <i className="ti ti-robot"></i> Delegated to AI
+              </div>
+              <div className="th-ledger-items">
+                <div className="th-ledger-item">
+                  <div className="th-ledger-item-title">Release Notes prototype</div>
+                  <div className="th-ledger-item-desc">
+                    Mocking up the flow of the prototype. Building the actual clickable prototype. Writing the
+                    implementation instructions for engineering. The Slack integration feature. Reviewing
+                    Samsara's website to match the tone and color palette.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* What this implies */}
+          <div className="th-ledger-implication">
+            <div className="th-ledger-impl-label">What this implies about how this role should be shaped</div>
+            <p>
+              Even though AI can build fast prototypes and help you architect your vision clearly, human
+              empathy and understanding for culture is the clear driver of success in the product operations
+              function. Knowing when to leverage tools and systems to automate versus keeping other elements
+              human-centered is the easy part.
+            </p>
+            <p>
+              Adding in the additional layer of context — business priorities, customer impact, and the effect
+              of decisions on internal teams' workloads — is what is critical to this role's success. Being
+              able to come in, take on some of the biggest pain points, show immediate value, and use those
+              examples to set the tone for how teams can partner with product operations is the key.
+            </p>
           </div>
         </div>
       </section>
