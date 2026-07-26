@@ -245,6 +245,29 @@ export default function TakeHome() {
                   <span>Zendesk</span><span>Draft → Live on approval</span>
                 </div>
               </div>
+
+              <a
+                href="https://github.com/klucioblight/take-home-assignment"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginTop: "0.85rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.5)",
+                  textDecoration: "none",
+                  letterSpacing: "0.02em",
+                  transition: "color 0.15s"
+                }}
+                onMouseOver={e => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
+                onMouseOut={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+              >
+                <i className="ti ti-brand-github" style={{ fontSize: 14 }}></i>
+                View source on GitHub
+              </a>
             </div>
           </div>
 
