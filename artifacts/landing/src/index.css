@@ -1967,8 +1967,173 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-@media (max-width: 600px) {
-  .star-grid, .results-row, .metrics-row, .how-grid { grid-template-columns: 1fr; }
+/* =========================================================
+   MOBILE RESPONSIVE — comprehensive overrides
+   ========================================================= */
+
+/* --- Shared container / spacing --- */
+@media (max-width: 640px) {
+  .container { padding: 0 1rem; }
+  section { padding: 2rem 0; }
+  #hero { padding: 2.5rem 0 2rem; }
   .nav-links { display: none; }
-  section { padding: 2.5rem 0; }
+}
+
+/* --- Exec stats: wrap to 2-column grid --- */
+@media (max-width: 640px) {
+  .exec-stats {
+    flex-wrap: wrap;
+    border-radius: var(--radius-lg);
+  }
+  .exec-stat {
+    flex: 0 0 50%;
+    min-width: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 0.5rem;
+  }
+  .exec-stat:nth-child(1),
+  .exec-stat:nth-child(2) { border-top: none; }
+  .exec-divider { display: none; }
+}
+
+/* --- Portfolio table: reflow to stacked cards --- */
+@media (max-width: 640px) {
+  .portfolio-table {
+    border-radius: var(--radius-md);
+  }
+  .pt-header { display: none; }
+  .pt-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 2px solid var(--border);
+  }
+  .pt-row:first-of-type { border-top: none; }
+  .pt-cell {
+    border-right: none !important;
+    padding: 0.85rem 1rem;
+  }
+  .pt-col-problem {
+    background: var(--off-white);
+    border-bottom: 1px solid var(--border);
+  }
+  .pt-col-action {
+    border-bottom: 1px solid var(--border);
+  }
+  .pt-col-outcome::before {
+    content: "Outcome";
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* --- Work grid: 3-col → 1-col --- */
+@media (max-width: 640px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card-wide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* --- 3-col grids that need to drop to 1 --- */
+@media (max-width: 600px) {
+  .star-grid,
+  .results-row,
+  .metrics-row,
+  .how-grid,
+  .th-principles-grid,
+  .th-spec-cards { grid-template-columns: 1fr; }
+
+  /* Keep spec-cards as 2-col on very small screens */
+  .th-spec-cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- Why / closing cards --- */
+@media (max-width: 640px) {
+  .closing-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* --- Agent pipeline --- */
+@media (max-width: 700px) {
+  .agent-pipeline {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .pipeline-arrow { display: none; }
+  .agent-header { padding: 1rem; }
+}
+
+/* --- Take-home theme tags don't overflow --- */
+@media (max-width: 640px) {
+  .th-tag {
+    min-width: 80px;
+    font-size: 8.5px;
+  }
+  .th-theme-list li {
+    flex-wrap: wrap;
+  }
+  .th-themes,
+  .th-charter-grid,
+  .th-ledger-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Split card (Release Note Pipeline) --- */
+@media (max-width: 700px) {
+  .th-split-card { grid-template-columns: 1fr; }
+  .th-split-outputs { grid-template-columns: 1fr; }
+  .th-split-left,
+  .th-split-right { padding: 1.25rem 1rem; }
+}
+
+/* --- Prototype layout --- */
+@media (max-width: 800px) {
+  .proto-layout { grid-template-columns: 1fr; }
+}
+
+/* --- Process rail --- */
+@media (max-width: 640px) {
+  .th-process-rail { flex-direction: column; gap: 10px; }
+  .th-process-line { display: none; }
+  .th-pipeline { flex-direction: column; gap: 16px; }
+  .th-pipe-arrow { display: none; }
+  .th-status-owner { display: none; }
+}
+
+/* --- Prototype card wraps on small screens --- */
+@media (max-width: 480px) {
+  .th-prototype-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .th-prototype-cta { white-space: normal; }
+}
+
+/* --- Pillar/tool/why grids already use auto-fit but need floor reduction --- */
+@media (max-width: 480px) {
+  .pillars-grid,
+  .tools-grid,
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* --- h1 font-size floor --- */
+@media (max-width: 480px) {
+  h1 { font-size: 38px; }
+}
+
+/* --- Nav overflow guard --- */
+@media (max-width: 360px) {
+  nav { padding: 0 0.75rem; }
+  .nav-logo { font-size: 13px; }
 }
