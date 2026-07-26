@@ -120,162 +120,122 @@ export default function TakeHome() {
       <section style={{ background: "#fff" }}>
         <div className="container">
           <div className="eyebrow">Track B · Main deliverable</div>
-          <h2>Release Note Pipeline</h2>
-          <p className="section-sub">
-            Paste raw PRD text → AI drafts an internal release note and a customer-facing release note →
-            internal note posts to <strong>#product-releases</strong> on Slack → external note publishes to
-            kb.samsara.com (Zendesk Help Center) after one-click approval.
-          </p>
 
-          <div className="th-status-bar">
-            <span className="th-status-badge th-badge-green"><i className="ti ti-check"></i> Working prototype</span>
-            <span className="th-status-badge th-badge-blue"><i className="ti ti-layout-board"></i> Production architecture drafted</span>
-            <span className="th-status-owner">Owner: Product Operations</span>
-          </div>
+          <div className="th-split-card">
+            {/* LEFT: Why & What */}
+            <div className="th-split-left">
+              <h2>Release Note Pipeline</h2>
+              <p className="section-sub">
+                Release documentation is manual: someone reads the PRD, writes an internal note, rewrites it for customers,
+                pastes it into Slack, and separately updates the knowledge base. This pipeline turns that into{' '}
+                <strong>one step with a review gate</strong> — every launch ships with consistent docs in minutes.
+              </p>
 
-          {/* Problem */}
-          <div className="th-problem-box">
-            <div className="th-problem-label">The problem today</div>
-            Release documentation is manual: someone reads the PRD, writes an internal note, rewrites it for customers,
-            pastes it into Slack, and separately updates the knowledge base. This pipeline turns that into <strong>one step
-            with a review gate</strong> — every launch ships with consistent docs in minutes.
-          </div>
-
-          {/* Live prototype launch card */}
-          <a
-            href="/prototype"
-            className="th-prototype-card"
-          >
-            <div className="th-prototype-left">
-              <div className="th-prototype-icon">
-                <i className="ti ti-player-play"></i>
+              <div className="th-split-produces-label">
+                <i className="ti ti-file-text"></i> What it produces
               </div>
-              <div>
-                <div className="th-prototype-card-title">Open the live prototype</div>
-                <div className="th-prototype-card-desc">
-                  Paste a PRD → AI drafts internal + external release notes → ready to post to Slack and Zendesk
+
+              <div className="th-split-outputs">
+                <div className="th-split-output-card">
+                  <div className="th-split-output-header">
+                    <i className="ti ti-lock"></i> Internal Release Note
+                    <span className="th-split-output-dest">#product-releases</span>
+                  </div>
+                  <div className="th-split-output-lines">
+                    <div className="th-split-line" style={{ width: "75%" }}></div>
+                    <div className="th-split-line" style={{ width: "100%" }}></div>
+                    <div className="th-split-line" style={{ width: "83%" }}></div>
+                    <div className="th-split-line" style={{ width: "67%" }}></div>
+                  </div>
+                </div>
+                <div className="th-split-output-card">
+                  <div className="th-split-output-header">
+                    <i className="ti ti-world"></i> External KB Article
+                    <span className="th-split-output-dest">kb.samsara.com</span>
+                  </div>
+                  <div className="th-split-output-lines">
+                    <div className="th-split-line" style={{ width: "100%" }}></div>
+                    <div className="th-split-line" style={{ width: "80%" }}></div>
+                    <div className="th-split-line" style={{ width: "83%" }}></div>
+                    <div className="th-split-line" style={{ width: "75%" }}></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="th-split-badges">
+                <span className="th-split-badge th-split-badge-green">
+                  <i className="ti ti-check"></i> Working prototype
+                </span>
+                <span className="th-split-badge th-split-badge-blue">
+                  <i className="ti ti-layout-board"></i> Production architecture drafted
+                </span>
+              </div>
+            </div>
+
+            {/* RIGHT: How */}
+            <div className="th-split-right">
+              <div className="th-split-glow-orb"></div>
+              <div className="th-split-how-label">How it works</div>
+
+              <div className="th-split-steps">
+                <div className="th-split-connector"></div>
+                <div className="th-split-step">
+                  <div className="th-split-step-num">1</div>
+                  <div>
+                    <div className="th-split-step-title">Ingest</div>
+                    <div className="th-split-step-desc">PM submits raw PRD via simple form.</div>
+                  </div>
+                </div>
+                <div className="th-split-step">
+                  <div className="th-split-step-num">2</div>
+                  <div>
+                    <div className="th-split-step-title">Draft</div>
+                    <div className="th-split-step-desc">Claude AI generates tailored internal &amp; external drafts.</div>
+                  </div>
+                </div>
+                <div className="th-split-step">
+                  <div className="th-split-step-num">3</div>
+                  <div>
+                    <div className="th-split-step-title">Review</div>
+                    <div className="th-split-step-desc">Human-in-the-loop approval and final edits.</div>
+                  </div>
+                </div>
+                <div className="th-split-step">
+                  <div className="th-split-step-num th-split-step-num-amber">4</div>
+                  <div>
+                    <div className="th-split-step-title th-split-step-title-amber">Publish</div>
+                    <div className="th-split-step-desc">Auto-posts to Slack (#product-releases) and Zendesk KB.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="th-split-cta-wrap">
+                <div className="th-split-cta-glow"></div>
+                <a href="/prototype" className="th-split-cta">
+                  <span className="th-split-cta-main">
+                    Try the live prototype <i className="ti ti-arrow-right"></i>
+                  </span>
+                  <span className="th-split-cta-sub">Paste a PRD → get internal + external notes in seconds</span>
+                </a>
+              </div>
+
+              <div className="th-split-arch">
+                <div className="th-split-arch-label">Architecture Decisions</div>
+                <div className="th-split-arch-row">
+                  <span>Slack</span><span>Bot token integration</span>
+                </div>
+                <div className="th-split-arch-row">
+                  <span>Approval gate</span><span>Required for external</span>
+                </div>
+                <div className="th-split-arch-row">
+                  <span>Zendesk</span><span>Draft → Live on approval</span>
                 </div>
               </div>
             </div>
-            <div className="th-prototype-cta">
-              Try it <i className="ti ti-arrow-right"></i>
-            </div>
-          </a>
-
-          {/* Pipeline stages */}
-          <div className="th-pipeline">
-            <div className="th-pipe-step">
-              <div className="th-pipe-icon" style={{ background: "var(--accent-light)", color: "var(--navy-light)" }}>
-                <i className="ti ti-file-text"></i>
-              </div>
-              <div className="th-pipe-step-label">1 · Ingest</div>
-              <div className="th-pipe-step-desc">Paste PRD or feature text into the left panel</div>
-            </div>
-            <div className="th-pipe-arrow">→</div>
-            <div className="th-pipe-step">
-              <div className="th-pipe-icon" style={{ background: "var(--amber-light)", color: "#7A4F00" }}>
-                <i className="ti ti-robot"></i>
-              </div>
-              <div className="th-pipe-step-label">2 · Draft</div>
-              <div className="th-pipe-step-desc">Claude parses text and drafts both notes (real API call)</div>
-            </div>
-            <div className="th-pipe-arrow">→</div>
-            <div className="th-pipe-step">
-              <div className="th-pipe-icon" style={{ background: "#EAF3DE", color: "#27500A" }}>
-                <i className="ti ti-eye"></i>
-              </div>
-              <div className="th-pipe-step-label">3 · Review</div>
-              <div className="th-pipe-step-desc">Internal · External · Publish to KB tabs</div>
-            </div>
-            <div className="th-pipe-arrow">→</div>
-            <div className="th-pipe-step">
-              <div className="th-pipe-icon" style={{ background: "#E1F5EE", color: "#085041" }}>
-                <i className="ti ti-send"></i>
-              </div>
-              <div className="th-pipe-step-label">4 · Publish</div>
-              <div className="th-pipe-step-desc">One-click to Slack + Zendesk KB</div>
-            </div>
           </div>
 
-          {/* What it generates */}
-          <div className="th-outputs-grid">
-            <div className="th-output-card">
-              <div className="th-output-header">
-                <i className="ti ti-lock"></i> Internal release note
-                <span className="th-output-dest">#product-releases</span>
-              </div>
-              <ul className="th-output-list">
-                <li><strong>TL;DR</strong> — two-sentence summary</li>
-                <li><strong>How it works</strong> — functional bullets</li>
-                <li><strong>Availability</strong> — plans, hardware, regions (unknowns flagged as TBD)</li>
-                <li><strong>Rollout</strong> — timing and status</li>
-                <li><strong>Links &amp; resources</strong> — PRD, help article, training deck</li>
-                <li><strong>Talking points</strong> — for support &amp; sales</li>
-              </ul>
-            </div>
-            <div className="th-output-card">
-              <div className="th-output-header">
-                <i className="ti ti-world"></i> External release note
-                <span className="th-output-dest">kb.samsara.com</span>
-              </div>
-              <ul className="th-output-list">
-                <li>Friendly announcement intro in customer voice</li>
-                <li>Feature sections with no internal jargon</li>
-                <li>Closing CTA pointing to docs or the admin</li>
-                <li>Published as draft in Zendesk — reviewer approves before customers see it</li>
-              </ul>
-              <div className="th-output-example">
-                <div className="th-example-label">Example input used in demo</div>
-                "AI Multicam: Drivers can now add up to four additional HD cameras, providing a 360-degree
-                view to reduce blindspots. The AI Multicam actively notifies drivers in real-time of
-                hazards such as pedestrians and cyclists."
-              </div>
-            </div>
-          </div>
-
-          {/* Production architecture */}
-          <div className="eyebrow" style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>Production architecture · Key decisions</div>
-          <div className="portfolio-table">
-            <div className="pt-header">
-              <div className="pt-cell pt-col-problem">Decision</div>
-              <div className="pt-cell pt-col-action">Choice</div>
-              <div className="pt-cell">Why</div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">Slack integration</div>
-              <div className="pt-cell pt-col-action">Bot token, not webhook</div>
-              <div className="pt-cell">Receipts, threading, Approve/Edit buttons, any channel</div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">Approval gate</div>
-              <div className="pt-cell pt-col-action">Required for external, optional for internal</div>
-              <div className="pt-cell">Internal ships instantly; customer-facing gets one human click</div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">Zendesk publish</div>
-              <div className="pt-cell pt-col-action">Draft → flip live on approval</div>
-              <div className="pt-cell">Reviewable first; rollback is one API call</div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">LLM output</div>
-              <div className="pt-cell pt-col-action">Schema validation + one retry</div>
-              <div className="pt-cell">Unparseable output never reaches a channel</div>
-            </div>
-            <div className="pt-row">
-              <div className="pt-cell pt-col-problem">Secrets</div>
-              <div className="pt-cell pt-col-action">All tokens in secrets manager</div>
-              <div className="pt-cell">Removes per-session pasting; rotation with zero client changes</div>
-            </div>
-          </div>
-
-          {/* Next step */}
-          <div className="th-nextstep-bar">
-            <i className="ti ti-arrow-right-circle"></i>
-            <span><strong>Next step:</strong> Partner with engineering or IT to determine who can help us set this up internally.</span>
-          </div>
-
-          {/* Track B philosophy */}
-          <div className="th-philosophy-block th-philosophy-light">
+          {/* Philosophy */}
+          <div className="th-philosophy-block th-philosophy-light" style={{ marginTop: "1.25rem" }}>
             <div className="th-philosophy-eyebrow"><i className="ti ti-bulb"></i> My thinking — why these decisions</div>
             <div className="th-philosophy-body">Release documentation came up repeatedly in my interviews — teams are often surprised by releases and see them at the same time as, or after, a customer. Fixing that is a quick win with high visibility. Starting with internal notes lets us see what the outputs look like, collect feedback from PMs and internal stakeholders, and iterate before anything goes external. External notes require approval until we feel fully confident the system is pulling the right information and the language is clear for a customer audience — that human gate stays until we've earned the trust to remove it.</div>
           </div>
