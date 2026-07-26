@@ -42,7 +42,7 @@ export default function TakeHome() {
               <div className="th-theme-title">Operational rhythms to drive alignment</div>
               <ul className="th-theme-list">
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Consistent planning rituals — baked into operating rhythm</li>
-                <li><span className="th-tag th-tag-ai">AI assisted</span> Executive reporting for monthly reviews — data automated, strategy human-owned</li>
+                <li><span className="th-tag th-tag-ai">AI assisted</span> Executive reporting for monthly reviews — data automated</li>
                 <li><span className="th-tag th-tag-ai">AI assisted</span> Central force keeping Product, Eng, Design, GTM, and Leadership in sync</li>
               </ul>
               <div style={{ marginTop: "0.85rem", padding: "0.6rem 0.85rem", background: "rgba(0,38,62,0.05)", borderLeft: "2px solid rgba(0,38,62,0.2)", borderRadius: "0 4px 4px 0", fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>
